@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 7: Roads &amp; Back Alleys · InfoTown</title>
+<meta name="description" content="InfoTown Academy lesson 7. How does it get there? This is an Information Exchange!">
+<meta property="og:title" content="Lesson 7: Roads &amp; Back Alleys · InfoTown">
+<meta property="og:description" content="InfoTown Academy lesson 7. How does it get there? This is an Information Exchange!">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1b3478">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/infotown.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="in">
+  <a class="brand" href="../../"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1b3478"/><path d="M14 26 L32 14 L50 26 Z" fill="#fdf3d4" stroke="#fdf3d4" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="28" width="32" height="22" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M24 30 V50 M40 30 V50" stroke="#fff" stroke-width="2.5"/><path d="M29 50 V41 a3 3 0 0 1 6 0 V50" fill="#fdf3d4"/></svg>InfoTown</a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../../">Town Square</a>
+    <a href="../../academy/" aria-current="page">Academy</a>
+    <a href="../../manifesto/">Manifesto</a>
+  </nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+
+
+<header class="top">
+  <div class="banner">InfoTown<br>Academy<small>Lesson 7 of 12</small></div>
+  <div class="titleblock">
+    <span class="eyebrow">Part 3 · The Journey</span>
+    <h1>Roads &amp; Back Alleys</h1>
+    <p class="question">How does a parcel get from one building to another?</p>
+  </div>
+</header>
+<p class="recap"><b>So far:</b> someone needed something (Lesson 4), it was packed into a parcel (Lesson 5) and given a label (Lesson 6). Now it has to travel.</p>
+
+<!-- 1. THE SCENE -->
+<section aria-labelledby="h-scene">
+  <div class="sechead">
+    <span class="eyebrow">The scene</span>
+    <h2 id="h-scene">Every town has two ways across it</h2>
+    <p>The main road is the one we built. It goes through the Post Office, where every parcel is booked in. The back alley is the shortcut people take when they're in a hurry. Both get the parcel there.</p>
+  </div>
+  <div class="scenebox">
+    <div class="controls" role="group" aria-label="Highlight a route" data-target="scene">
+      <span>Show:</span>
+      <button type="button" data-mode="both" aria-pressed="true">Both routes</button>
+      <button type="button" data-mode="main" aria-pressed="false">The main road</button>
+      <button type="button" data-mode="alley" aria-pressed="false">The back alley</button>
+    </div>
+    <div class="scenewrap">
+<svg class="scene" id="scene" viewBox="0 0 1200 570" role="img" aria-labelledby="scene-t scene-d">
+  <title id="scene-t">InfoTown street scene</title>
+  <desc id="scene-d">A Design Office on the left and a Site Office on the right. Between them the main road runs past the Post Office (the CDE), where a gate records every parcel. Below, a back alley winds past bins, a gap in a fence, a phone and a USB stick. Footprints along the alley fade away before it reaches the Site Office.</desc>
+  <defs>
+    <g id="pp"><circle cx="0" cy="8" r="7" fill="#fff"/><path d="M0 15 V40 M0 21 L-9 33 M0 21 L9 33 M0 40 L-7 60 M0 40 L7 60" fill="none"/></g>
+    <g id="ph"><use href="#pp"/><path d="M-8 6 Q0 -4 8 6 Z" fill="#fde6a0"/><path d="M-10 6 H10" fill="none"/></g>
+    <g id="box"><rect x="-11" y="-9" width="22" height="18" rx="1.5" fill="#f6dfb4"/><path d="M-11 -3 H11 M0 -9 V-3" fill="none"/><rect x="-7" y="1" width="9" height="5" fill="#fff" stroke-width="1"/></g>
+  </defs>
+
+  <!-- skyline -->
+  <g fill="none" stroke="#c8d4ec" stroke-width="1.5" stroke-linejoin="round">
+    <rect x="300" y="96" width="38" height="96"/><rect x="345" y="66" width="30" height="126"/><rect x="380" y="110" width="48" height="82"/>
+    <rect x="760" y="84" width="40" height="110"/><rect x="806" y="52" width="28" height="142"/><rect x="840" y="100" width="58" height="94"/>
+    <rect x="1010" y="118" width="40" height="80"/><rect x="1060" y="96" width="30" height="102"/>
+    <path d="M110 96 q8-16 26-8 q12-14 28 2 q16 0 14 12 h-68z"/><path d="M640 66 q8-14 22-7 q10-12 24 2 q14 0 12 10 h-58z"/><path d="M960 60 q8-14 22-7 q10-12 24 2 q14 0 12 10 h-58z"/>
+  </g>
+
+  <g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- road -->
+    <rect x="0" y="372" width="1200" height="58" fill="#f4f7fc" stroke="none"/>
+    <path d="M0 372 H1200 M0 430 H1200" fill="none" stroke-width="1.5"/>
+    <path d="M0 401 H1200" fill="none" stroke="#c8d4ec" stroke-dasharray="16 12"/>
+
+    <!-- Design Office -->
+    <polygon points="46,202 170,140 294,202" fill="#ece7f8"/>
+    <rect x="58" y="202" width="224" height="170" fill="#ece7f8"/>
+    <rect x="100" y="214" width="140" height="28" rx="3" fill="#fff"/>
+    <text x="170" y="233" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">DESIGN OFFICE</text>
+    <rect x="78" y="258" width="44" height="36" fill="#fff"/><path d="M100 258 V294" fill="none"/>
+    <rect x="218" y="258" width="44" height="36" fill="#fff"/><path d="M240 258 V294" fill="none"/>
+    <rect x="150" y="312" width="40" height="60" fill="#fff"/>
+    <use href="#pp" x="128" y="310"/>
+
+    <!-- Post Office (CDE) -->
+    <polygon points="458,196 600,140 742,196" fill="#fdf3d4"/>
+    <text x="600" y="186" text-anchor="middle" font-family="Lexend, sans-serif" font-size="14" font-weight="700" fill="#1b3478" stroke="none" letter-spacing="2">CDE</text>
+    <rect x="470" y="196" width="260" height="176" fill="#fdf3d4"/>
+    <rect x="526" y="206" width="148" height="28" rx="3" fill="#fff"/>
+    <text x="600" y="225" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">POST OFFICE</text>
+    <path d="M498 246 V372 M522 246 V372 M678 246 V372 M702 246 V372" fill="none" stroke-width="1.5"/>
+    <path d="M580 372 V318 a20 20 0 0 1 40 0 V372" fill="#fff"/>
+    <!-- recording gate over the road -->
+    <rect x="552" y="328" width="10" height="104" fill="#fff"/>
+    <rect x="638" y="328" width="10" height="104" fill="#fff"/>
+    <rect x="544" y="314" width="112" height="20" rx="2" fill="#fff"/>
+    <text x="600" y="328" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1.5">RECORDED</text>
+    <use href="#pp" x="676" y="310"/>
+    <rect x="686" y="330" width="12" height="9" fill="#fde6d8"/>
+
+    <!-- Site Office -->
+    <rect x="912" y="240" width="248" height="12" fill="#e2f2e6"/>
+    <rect x="920" y="252" width="232" height="120" fill="#e2f2e6"/>
+    <rect x="966" y="262" width="140" height="28" rx="3" fill="#fff"/>
+    <text x="1036" y="281" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SITE OFFICE</text>
+    <rect x="936" y="302" width="50" height="30" fill="#fff"/>
+    <rect x="1094" y="302" width="44" height="30" fill="#fff"/>
+    <rect x="1016" y="304" width="36" height="68" fill="#fff"/>
+    <use href="#ph" x="1072" y="312"/>
+    <polygon points="1168,372 1178,342 1188,372" fill="#fde6d8"/>
+
+    <!-- van -->
+    <g transform="translate(286,374)">
+      <rect x="0" y="4" width="74" height="28" rx="4" fill="#fff"/>
+      <path d="M74 12 H88 L96 22 V32 H74 Z" fill="#fff"/>
+      <rect x="78" y="15" width="10" height="7" fill="#e1ecfa" stroke-width="1.5"/>
+      <rect x="24" y="10" width="22" height="16" fill="#f6dfb4" stroke-width="1.5"/>
+      <circle cx="18" cy="34" r="6" fill="#fff"/><circle cx="80" cy="34" r="6" fill="#fff"/>
+    </g>
+  </g>
+
+  <!-- MAIN ROAD route -->
+  <g class="layer" data-layer="main">
+    <path id="rMain" d="M170 418 H1036" fill="none" stroke="#2f6fd6" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#fff" stroke="#2f6fd6" stroke-width="4">
+      <circle cx="170" cy="418" r="9"/><circle cx="600" cy="418" r="9"/><circle cx="1036" cy="418" r="9"/>
+    </g>
+    <text x="364" y="360" text-anchor="middle" font-family="Lexend, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" letter-spacing="2">THE MAIN ROAD</text>
+    <text x="828" y="394" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="14" fill="#1b3478">Booked in: who · what · when · which version</text>
+    <g stroke="#1b3478" stroke-width="1.5" stroke-linejoin="round"><use href="#box"><animateMotion dur="7s" repeatCount="indefinite" path="M170 418 H1036"/></use></g>
+  </g>
+
+  <!-- BACK ALLEY route -->
+  <g class="layer" data-layer="alley">
+    <g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- back gates -->
+      <rect x="152" y="446" width="36" height="22" fill="#fff"/><path d="M170 446 V468" fill="none"/>
+      <rect x="1018" y="446" width="36" height="22" fill="#fff"/><path d="M1036 446 V468" fill="none"/>
+      <!-- bins -->
+      <rect x="286" y="486" width="24" height="30" rx="2" fill="#fff"/><path d="M282 486 H314" fill="none"/>
+      <rect x="318" y="492" width="20" height="24" rx="2" fill="#fff"/><path d="M315 492 H341" fill="none"/>
+      <!-- phone + chat bubble -->
+      <rect x="448" y="452" width="28" height="46" rx="5" fill="#fff"/>
+      <rect x="453" y="460" width="18" height="26" fill="#e1ecfa" stroke-width="1"/>
+      <path d="M455 482 l5 -8 l4 5 l3 -3 l4 6 z" fill="#fff" stroke-width="1"/>
+      <path d="M486 452 h70 a6 6 0 0 1 6 6 v18 a6 6 0 0 1 -6 6 h-58 l-10 9 v-9 h-2 a6 6 0 0 1 -6 -6 v-18 a6 6 0 0 1 6 -6z" fill="#fff" stroke-width="1.5"/>
+      <text x="522" y="471" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="13" fill="#1b3478" stroke="none">photo.jpg</text>
+      <!-- fence with a gap -->
+      <path d="M640 470 V532 M650 470 V532 M660 470 V532 M670 470 V532 M680 470 V532 M708 470 V532 M718 470 V532 M728 470 V532 M738 470 V532 M748 470 V532 M758 470 V532 M640 482 H680 M708 482 H758 M640 520 H680 M708 520 H758" fill="none" stroke-width="1.5"/>
+      <use href="#pp" x="622" y="460"/>
+      <use href="#pp" x="776" y="460"/>
+      <!-- USB stick -->
+      <rect x="866" y="532" width="26" height="11" rx="2" fill="#fff"/><rect x="892" y="534" width="8" height="7" fill="#fff" stroke-width="1.5"/>
+    </g>
+    <path id="rAlley" d="M170 468 C 260 530, 380 520, 440 512 S 600 488, 694 500 S 860 520, 940 492 S 1010 470, 1036 468" fill="none" stroke="#d65a2c" stroke-width="4" stroke-dasharray="11 9" stroke-linecap="round"/>
+    <!-- fading footprints -->
+    <g fill="#d65a2c">
+      <ellipse cx="800" cy="512" rx="4" ry="6" opacity=".55"/><ellipse cx="812" cy="520" rx="4" ry="6" opacity=".5"/>
+      <ellipse cx="840" cy="514" rx="4" ry="6" opacity=".38"/><ellipse cx="852" cy="522" rx="4" ry="6" opacity=".32"/>
+      <ellipse cx="910" cy="502" rx="4" ry="6" opacity=".2"/><ellipse cx="922" cy="508" rx="4" ry="6" opacity=".16"/>
+      <ellipse cx="960" cy="486" rx="4" ry="6" opacity=".09"/><ellipse cx="972" cy="492" rx="4" ry="6" opacity=".06"/>
+    </g>
+    <text x="196" y="556" font-family="Lexend, sans-serif" font-size="15" font-weight="700" fill="#d65a2c" letter-spacing="2">THE BACK ALLEY</text>
+    <text x="1036" y="530" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="14" font-style="italic" fill="#d65a2c">…and the trail fades</text>
+    <g stroke="#1b3478" stroke-width="1.5" stroke-linejoin="round"><use href="#box"><animateMotion dur="5.5s" repeatCount="indefinite" path="M170 468 C 260 530, 380 520, 440 512 S 600 488, 694 500 S 860 520, 940 492 S 1010 470, 1036 468"/></use></g>
+  </g>
+</svg>
+    </div>
+    <div class="legend">
+      <div><span class="swatch"></span><span><b>Main road.</b> Every stop is recorded.</span></div>
+      <div><span class="swatch alley"></span><span><b>Back alley.</b> Faster, but it leaves no trail.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. THE STORY -->
+<section aria-labelledby="h-story">
+  <div class="sechead">
+    <span class="eyebrow">The story</span>
+    <h2 id="h-story">Drawing 042 takes a shortcut</h2>
+    <p>A drainage drawing, a Friday afternoon and a pour booked for Monday.</p>
+  </div>
+
+  <p class="striphead alley"><i></i>The back alley</p>
+  <div class="strip3">
+    <!-- P1 -->
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M0 160 H120 V182 H240 V160 H320"/>
+        <rect x="130" y="168" width="100" height="9" rx="4.5" fill="#e1ecfa"/>
+        <use href="#ph" x="72" y="96"/>
+        <rect x="80" y="98" width="7" height="13" rx="1.5" fill="#fff"/>
+        <path d="M276 160 V114"/><rect x="244" y="80" width="64" height="36" rx="3" fill="#fdf3d4"/>
+        <text x="276" y="96" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#1b3478" stroke="none">POUR</text>
+        <text x="276" y="110" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" fill="#1b3478" stroke="none">MON 8AM</text>
+      </g></svg>
+      <div class="cap"><span class="tag">Friday, 4:05pm</span><p class="say">Can you just send me the approved drawing? We pour Monday morning.</p><p class="n">Dave, site supervisor</p></div>
+    </article>
+    <!-- P2 -->
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M30 148 H290 M50 148 V176 M270 148 V176"/>
+        <rect x="160" y="62" width="112" height="70" rx="3" fill="#fff"/><path d="M216 132 V148"/>
+        <path d="M172 76 H258 M172 88 H240 M172 100 H252" stroke-width="1.5"/>
+        <rect x="190" y="108" width="62" height="18" rx="2" fill="#fde6d8" stroke="#d65a2c" stroke-width="1.5"/>
+        <text x="221" y="121" text-anchor="middle" font-family="Lexend, sans-serif" font-size="9.5" font-weight="700" fill="#d65a2c" stroke="none" letter-spacing=".5">CHECKING</text>
+        <use href="#pp" x="96" y="84"/>
+        <rect x="118" y="88" width="13" height="22" rx="2" fill="#fff"/>
+        <path d="M136 92 l9 -4 M136 99 h10 M136 106 l9 4" stroke="#d65a2c"/>
+        <path d="M120 170 H296" stroke="#d65a2c" stroke-width="3" stroke-dasharray="9 7"/><path d="M288 163 L300 170 L288 177" stroke="#d65a2c" stroke-width="3"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Friday, 4:20pm</span><p class="say">It's still being checked. I'll send you a photo from my phone.</p><p class="n">Priya, designer. The parcel goes down the back alley.</p></div>
+    </article>
+    <!-- P3 -->
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M0 160 H100 V182 H230 V160 H320"/>
+        <rect x="110" y="168" width="110" height="9" rx="4.5" fill="#e1ecfa"/>
+        <use href="#ph" x="70" y="96"/><use href="#ph" x="170" y="108"/>
+        <polygon points="262,160 274,126 286,160" fill="#fde6d8"/>
+        <rect x="264" y="98" width="20" height="28" rx="3" fill="#fff"/><path d="M268 120 l4 -7 l3 4 l3 -3 l3 6 z" fill="#e1ecfa" stroke-width="1"/>
+        <rect x="8" y="10" width="222" height="50" rx="6" fill="#fdf3d4" stroke-dasharray="5 4" stroke-width="1.5"/>
+        <text x="20" y="31" font-family="Lexend, sans-serif" font-size="11" font-weight="600" fill="#1b3478" stroke="none">Meanwhile, at the Post Office:</text>
+        <text x="20" y="48" font-family="Source Sans 3, sans-serif" font-size="12" fill="#1b3478" stroke="none">C01 approved. Pipe level changed.</text>
+      </g></svg>
+      <div class="cap"><span class="tag">Monday, 7:30am</span><p class="n">The gang builds from the photo propped on a cone. Nobody on site knows the pipe level changed when it was checked.</p></div>
+    </article>
+    <!-- P4 -->
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M0 160 H120 V184 H260 V160 H320"/>
+        <rect x="130" y="158" width="120" height="9" rx="4.5" fill="#e1ecfa"/>
+        <path d="M130 178 H250" stroke="#8b9bc0" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <use href="#pp" x="76" y="96"/>
+        <rect x="86" y="116" width="14" height="18" rx="1.5" fill="#fff"/>
+        <path d="M270 162 V178 M264 162 H276 M264 178 H276" stroke="#d65a2c" stroke-width="2.5"/>
+        <text x="284" y="150" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="700" fill="#d65a2c" stroke="none">150mm</text>
+        <text x="190" y="140" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" fill="#56658a" stroke="none">design level ┄┄</text>
+      </g></svg>
+      <div class="cap"><span class="tag">Three weeks later</span><p class="say">This pipe is 150mm higher than the approved drawing.</p><p class="n">The client's inspector</p></div>
+    </article>
+    <!-- P5 -->
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#ph" x="160" y="70"/>
+        <rect x="34" y="34" width="46" height="30" rx="2" fill="#fff"/><path d="M34 34 L57 52 L80 34"/>
+        <rect x="246" y="28" width="28" height="44" rx="4" fill="#fff"/><path d="M252 42 L268 58 M268 42 L252 58" stroke="#d65a2c"/>
+        <path d="M34 120 h48 a6 6 0 0 1 6 6 v16 a6 6 0 0 1 -6 6 h-36 l-10 8 v-8 h-2 a6 6 0 0 1 -6 -6 v-16 a6 6 0 0 1 6 -6z" fill="#fff"/>
+        <rect x="240" y="132" width="30" height="12" rx="2" fill="#fff"/><rect x="270" y="134" width="8" height="8" fill="#fff" stroke-width="1.5"/>
+        <g font-family="Lexend, sans-serif" font-size="22" font-weight="700" fill="#d65a2c" stroke="none">
+          <text x="92" y="44">?</text><text x="284" y="40">?</text><text x="98" y="138">?</text><text x="290" y="132">?</text>
+        </g>
+      </g></svg>
+      <div class="cap"><span class="tag">Can you find it later?</span><p class="n">Dave searches his email, his chats and a USB stick. The photo was on his old phone, and it was replaced last week. Which version did they build from? Nobody can say.</p></div>
+    </article>
+    <!-- P6 -->
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#pp" x="96" y="70"/><use href="#pp" x="160" y="66"/><use href="#ph" x="224" y="70"/>
+        <rect x="56" y="122" width="208" height="14" rx="2" fill="#ece7f8"/><path d="M76 136 V172 M244 136 V172"/>
+        <g transform="translate(262 36) rotate(-10)"><rect x="-44" y="-15" width="88" height="30" rx="3" fill="#fde6d8" stroke="#d65a2c"/><text x="0" y="5" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="700" fill="#d65a2c" stroke="none" letter-spacing="1.5">REWORK</text></g>
+      </g></svg>
+      <div class="cap"><span class="tag">Can you prove it?</span><p class="say">Can you show us what you were given, and who gave it to you?</p><p class="n">With no trail there's no proof, so the contractor pays to dig it up and relay it.</p></div>
+    </article>
+  </div>
+
+  <p class="striphead main"><i class="m"></i>Same Friday, on the main road</p>
+  <div class="strip3">
+    <article class="panel">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M30 148 H290 M50 148 V176 M270 148 V176"/>
+        <rect x="160" y="62" width="112" height="70" rx="3" fill="#fff"/><path d="M216 132 V148"/>
+        <path d="M172 76 H258 M172 88 H240 M172 100 H252" stroke-width="1.5"/>
+        <rect x="190" y="108" width="62" height="18" rx="2" fill="#fde6d8" stroke="#d65a2c" stroke-width="1.5"/>
+        <text x="221" y="121" text-anchor="middle" font-family="Lexend, sans-serif" font-size="9.5" font-weight="700" fill="#d65a2c" stroke="none" letter-spacing=".5">CHECKING</text>
+        <use href="#pp" x="96" y="84"/>
+        <rect x="20" y="16" width="74" height="40" rx="3" fill="#fdf3d4"/>
+        <text x="57" y="33" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" font-weight="700" fill="#1b3478" stroke="none">ON THE CDE</text>
+        <text x="57" y="48" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" fill="#1b3478" stroke="none">MON 9AM</text>
+      </g></svg>
+      <div class="cap"><span class="tag">Friday, 4:20pm</span><p class="say">It isn't approved yet. The checker's on it first thing, and it'll be on the CDE by nine.</p><p class="n">Dave moves the pour to Tuesday.</p></div>
+    </article>
+    <article class="panel">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <polygon points="22,82 66,62 110,82" fill="#fdf3d4"/><rect x="28" y="82" width="76" height="70" fill="#fdf3d4"/>
+        <text x="66" y="77" text-anchor="middle" font-family="Lexend, sans-serif" font-size="9" font-weight="700" fill="#1b3478" stroke="none">CDE</text>
+        <path d="M58 152 V130 a8 8 0 0 1 16 0 V152" fill="#fff"/>
+        <path d="M104 140 H250" stroke="#2f6fd6" stroke-width="4"/>
+        <circle cx="104" cy="140" r="6" fill="#fff" stroke="#2f6fd6" stroke-width="3"/><circle cx="250" cy="140" r="6" fill="#fff" stroke="#2f6fd6" stroke-width="3"/>
+        <g transform="translate(170 126)" stroke-width="1.5"><use href="#box"/></g>
+        <g transform="translate(170 92)"><rect x="-58" y="-14" width="116" height="28" rx="3" fill="#e1ecfa" stroke="#2f6fd6"/><text x="0" y="5" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#2f6fd6" stroke="none" letter-spacing=".5">C01 · APPROVED</text></g>
+        <use href="#ph" x="278" y="96"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Monday, 9:12am</span><p class="n">C01 goes through the Post Office, gets booked in and goes out to site. The gang builds to the new pipe level.</p></div>
+    </article>
+    <article class="panel">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#ph" x="54" y="92"/><use href="#pp" x="20" y="96"/>
+        <rect x="100" y="26" width="200" height="132" rx="8" fill="#fff"/>
+        <rect x="110" y="36" width="180" height="112" rx="3" fill="#f5f8fd" stroke-width="1"/>
+        <g font-family="Source Sans 3, sans-serif" font-size="12.5" fill="#1b3478" stroke="none">
+          <text x="120" y="58" font-weight="700">Drawing 042 · history</text>
+          <text x="120" y="80">C01 · approved Mon 09:12</text>
+          <text x="120" y="98">Checked by: design checker</text>
+          <text x="120" y="116">Sent to site: transmittal 0412</text>
+          <text x="120" y="134" fill="#2f6fd6" font-weight="700">Found in 30 seconds</text>
+        </g>
+      </g></svg>
+      <div class="cap"><span class="tag">Three weeks later</span><p class="say">Here's what we built to, who approved it and when it reached us.</p><p class="n">Found and proven. The query is closed the same day.</p></div>
+    </article>
+  </div>
+
+  <div class="verdict">
+    <div class="a"><b>The back alley</b>Saved half a day on Friday. Cost a rework, a dispute and three weeks of trouble.</div>
+    <div class="m"><b>The main road</b>Cost half a day on Friday. Nothing went wrong after that.</div>
+  </div>
+</section>
+
+<!-- 3. THE BACK ALLEY TEST -->
+<section aria-labelledby="h-test">
+  <div class="sechead">
+    <span class="eyebrow">The back alley test</span>
+    <h2 id="h-test">Two questions for every parcel you send or receive</h2>
+  </div>
+  <div class="test">
+    <div class="q">
+      <h3>Can you find it later?</h3>
+      <div class="rows">
+        <div class="r-m"><b>Main road</b><span>It's in the CDE with its label. Anyone with access can find it, even after the sender has left the job.</span></div>
+        <div class="r-a"><b>Back alley</b><span>It's in one person's phone, inbox or chat. When that person moves on, it goes with them.</span></div>
+      </div>
+    </div>
+    <div class="q">
+      <h3>Can you prove it?</h3>
+      <div class="rows">
+        <div class="r-m"><b>Main road</b><span>The CDE records who sent which version, when, and what state it was in.</span></div>
+        <div class="r-a"><b>Back alley</b><span>The parcel arrived, but there's no record of what it was, who sent it or whether it was approved.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. THE REAL TOWN -->
+<section aria-labelledby="h-real">
+  <div class="sechead">
+    <span class="eyebrow">The real town</span>
+    <h2 id="h-real">Why do people use back alleys?</h2>
+    <p>Usually for a good reason. Back alleys aren't drawn on the official map, but every town has them.</p>
+  </div>
+  <div class="why">
+    <div><b>It's quicker</b><p>The main road feels slow when the pour is on Monday.</p></div>
+    <div><b>They don't know the road</b><p>Nobody showed them how to send it properly.</p></div>
+    <div><b>The road is closed to them</b><p>They have no CDE access, or the right folder doesn't exist yet.</p></div>
+    <div><b>Everyone else does it</b><p>An alley used often enough starts to feel like the road.</p></div>
+  </div>
+  <p class="planner"><b>A note for the town planners (that's IM):</b> if lots of people use the same back alley, the road is probably in the wrong place. Find the busy alleys and fix the road.</p>
+  <div class="bringback">
+    <h3>Already in the alley?<br>Bring it back.</h3>
+    <ol>
+      <li>Put the parcel on the CDE.</li>
+      <li>Record the instruction: who sent it, what it was and when.</li>
+      <li>Tell the team where to find it.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. THE TERM + REVEAL -->
+<section aria-labelledby="h-reveal">
+  <div class="sechead"><span class="eyebrow">The InfoTown term</span></div>
+  <p class="term">Every town has <strong>roads we built</strong> and <strong>back alleys people use</strong>. Both move parcels. <strong>Only one leaves a trail.</strong></p>
+
+  <div class="reveal">
+    <span class="eyebrow">The reveal</span>
+    <h2 id="h-reveal">This is an Information Exchange!</h2>
+    <p class="big risk">The back alley is an informal exchange, and informal exchanges are a risk.</p>
+    <p class="small">ISO 19650 expects information to be shared through the CDE, so every container carries its status and revision and leaves a record of who shared it. The main road is that route. Anything that goes round it skips those protections.</p>
+  </div>
+</section>
+
+<!-- 6. TRANSLATION CARD -->
+<section aria-labelledby="h-card">
+  <div class="sechead">
+    <span class="eyebrow">Translation card</span>
+    <h2 id="h-card">Same idea, four languages</h2>
+  </div>
+  <div class="cardwrap">
+    <table>
+      <thead><tr><th scope="col">InfoTown</th><th scope="col">Information management</th><th scope="col">ISO 19650</th><th scope="col">In your organisation</th></tr></thead>
+      <tbody>
+        <tr><td class="tm">The main road</td><td>Formal (controlled) information exchange</td><td>Sharing information containers through the CDE, with status, revision and a record of who shared them</td><td>Your CDE platform's workflows and transmittals</td></tr>
+        <tr><td class="ta">The back alley</td><td>Informal (uncontrolled) exchange</td><td>Anything outside the CDE, with no status, no revision control and no record</td><td>Photos on phones, attachments from personal inboxes, files in chat apps, USB sticks</td></tr>
+        <tr><td>The trail</td><td>Audit trail</td><td>The history the CDE keeps for every information container</td><td>Your CDE's document history and transmittal register</td></tr>
+        <tr><td>Footprints that fade</td><td>Lost evidence</td><td>Information that can't be retrieved or relied on</td><td>Replaced phones, leavers' inboxes, chats nobody can search</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 7. TAKE-AWAY -->
+<section aria-labelledby="h-take">
+  <div class="sechead"><span class="eyebrow">Take it back to your project</span><h2 id="h-take" class="sr">Take-away question</h2></div>
+  <div class="takeaway">
+    <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><g fill="none" stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="14" width="36" height="30" rx="2" fill="#f6dfb4"/><path d="M9 24 H45 M27 14 V24"/><rect x="15" y="30" width="14" height="8" fill="#fff" stroke-width="1.5"/></g></svg>
+    <p>Think of the last drawing or instruction you got. Could you find it in six months' time? Could you prove who sent it and which version it was?</p>
+  </div>
+  <nav class="lessonnav" aria-label="Lessons"><a href="../06-the-labels/">← Lesson 6 · <b>The Labels</b> (This is Metadata!)</a><span>Lesson 8 · <b>The Checkpoints</b> (coming soon) →</span></nav>
+</section>
+
+
+</div>
+</main>
+<footer class="site-footer"><div class="in">
+  <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
+  <span>&copy; 2026 InfoTown</span>
+</div></footer>
+<script src="../../assets/lesson.js"></script>
+</body>
+</html>

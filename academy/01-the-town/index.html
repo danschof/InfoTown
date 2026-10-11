@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1: The Town · InfoTown</title>
+<meta name="description" content="InfoTown Academy lesson 1. Where am I? Looking after this town is Information Management!">
+<meta property="og:title" content="Lesson 1: The Town · InfoTown">
+<meta property="og:description" content="InfoTown Academy lesson 1. Where am I? Looking after this town is Information Management!">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1b3478">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/infotown.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="in">
+  <a class="brand" href="../../"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1b3478"/><path d="M14 26 L32 14 L50 26 Z" fill="#fdf3d4" stroke="#fdf3d4" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="28" width="32" height="22" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M24 30 V50 M40 30 V50" stroke="#fff" stroke-width="2.5"/><path d="M29 50 V41 a3 3 0 0 1 6 0 V50" fill="#fdf3d4"/></svg>InfoTown</a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../../">Town Square</a>
+    <a href="../../academy/" aria-current="page">Academy</a>
+    <a href="../../manifesto/">Manifesto</a>
+  </nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<header class="top">
+  <div class="banner">InfoTown<br>Academy<small>Lesson 1 of 12</small></div>
+  <div class="titleblock">
+    <span class="eyebrow">Part 1 · The Place</span>
+    <h1>The Town</h1>
+    <p class="question">Where am I?</p>
+  </div>
+</header>
+<p class="recap"><b>Start here.</b> Every organisation, and every project it runs, has a town where information lives and moves. This lesson shows you the whole town before we visit its parts.</p>
+
+<!-- SCENE -->
+<section aria-labelledby="h-scene">
+  <div class="sechead">
+    <span class="eyebrow">The scene</span>
+    <h2 id="h-scene">The town you see, and the town underneath</h2>
+    <p>From the hill you can see the offices, the site and the client's castle across the river. Underneath runs a second town that most people never notice: the routes information takes between them. Switch between the two.</p>
+  </div>
+  <div class="scenebox">
+    <div class="controls" role="group" aria-label="Choose a view" data-target="scene">
+      <span>Show:</span>
+      <button type="button" data-mode="both" aria-pressed="true">Both</button>
+      <button type="button" data-mode="streets" aria-pressed="false">The streets you see</button>
+      <button type="button" data-mode="info" aria-pressed="false">The hidden town</button>
+    </div>
+    <div class="scenewrap">
+<svg class="scene" id="scene" viewBox="0 0 1200 560" role="img" aria-labelledby="st sd">
+  <title id="st">The project town from the hill</title>
+  <desc id="sd">A Design Office, Head Office, Post Office (CDE), Site Office and a Suppliers' yard on one side of a river, with the Client's castle on the other side, reached by a bridge. Streets join the buildings. A second layer shows information routes: solid blue routes that were designed, and one dashed orange shortcut from the Design Office straight to the Site Office.</desc>
+  <defs>
+    <g id="pp"><circle cx="0" cy="8" r="7" fill="#fff"/><path d="M0 15 V40 M0 21 L-9 33 M0 21 L9 33 M0 40 L-7 60 M0 40 L7 60" fill="none"/></g>
+    <g id="ph"><use href="#pp"/><path d="M-8 6 Q0 -4 8 6 Z" fill="#fde6a0"/><path d="M-10 6 H10" fill="none"/></g>
+    <g id="box"><rect x="-11" y="-9" width="22" height="18" rx="1.5" fill="#f6dfb4"/><path d="M-11 -3 H11 M0 -9 V-3" fill="none"/><rect x="-7" y="1" width="9" height="5" fill="#fff" stroke-width="1"/></g>
+    <g id="bare"><rect x="-11" y="-9" width="22" height="18" rx="1.5" fill="#f6dfb4"/><path d="M-11 -3 H11 M0 -9 V-3" fill="none"/></g>
+  </defs>
+
+  <!-- hills & sky -->
+  <g fill="none" stroke="#c8d4ec" stroke-width="1.5">
+    <path d="M0 120 C 160 70, 300 90, 420 110 S 700 60, 860 96"/>
+    <path d="M120 60 q8-14 22-7 q10-12 24 2 q14 0 12 10 h-58z"/><path d="M560 40 q8-14 22-7 q10-12 24 2 q14 0 12 10 h-58z"/>
+  </g>
+  <!-- river -->
+  <path d="M985 0 C 940 180, 1050 330, 995 560" fill="none" stroke="#e1ecfa" stroke-width="60"/>
+  <path d="M970 120 q8 -6 16 0 t16 0 M990 420 q8 -6 16 0 t16 0" fill="none" stroke="#9fb7e0" stroke-width="1.5"/>
+
+  <!-- STREETS layer -->
+  <g class="layer" data-layer="streets" fill="none" stroke="#e6ebf5" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 392 H930 L960 312 H1110"/>
+    <path d="M165 350 V392 M430 270 V392 M710 320 V392 M800 392 V420 M155 392 V430"/>
+  </g>
+
+  <g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bridge -->
+    <rect x="930" y="302" width="130" height="18" rx="3" fill="#fff"/>
+    <path d="M945 320 a20 14 0 0 1 40 0 M1005 320 a20 14 0 0 1 40 0" fill="none" stroke-width="1.5"/>
+    <!-- Design Office -->
+    <polygon points="58,210 165,160 272,210" fill="#ece7f8"/>
+    <rect x="70" y="210" width="190" height="140" fill="#ece7f8"/>
+    <rect x="95" y="222" width="140" height="26" rx="3" fill="#fff"/>
+    <text x="165" y="240" text-anchor="middle" font-family="Lexend, sans-serif" font-size="12" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">DESIGN OFFICE</text>
+    <rect x="88" y="262" width="36" height="30" fill="#fff"/><rect x="206" y="262" width="36" height="30" fill="#fff"/>
+    <rect x="150" y="300" width="30" height="50" fill="#fff"/>
+    <!-- Head Office -->
+    <polygon points="320,150 430,104 540,150" fill="#e1ecfa"/>
+    <rect x="330" y="150" width="200" height="120" fill="#e1ecfa"/>
+    <circle cx="430" cy="132" r="9" fill="#fff"/><path d="M430 126 V132 L434 135" fill="none" stroke-width="1.5"/>
+    <rect x="360" y="160" width="140" height="26" rx="3" fill="#fff"/>
+    <text x="430" y="178" text-anchor="middle" font-family="Lexend, sans-serif" font-size="12" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">HEAD OFFICE</text>
+    <path d="M354 196 V270 M378 196 V270 M482 196 V270 M506 196 V270" fill="none" stroke-width="1.5"/>
+    <path d="M416 270 V236 a14 14 0 0 1 28 0 V270" fill="#fff"/>
+    <!-- Post Office -->
+    <polygon points="590,170 710,124 830,170" fill="#fdf3d4"/>
+    <text x="710" y="162" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="700" fill="#1b3478" stroke="none" letter-spacing="2">CDE</text>
+    <rect x="600" y="170" width="220" height="150" fill="#fdf3d4"/>
+    <rect x="640" y="180" width="140" height="26" rx="3" fill="#fff"/>
+    <text x="710" y="198" text-anchor="middle" font-family="Lexend, sans-serif" font-size="12" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">POST OFFICE</text>
+    <path d="M624 216 V320 M646 216 V320 M774 216 V320 M796 216 V320" fill="none" stroke-width="1.5"/>
+    <path d="M694 320 V280 a16 16 0 0 1 32 0 V320" fill="#fff"/>
+    <!-- Site Office -->
+    <rect x="694" y="412" width="212" height="12" fill="#e2f2e6"/>
+    <rect x="700" y="424" width="200" height="96" fill="#e2f2e6"/>
+    <rect x="730" y="434" width="140" height="26" rx="3" fill="#fff"/>
+    <text x="800" y="452" text-anchor="middle" font-family="Lexend, sans-serif" font-size="12" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SITE OFFICE</text>
+    <rect x="716" y="474" width="40" height="26" fill="#fff"/><rect x="844" y="474" width="40" height="26" fill="#fff"/>
+    <rect x="784" y="470" width="32" height="50" fill="#fff"/>
+    <polygon points="924,520 932,496 940,520" fill="#fde6d8"/><polygon points="950,520 958,496 966,520" fill="#fde6d8"/>
+    <!-- Suppliers -->
+    <path d="M70 450 L100 430 L100 450 L130 430 L130 450 L160 430 L160 450 L190 430 L190 450 L220 430 L220 450" fill="#fde6d8"/>
+    <rect x="70" y="450" width="160" height="70" fill="#fde6d8"/>
+    <rect x="90" y="462" width="120" height="24" rx="3" fill="#fff"/>
+    <text x="150" y="479" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11.5" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SUPPLIERS</text>
+    <rect x="136" y="494" width="28" height="26" fill="#fff"/>
+    <!-- fountain -->
+    <ellipse cx="470" cy="476" rx="62" ry="13" fill="#e1ecfa"/>
+    <path d="M470 468 V412 M470 418 q-22 8 -34 44 M470 418 q22 8 34 44" fill="none" stroke="#2f6fd6"/>
+    <circle cx="470" cy="408" r="5" fill="#fff" stroke="#2f6fd6"/>
+    <!-- Client castle -->
+    <rect x="1066" y="200" width="32" height="112" fill="#ece7f8"/><rect x="1150" y="200" width="32" height="112" fill="#ece7f8"/>
+    <rect x="1094" y="232" width="60" height="80" fill="#ece7f8"/>
+    <path d="M1066 200 v-9 h8 v9 h8 v-9 h8 v9 h8 M1150 200 v-9 h8 v9 h8 v-9 h8 v9 h8 M1082 191 V150 M1082 150 l22 8 l-22 8" fill="none"/>
+    <path d="M1112 312 V286 a12 12 0 0 1 24 0 V312" fill="#fff"/>
+    <text x="1124" y="342" text-anchor="middle" font-family="Lexend, sans-serif" font-size="12" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">THE CLIENT</text>
+    <!-- people -->
+    <use href="#pp" x="300" y="350"/><use href="#pp" x="560" y="350"/><use href="#ph" x="640" y="460"/>
+    <use href="#pp" x="420" y="412"/><use href="#pp" x="520" y="420"/><use href="#pp" x="1124" y="350"/>
+    <use href="#ph" x="250" y="456"/>
+  </g>
+
+  <!-- HIDDEN TOWN layer -->
+  <g class="layer" data-layer="info">
+    <g fill="none" stroke="#2f6fd6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M165 290 H600"/>
+      <path d="M430 250 V290"/>
+      <path d="M710 245 V380 H800 V430"/>
+      <path d="M820 245 H900 L950 290 H1124 V260"/>
+      <path d="M150 490 H260 L300 380 H710"/>
+    </g>
+    <path d="M200 350 C 260 560, 600 540, 760 470" fill="none" stroke="#d65a2c" stroke-width="4" stroke-dasharray="11 9" stroke-linecap="round"/>
+    <g fill="#fff" stroke="#2f6fd6" stroke-width="4">
+      <circle cx="165" cy="290" r="9"/><circle cx="430" cy="250" r="9"/><circle cx="710" cy="245" r="11"/><circle cx="800" cy="430" r="9"/><circle cx="1124" cy="260" r="9"/><circle cx="150" cy="490" r="9"/>
+    </g>
+    <g stroke="#1b3478" stroke-width="1.5" stroke-linejoin="round">
+      <use href="#box"><animateMotion dur="7s" repeatCount="indefinite" path="M165 290 H710 V380 H800 V430"/></use>
+      <use href="#box"><animateMotion dur="8s" repeatCount="indefinite" path="M710 245 H900 L950 290 H1124 V260"/></use>
+      <use href="#bare"><animateMotion dur="5s" repeatCount="indefinite" path="M200 350 C 260 560, 600 540, 760 470"/></use>
+    </g>
+    <text x="24" y="548" font-family="Lexend, sans-serif" font-size="14" font-weight="700" fill="#2f6fd6" letter-spacing="2">THE HIDDEN TOWN</text>
+  </g>
+</svg>
+    </div>
+    <div class="legend">
+      <div><span class="swatch"></span><span><b>Routes we built.</b> The way information is meant to travel.</span></div>
+      <div><span class="swatch alley"></span><span><b>Shortcuts.</b> The way it sometimes really travels.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section aria-labelledby="h-story">
+  <div class="sechead">
+    <span class="eyebrow">The story</span>
+    <h2 id="h-story">Sam's first week</h2>
+    <p>Sam has just joined the project as an assistant engineer. Nobody has shown Sam the town.</p>
+  </div>
+
+  <p class="striphead alley"><i></i>Without a map</p>
+  <div class="strip3">
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M60 140 H260 M80 140 V176 M240 140 V176"/>
+        <path d="M130 140 L140 112 H190 L198 140" fill="#fff"/><path d="M146 118 H184 V134 H146 Z" fill="#e1ecfa" stroke-width="1.5"/>
+        <use href="#pp" x="96" y="78"/><use href="#pp" x="236" y="78"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Monday, 9am</span><p class="say">Welcome! Here's your laptop. Shout if you need anything.</p><p class="n">Sam's new manager</p></div>
+    </article>
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#pp" x="70" y="96"/><text x="88" y="96" font-family="Lexend, sans-serif" font-size="22" font-weight="700" fill="#d65a2c" stroke="none">?</text>
+        <use href="#pp" x="200" y="96"/>
+        <path d="M212 120 L260 70 M212 124 L290 124 M212 128 L262 176" stroke="#d65a2c" stroke-dasharray="6 5"/>
+        <path d="M252 72 L262 68 L258 80 M282 118 L292 124 L282 130 M252 172 L264 178 L262 166" stroke="#d65a2c"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Monday, 11am</span><p class="say">Drawings? Some are on the CDE, some are on the shared drive, and Dave keeps the site ones.</p><p class="n">Priya, designer</p></div>
+    </article>
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <rect x="70" y="16" width="180" height="160" rx="4" fill="#fff"/><path d="M70 36 H250" stroke-width="1"/>
+        <g stroke="#d65a2c" stroke-width="1.8">
+          <rect x="90" y="54" width="40" height="24"/><rect x="180" y="50" width="44" height="24"/><rect x="100" y="120" width="42" height="24"/><rect x="186" y="128" width="40" height="22"/>
+          <path d="M130 66 L180 62 M120 78 L118 120 M202 74 C 230 100, 150 100, 142 128 M142 132 H186 M110 100 L220 112"/>
+          <path d="M150 96 l14 14 M164 96 l-14 14"/>
+        </g>
+      </g></svg>
+      <div class="cap"><span class="tag">Wednesday</span><p class="n">Sam draws a map on a notepad, crossing things out as each answer turns out to be half right.</p></div>
+    </article>
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M60 60 H110 L122 72 H200 V150 H60 Z" fill="#fdf3d4"/>
+        <text x="130" y="116" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#1b3478" stroke="none">OLD STUFF</text>
+        <path d="M200 92 H232 L244 104 V156 H200" fill="#fff"/>
+        <use href="#pp" x="272" y="96"/>
+        <text x="222" y="140" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" font-weight="700" fill="#d65a2c" stroke="none">2021</text>
+      </g></svg>
+      <div class="cap"><span class="tag">Thursday</span><p class="n">Sam finds a folder called OLD STUFF and uses a calculation template from it. It's three years out of date.</p></div>
+    </article>
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#pp" x="160" y="100"/>
+        <rect x="30" y="30" width="54" height="40" fill="#ece7f8"/><rect x="236" y="26" width="54" height="40" fill="#e2f2e6"/><rect x="40" y="118" width="54" height="40" fill="#e1ecfa"/><rect x="232" y="122" width="54" height="40" fill="#fde6d8"/>
+        <g font-family="Lexend, sans-serif" font-size="20" font-weight="700" fill="#d65a2c" stroke="none"><text x="96" y="46">?</text><text x="214" y="44">?</text><text x="104" y="136">?</text><text x="212" y="140">?</text></g>
+      </g></svg>
+      <div class="cap"><span class="tag">A month later</span><p class="say">There's another drive?</p><p class="n">Sam is still finding new places where information lives.</p></div>
+    </article>
+    <article class="panel p-alley">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <rect x="20" y="40" width="84" height="110" rx="3" fill="#fff"/><rect x="118" y="40" width="84" height="110" rx="3" fill="#fff"/><rect x="216" y="40" width="84" height="110" rx="3" fill="#fff"/>
+        <g stroke="#d65a2c" stroke-width="1.6">
+          <path d="M34 60 h20 v14 h-20z M70 90 h22 v14 h-22z M44 74 L80 90 M40 120 q30 -20 50 10"/>
+          <path d="M130 70 h24 v14 h-24z M160 110 h26 v14 h-26z M142 84 C 150 120, 170 100, 172 110 M180 60 l10 10"/>
+          <path d="M230 100 h22 v14 h-22z M262 60 h24 v14 h-24z M252 106 L270 74 M232 70 q20 -10 30 10 M240 134 h40"/>
+        </g>
+      </g></svg>
+      <div class="cap"><span class="tag">The result</span><p class="n">Every new starter draws this map from scratch, and every map comes out different.</p></div>
+    </article>
+  </div>
+
+  <p class="striphead main"><i class="m"></i>Same Monday, with a map</p>
+  <div class="strip3">
+    <article class="panel">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#pp" x="60" y="96"/><use href="#pp" x="270" y="96"/>
+        <rect x="100" y="30" width="140" height="120" rx="4" fill="#fff"/>
+        <rect x="114" y="46" width="34" height="22" fill="#ece7f8"/><rect x="192" y="46" width="34" height="22" fill="#fdf3d4"/><rect x="114" y="112" width="34" height="22" fill="#e2f2e6"/><rect x="192" y="112" width="34" height="22" fill="#e1ecfa"/>
+        <path d="M148 57 H192 M209 68 V112 M192 123 H148" stroke="#2f6fd6" stroke-width="3"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Monday, 9am</span><p class="say">Here's your laptop, and here's the town map. Everything we use, and how it connects.</p><p class="n">Sam's new manager</p></div>
+    </article>
+    <article class="panel">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#pp" x="80" y="96"/>
+        <rect x="96" y="104" width="44" height="34" rx="2" fill="#fff"/><path d="M104 116 H132 M104 126 H124" stroke="#2f6fd6" stroke-width="1.5"/>
+        <circle cx="230" cy="90" r="36" fill="#e1ecfa"/><path d="M212 90 l12 12 l24 -26" stroke="#2f6fd6" stroke-width="4"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Monday, 11am</span><p class="n">Sam needs a drawing. The map shows which building it's in, and Sam has it in five minutes.</p></div>
+    </article>
+    <article class="panel">
+      <svg viewBox="0 0 320 190" aria-hidden="true"><g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <use href="#pp" x="110" y="96"/><use href="#pp" x="210" y="96"/>
+        <rect x="128" y="104" width="64" height="44" rx="2" fill="#fff"/>
+        <path d="M136 114 h12 v8 h-12z M170 114 h12 v8 h-12z M136 134 h12 v8 h-12z M148 118 H170 M142 122 V134" stroke="#2f6fd6" stroke-width="1.5"/>
+      </g></svg>
+      <div class="cap"><span class="tag">Friday</span><p class="say">Here's the map. Let me show you where things live.</p><p class="n">Sam, showing the next new starter.</p></div>
+    </article>
+  </div>
+
+  <div class="verdict">
+    <div class="a"><b>Without a map</b>A month to learn the town, an out-of-date template, and a different picture in every head.</div>
+    <div class="m"><b>With a map</b>One picture everyone shares. Sam was useful by Monday lunchtime.</div>
+  </div>
+</section>
+
+<!-- TEST -->
+<section aria-labelledby="h-test">
+  <div class="sechead">
+    <span class="eyebrow">The map test</span>
+    <h2 id="h-test">Could you draw your town on one page?</h2>
+  </div>
+  <div class="test">
+    <div class="q"><h3>Where does information live?</h3><div class="rows">
+      <div class="r-m"><b>With a map</b>Every building is on it, from the CDE to the shared drives.</div>
+      <div class="r-a"><b>Without</b>"Ask Priya." Everyone knows a different part.</div></div></div>
+    <div class="q"><h3>How does it move?</h3><div class="rows">
+      <div class="r-m"><b>With a map</b>The routes between buildings are drawn, including the shortcuts.</div>
+      <div class="r-a"><b>Without</b>Nobody can see the routes, so nobody can improve them.</div></div></div>
+    <div class="q"><h3>Who looks after it?</h3><div class="rows">
+      <div class="r-m"><b>With a map</b>Each building has a named keeper.</div>
+      <div class="r-a"><b>Without</b>When something breaks, nobody knows who to call.</div></div></div>
+  </div>
+</section>
+
+<!-- REAL TOWN -->
+<section aria-labelledby="h-real">
+  <div class="sechead">
+    <span class="eyebrow">The real town</span>
+    <h2 id="h-real">Why does nobody have the map?</h2>
+    <p>Because towns grow one building at a time, and nobody stops to draw them.</p>
+  </div>
+  <div class="why">
+    <div><b>Towns grow, they aren't planned</b><p>Every new tool or team adds a building.</p></div>
+    <div><b>Every project builds its own</b><p>A new job means a new set of places.</p></div>
+    <div><b>The map lives in people's heads</b><p>When they leave, the map leaves with them.</p></div>
+    <div><b>Maps go out of date</b><p>Drawn once for a bid and never updated.</p></div>
+  </div>
+  <p class="planner"><b>A note for the town planners (that's IM):</b> draw the town before you try to fix it. You can't improve routes nobody can see.</p>
+  <div class="bringback">
+    <h3>Lost in town?<br>Start a map.</h3>
+    <ol>
+      <li>List the places where you keep and find information.</li>
+      <li>Draw lines for how it moves between them.</li>
+      <li>Write who looks after each place.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- TERM + REVEAL -->
+<section aria-labelledby="h-reveal">
+  <div class="sechead"><span class="eyebrow">The InfoTown term</span></div>
+  <p class="term">Every organisation has a hidden town. Most people work there every day. <strong>They just haven't seen it yet.</strong></p>
+  <div class="reveal">
+    <span class="eyebrow">The reveal</span>
+    <h2 id="h-reveal">Looking after this town is Information Management!</h2>
+    <p class="big">Information management means planning, building and running the town, so the right information reaches the right people at the right time.</p>
+    <p class="small">Standards such as ISO 19650 are rulebooks for running parts of the town on construction and infrastructure projects. InfoTown shows you the whole town first, so the rules make sense when you meet them in Lesson 10.</p>
+  </div>
+</section>
+
+<!-- TRANSLATION CARD -->
+<section aria-labelledby="h-card">
+  <div class="sechead"><span class="eyebrow">Translation card</span><h2 id="h-card">Same idea, four languages</h2></div>
+  <div class="cardwrap">
+    <table>
+      <thead><tr><th scope="col">InfoTown</th><th scope="col">Information management</th><th scope="col">ISO 19650</th><th scope="col">In your organisation</th></tr></thead>
+      <tbody>
+        <tr><td>The town</td><td>Information environment</td><td>All the information produced and managed across a project or asset</td><td>Every system, place and person that handles your information</td></tr>
+        <tr><td>The hidden town</td><td>Information flows</td><td>Information exchanges between the parties</td><td>How documents, data and messages actually move today</td></tr>
+        <tr><td>The town map</td><td>Information landscape map</td><td>Not named as such; it supports planning at mobilisation</td><td>A one-page diagram of your systems and the routes between them</td></tr>
+        <tr><td>The town planners</td><td>Information management team</td><td>The information management function</td><td>Your IM, BIM or document control team</td></tr>
+        <tr><td>Running the town</td><td>Information management</td><td>Information management, across the whole life of a project or asset</td><td>Everything in this Academy</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- TAKE-AWAY -->
+<section aria-labelledby="h-take">
+  <div class="sechead"><span class="eyebrow">Take it back to your project</span><h2 id="h-take" class="sr">Take-away question</h2></div>
+  <div class="takeaway">
+    <svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><g fill="none" stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="40" height="36" rx="2" fill="#fff"/><rect x="12" y="14" width="10" height="8" fill="#ece7f8"/><rect x="32" y="14" width="10" height="8" fill="#fdf3d4"/><rect x="22" y="32" width="10" height="8" fill="#e2f2e6"/><path d="M22 18 H32 M37 22 L30 32" stroke="#2f6fd6"/></g></svg>
+    <p>Could you draw your organisation's town on one page? Try it now: the places, the roads between them and who looks after each one.</p>
+  </div>
+  <nav class="lessonnav" aria-label="Lessons"><a href="../">← <b>All lessons</b></a><a href="../02-the-buildings/">Lesson 2 · <b>The Buildings</b> (This is a Common Data Environment!) →</a></nav>
+</section>
+
+</div>
+</main>
+<footer class="site-footer"><div class="in">
+  <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
+  <span>&copy; 2026 InfoTown</span>
+</div></footer>
+<script src="../../assets/lesson.js"></script>
+</body>
+</html>
