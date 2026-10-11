@@ -8,12 +8,18 @@
 <meta property="og:title" content="Follow the Process · InfoTown">
 <meta property="og:description" content="From the client's requirement to handover and beyond: watch what gets made, where it goes, and how its label changes at every stop.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://www.infotown.co.uk/assets/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="InfoTown: every organisation has a hidden town. The Town Square with the Academy, Stories, Phrase Book, Visitor Centre and Manifesto.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.infotown.co.uk/assets/share.png">
 <meta name="theme-color" content="#1b3478">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610112235">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610112251">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -100,11 +106,7 @@
   </g>
   <path id="j-route" d="" fill="none" stroke="none"/>
   <path id="j-trail" d="" fill="none" stroke="#1b3478" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round" opacity=".55"/>
-  <g id="j-parcel" stroke="#1b3478" stroke-width="1.8" stroke-linejoin="round">
-    <use href="#jbox" id="j-boxuse"/>
-    <rect id="j-tagbg" x="16" y="-28" width="64" height="22" rx="11" fill="#1b3478" stroke="none"/>
-    <text id="j-tag" x="48" y="-13" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700" fill="#fff" stroke="none"></text>
-  </g>
+  <g id="j-parcels"></g>
 </svg>
     </div>
 
@@ -113,6 +115,7 @@
         <span class="eyebrow" id="j-count"></span>
         <h3 id="j-title"></h3>
         <p id="j-text"></p>
+        <p class="jhist" id="j-hist"></p>
         <a id="j-link" class="jlink" href="#"></a>
       </div>
       <div class="labelcard jlabel">
@@ -127,15 +130,20 @@
         </dl>
       </div>
     </div>
+
+    <div class="jreg">
+      <div class="jreghead"><span class="eyebrow">The register</span><span class="jregnote">Every item on the job so far, as the CDE sees it right now</span></div>
+      <div class="natable"><table id="j-reg"><thead><tr><th>Item</th><th>Number</th><th>Rev</th><th>Status</th><th>Where</th></tr></thead><tbody></tbody></table></div>
+    </div>
   </div>
 
   <aside class="tipbox" aria-label="Sam's Heads Up">
     <div class="tipsam" aria-hidden="true"><svg viewBox="0 0 48 48" width="52" height="52"><g fill="none" stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="26" r="15" fill="#fff"/><path d="M10 22 Q12 9 24 9 Q36 9 38 22 Q31 16 24 17 Q17 16 10 22 Z" fill="#4a4f5c"/><rect x="14" y="24" width="8.5" height="6" rx="2" fill="#fff"/><rect x="25.5" y="24" width="8.5" height="6" rx="2" fill="#fff"/><path d="M22.5 27 h3"/><path d="M15 21.5 l6 1.6 M33 21.5 l-6 1.6"/><path d="M19 36 h10"/></g></svg></div>
     <div>
       <span class="tipkicker">Sam's Heads Up</span>
-      <p class="tiphead">This is the tidy version</p>
-      <p>A real job runs hundreds of these threads at once, and each one loops round the shared table more times than anyone budgeted for. The codes here are the UK ones from the National Annex to ISO 19650. Your project's BEP, naming convention and status codes may differ, so check them.</p>
-      <p>What doesn't change: <b>it starts with a requirement, every move changes a label, and every change leaves a trail.</b> If you can't follow the thread from the client's need to the thing in the ground, neither can anyone else.</p>
+      <p class="tiphead">One requirement, lots of parcels</p>
+      <p>Notice how one need from the client spawns a whole family: the requirements, the plan, the drawing, the red-line, the inspection record, the as-built and the handover pack. Each one is its own parcel with its own number, and each one leaves its own trail. A real job runs thousands of these at once.</p>
+      <p>The codes are the UK ones from the National Annex to ISO 19650, with A5 for construction and A6 for the as-built record. Your project's BEP, naming convention and status codes may differ, so check them.</p>
     </div>
   </aside>
 
@@ -145,10 +153,10 @@
     <p>The same process as a table: the trail your CDE should be able to show for this one requirement. This is what "can you prove it?" looks like.</p>
   </div>
   <div class="cardwrap"><table class="jtable" id="j-table">
-    <thead><tr><th scope="col">#</th><th scope="col">Stage</th><th scope="col">Item</th><th scope="col">Where</th><th scope="col">Revision</th><th scope="col">Status</th></tr></thead>
+    <thead><tr><th scope="col">#</th><th scope="col">Stage</th><th scope="col">Item</th><th scope="col">Rev</th><th scope="col">Status</th><th scope="col">Where</th></tr></thead>
     <tbody></tbody>
   </table></div>
-  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Being developed inside a task team</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>Suitable for coordination within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Suitable for information and reference by other task teams</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Suitable for review and comment within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Suitable for review and authorisation by the lead appointed party</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Suitable for review and acceptance by the appointing party</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off with no comments: authorised (for the lead) or accepted (for the client). n is the work stage</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>Partly signed off with comments. Deprecated: don't use it on new work</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, and the n is the work stage. The Annex ties the stages to BS 8536-1 (buildings) and BS 8536-2 (infrastructure), which follow the familiar Stage 0 to 7 pattern of the RIBA Plan of Work, so a construction issue is typically A5 and handover A6, unless your project's information standard sets its own. What each A code is issued for still has to be written in that standard.</p><h4>Revisions</h4>
+  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Being developed inside a task team</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>Suitable for coordination within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Suitable for information and reference by other task teams</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Suitable for review and comment within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Suitable for review and authorisation by the lead appointed party</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Suitable for review and acceptance by the appointing party</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off with no comments: authorised (for the lead) or accepted (for the client). n is the work stage</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>Partly signed off with comments. Deprecated: don't use it on new work</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, and the n is the work stage. The Annex ties the stages to BS 8536-1 (buildings) and BS 8536-2 (infrastructure), which follow the familiar Stage 0 to 7 pattern of the RIBA Plan of Work, so on this site a construction issue is A5 and the as-built record is A6, unless your project's information standard sets its own. What each A code is issued for still has to be written in that standard.</p><h4>Revisions</h4>
 <div class="natable"><table><thead><tr><th>While it's…</th><th>Revision looks like</th><th>Meaning</th></tr></thead><tbody>
 <tr><td>Work in progress</td><td><code>P01.01</code>, <code>P01.02</code>…</td><td>Preliminary revision plus a version number. Every new item starts at <code>P01.01</code></td></tr>
 <tr><td>Shared</td><td><code>P01</code>, <code>P02</code>…</td><td>Preliminary revision, two digits, prefixed P</td></tr>
@@ -157,8 +165,8 @@
 <div class="natable"><table><thead><tr><th>Field</th><th>The question it answers</th><th>On Drawing 042</th></tr></thead><tbody>
 <tr><td>Project</td><td>Which project? One code for the whole job, separate from anyone's own job number</td><td><code>P1234</code></td></tr>
 <tr><td>Originator</td><td>Which organisation produced it?</td><td><code>ABC</code></td></tr>
-<tr><td>Functional Breakdown</td><td>Which system, element or work package? <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>DRN</code></td></tr>
-<tr><td>Spatial Breakdown</td><td>Where? A level, area, chainage or grid. <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>A2</code></td></tr>
+<tr><td>Functional Breakdown</td><td>Which system, element or work package? <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>XX</code></td></tr>
+<tr><td>Spatial Breakdown</td><td>Where? A level, area, chainage or grid. <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>XX</code></td></tr>
 <tr><td>Form</td><td>What form of information is it?</td><td><code>D</code></td></tr>
 <tr><td>Discipline</td><td>Which technical discipline produced it?</td><td><code>C</code></td></tr>
 <tr><td>Number</td><td>Which one? A fixed-length number with leading zeros</td><td><code>0042</code></td></tr>
@@ -172,98 +180,148 @@
 
 <script>
 (function () {
-  var D42 = 'P1234-ABC-DRN-A2-D-C-0042';
+  var D42 = 'P1234-ABC-XX-XX-D-C-0042';
+  var ITEMS = {
+    eir:  'Client\'s requirements (EIR)',
+    plan: 'Delivery plan (the recipe)',
+    d042: 'Drawing 042: drainage layout',
+    mark: 'Red-line mark-up of Drawing 042',
+    insp: 'Inspection record: Area 2 drainage',
+    pack: 'Handover pack'
+  };
+  var S = '';
   var STEPS = [
-    { s: 'Requirement', t: 'It starts with a need', l: [4, 'The Recipe for Success', '04-the-recipe-for-success'],
-      x: 'Not with a drawing. The client needs Area 2 drained, and needs proof it was built right so they can look after it for the next forty years. That goes into their requirements: what they need to know, and when.',
-      pos: [1050, 110], path: null,
-      f: { item: 'The client\'s requirement', number: '–', rev: '–', status: '–', where: 'Client Town', who: 'The client' }, state: ['Requirement', 'planned'], tag: 'NEED' },
-    { s: 'Plan', t: 'Onto the recipe', l: [4, 'The Recipe for Success', '04-the-recipe-for-success'],
-      x: 'The teams work out what that takes: a drainage layout (Drawing 042), inspections to prove it, an as-built and a maintenance manual at the end. All on the recipe, with who and when. Including the bits for the end, because the end always comes.',
-      pos: [660, 66], path: 'M1050 110 L980 66 H660',
-      f: { item: 'The recipe', status: 'Drawing 042, inspections, as-built, O&M manual', where: 'The recipe (the delivery plan)', who: 'The teams, together' }, state: ['Planned', 'planned'], tag: 'PLAN' },
-    { s: 'Set up', t: 'The site gets ready', l: [5, 'Connecting the Site', '05-connecting-the-site'],
+    { s: 'Requirement', k: 'eir', t: 'The requirements arrive through the CDE', l: [4, 'The Recipe for Success', '04-the-recipe-for-success'],
+      x: 'It starts with a need, and the need travels like anything else. The client (code XYZ here) issues its exchange information requirements down the client line into the Site Office, where everyone reads the same version. Not as an email attachment from 2019.',
+      pos: [690, 232], path: 'M1050 110 H920 L840 200 H760 L690 232',
+      f: { number: 'P1234-XYZ-XX-XX-T-X-0001', rev: 'C01', status: 'Published by the client', where: 'Site Office: published', who: 'The whole delivery team' }, state: ['Requirement', 'planned'], tag: 'EIR' },
+    { s: 'Plan', k: 'plan', t: 'Onto the recipe', l: [4, 'The Recipe for Success', '04-the-recipe-for-success'],
+      x: 'The teams read the requirements and work out what it takes: Drawing 042, inspections to prove it, an as-built and an O&M manual at the end. All on the delivery plan, with who and when. It\'s a parcel too: a list, kept in the CDE.',
+      pos: [660, 66], path: null, spawn: true,
+      f: { number: 'P1234-ABC-XX-XX-L-X-0002', rev: 'C01', status: 'Agreed at appointment', where: 'The recipe', who: 'The teams, together' }, state: ['Planned', 'planned'], tag: 'PLAN' },
+    { s: 'Set up', k: null, t: 'The site gets ready', l: [5, 'Connecting the Site', '05-connecting-the-site'],
       x: 'Before anyone draws a line, Sam builds the Site Office, connects every town to it, puts up the signposts and tests the lot. Mobilisation: boring, invisible, and the reason everything after this works.',
-      pos: [660, 240], path: 'M660 66 V240',
-      f: { item: 'The Site Office', status: 'Built, connected and tested', where: 'The project site', who: 'Sam' }, state: ['Ready', 'planned'], tag: 'GO' },
-    { s: 'Design', t: 'Made in Alex\'s room', l: [6, 'Making It Together', '06-making-it-together'],
-      x: 'Now Drawing 042 exists. Alex draws it in the design team\'s own room and gives it its proper label straight away. Work in progress: nobody should be building on it yet.',
-      pos: [150, 110], path: 'M660 240 L613 250 L560 190 L480 110 H150',
-      f: { item: 'Drawing 042: drainage layout, Area 2', number: D42, rev: 'P01.01', status: 'S0 · Work in progress', where: 'Designer Town: Alex\'s room', who: 'Alex' }, state: ['Work in progress', 'wip'], tag: 'S0' },
-    { s: 'Check & approve', t: 'Through the checkpoints', l: [9, 'The Checkpoints', '09-the-checkpoints'],
-      x: 'Originate, check, review, approve. The working versions roll up into the first proper revision, approved for sharing. (Tempting at this point: WhatsApp it straight to Dave. Alex doesn\'t. Good.)',
+      f: { item: 'The Site Office (the CDE)', number: '–', rev: '–', status: 'Built, connected and tested', where: 'The project site', who: 'Sam' }, state: ['Ready', 'planned'] },
+    { s: 'Design', k: 'd042', t: 'Drawing 042 is born', l: [6, 'Making It Together', '06-making-it-together'],
+      x: 'Straight off the recipe, Alex starts Drawing 042 in the design team\'s own room and gives it its proper label from the start. Work in progress: nobody should be building on it yet.',
+      pos: [150, 110], path: null, spawn: true,
+      f: { number: D42, rev: 'P01.01', status: 'S0 · Work in progress', where: 'Designer Town: Alex\'s room', who: 'Alex' }, state: ['Work in progress', 'wip'], tag: 'S0' },
+    { s: 'Check & approve', k: 'd042', t: 'Through the checkpoints', l: [9, 'The Checkpoints', '09-the-checkpoints'],
+      x: 'Originate, check, review, approve. The working versions roll up into the first proper preliminary revision, shared for coordination. (Tempting at this point: WhatsApp it straight to Dave. Alex doesn\'t. Good.)',
       pos: [440, 110], path: 'M150 110 H440',
-      f: { rev: 'P01', status: 'S1 · Suitable for coordination', where: 'Design line, through the checkpoints', who: 'The approver' }, state: ['Approved for sharing', 'wip'], tag: 'S1' },
-    { s: 'Share & coordinate', t: 'On the shared table, and round again', l: [6, 'Making It Together', '06-making-it-together'],
-      x: 'Booked into the Site Office and onto the shared table. The drain hits a beam, comments come back, and it goes round the loop twice more: P02 for comment, then P03, shared as S4 for the lead to authorise. That\'s coordination, and it\'s meant to happen here, not on site.',
+      f: { rev: 'P01', status: 'S1 · Suitable for coordination', where: 'Design line, checkpoints', who: 'The approver' }, state: ['Shared', 'shared'], tag: 'S1' },
+    { s: 'Coordinate', k: 'd042', t: 'On the shared table, round the loop', l: [6, 'Making It Together', '06-making-it-together'],
+      x: 'Onto the shared table. The drain hits a beam, Alex fixes it in the room, and it comes back as P02 for the other teams and the client to comment on. That\'s coordination, and it\'s meant to happen here, not on site.',
       pos: [613, 250], path: 'M440 110 H480 L560 190 L613 250',
-      f: { rev: 'P03', status: 'S4 · Suitable for review and authorisation', where: 'Site Office: shared', who: 'Everyone on the project can see it' }, state: ['Shared', 'shared'], tag: 'S4' },
-    { s: 'Authorise & accept', t: 'Signed off and published', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'The lead firm authorises it, and it goes up the client line as S5, for the client to accept. The Clerk of Works accepts it, and it comes back to the published shelf as the first contractual revision with an A code. The number is the work stage: A5 here, for Stage 5, construction. This is now the version everyone builds from.',
-      pos: [707, 250], path: 'M613 250 L660 200 H800 H840 L920 110 H1050 H920 L840 200 H760 L707 250',
-      f: { rev: 'C01', status: 'A5 · Accepted for Stage 5 (construction)', where: 'Site Office: published', who: 'Everyone who builds from it' }, state: ['Published', 'published'], tag: 'A5' },
-    { s: 'Issue to site', t: 'Out to site', l: [11, 'Using Information', '11-using-information'],
-      x: 'Down the site line. Dave searches the site app for "Area 2 drainage", finds C01, checks it\'s published and current. Thirty seconds, including the tea.',
+      f: { rev: 'P02', status: 'S3 · Suitable for review and comment', where: 'Site Office: shared', who: 'The other teams and the client, commenting' }, state: ['Shared', 'shared'], tag: 'S3' },
+    { s: 'Authorise', k: 'd042', t: 'Comments in, then authorised', l: [10, 'Handing Over', '10-handing-over'],
+      x: 'Comments picked up, round the checkpoints again, and it\'s shared as P03 with S4 for the lead firm to authorise. They check it fits with everything else on the recipe, and authorise it.',
+      pos: [800, 200], path: 'M613 250 L660 200 H800',
+      f: { rev: 'P03', status: 'S4 · Suitable for review and authorisation', where: 'Authorise: the lead firm', who: 'The lead appointed party' }, state: ['Shared', 'shared'], tag: 'S4' },
+    { s: 'Accept', k: 'd042', t: 'Up to the client for acceptance', l: [10, 'Handing Over', '10-handing-over'],
+      x: 'Authorised, it\'s shared up the client line with S5, for the client to review and accept. Same revision, new status: the status says why it\'s been shared.',
+      pos: [1050, 110], path: 'M800 200 H840 L920 110 H1050',
+      f: { rev: 'P03', status: 'S5 · Suitable for review and acceptance', where: 'Client Town', who: 'The Clerk of Works' }, state: ['Shared', 'shared'], tag: 'S5' },
+    { s: 'Publish', k: 'd042', t: 'Accepted: A5, on the published shelf', l: [10, 'Handing Over', '10-handing-over'],
+      x: 'Accepted. It comes back down the client line and onto the published shelf as the first contractual revision, C01, with A5: signed off for Stage 5, construction. Now, and only now, it\'s for building from.',
+      pos: [707, 250], path: 'M1050 110 H920 L840 200 H760 L707 250',
+      f: { rev: 'C01', status: 'A5 · Accepted for construction', where: 'Site Office: published', who: 'Everyone who builds from it' }, state: ['Published', 'published'], tag: 'A5' },
+    { s: 'Issue to site', k: 'd042', t: 'Out to site, and built', l: [11, 'Using Information', '11-using-information'],
+      x: 'Down the site line. Dave finds C01 on the site app, checks it\'s published and current, and digs the trench. Once.',
       pos: [1050, 380], path: 'M707 250 L760 270 H840 L920 380 H1050',
-      f: { where: 'The site, on Dave\'s tablet', who: 'Dave' }, state: ['In use', 'published'], tag: 'A5' },
-    { s: 'Build', t: 'Built, once', l: [11, 'Using Information', '11-using-information'],
-      x: 'The trench goes in to C01. Once. On the day, the pipe has to move 300mm east round a buried cable nobody knew about. Dave notes it. Remember that: it matters in two stops\' time.',
-      pos: [1050, 380], path: null,
-      f: { item: 'Drawing 042, and a real trench', who: 'Dave and the gang' }, state: ['In use', 'published'], tag: 'A5' },
-    { s: 'Evidence', t: 'Proof, as its own parcel', l: [11, 'Using Information', '11-using-information'],
-      x: 'The inspection happens on the site app, with photos, and the Clerk of Works signs it. It goes back up the site line as a brand new parcel with its own label. Evidence is information too, and it\'s the bit everyone forgets until they need it.',
-      pos: [613, 250], path: 'M1050 380 H920 L840 270 H760 L613 250',
-      f: { item: 'Inspection record: Area 2 drainage', number: 'P1234-TCO-DRN-A2-T-C-0107', rev: 'C01', status: 'Signed off by the Clerk of Works', where: 'Site Office: shared', who: 'Dave, then the Clerk of Works' }, state: ['Shared', 'shared'], tag: 'EV' },
-    { s: 'As-built', t: 'Drawing 042 tells the truth', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'Drawing 042 is updated to show where the pipe really went (300mm east, thanks, cable). Round the checkpoints again, signed off again, and back on the published shelf as C02 with A6: the as-built, accepted at Stage 6, handover.',
-      pos: [707, 250], path: 'M613 250 L660 260 H707',
-      f: { item: 'Drawing 042, as built', number: D42, rev: 'C02', status: 'A6 · Accepted for Stage 6 (handover)', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'A6' },
-    { s: 'Handover', t: 'Handed over', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'The handover pack goes to the client: the as-built, the inspection records and the O&M manual. Exactly what the recipe said, no more. Authorised by the lead, accepted by the client. A copy goes home to your own Records Office too.',
-      pos: [1050, 110], path: 'M707 250 L760 200 H840 L920 110 H1050',
-      f: { item: 'The handover pack', number: 'As-built, inspection records, O&M manual', rev: '–', status: 'Authorised and accepted', where: 'Client Town', who: 'The client' }, state: ['Handed over', 'record'], tag: 'DONE' },
-    { s: 'Use', t: 'Five years later', l: [11, 'Using Information', '11-using-information'],
+      f: { where: 'The site, on Dave\'s tablet', who: 'Dave and the gang' }, state: ['In use', 'published'], tag: 'A5' },
+    { s: 'Red-line', k: 'mark', t: 'The red-line goes back', l: [11, 'Using Information', '11-using-information'],
+      x: 'On the day, the pipe has to move 300mm east round a buried cable nobody knew about. Dave red-lines Drawing 042 and shares the mark-up back through the Site Office for Alex. A new parcel, pointing at the old one.',
+      pos: [613, 250], path: 'M1050 380 H920 L840 270 H760 L613 250', spawnAt: [1050, 380],
+      f: { number: 'P1234-ABC-XX-XX-D-C-0108', rev: 'P01', status: 'S2 · Suitable for information', where: 'Site Office: shared', who: 'Dave, for Alex' }, state: ['Shared', 'shared'], tag: 'S2' },
+    { s: 'Evidence', k: 'insp', t: 'Proof, as its own parcel', l: [11, 'Using Information', '11-using-information'],
+      x: 'The inspection is done on the site app, with photos, and the Clerk of Works signs it off. It\'s a separate parcel with its own number, spawned by the work on Drawing 042, and it lands on the published shelf. Evidence is information too.',
+      pos: [712, 272], path: 'M1050 380 H920 L840 270 H760 L712 272', spawnAt: [1050, 380],
+      f: { number: 'P1234-ABC-XX-XX-T-C-0107', rev: 'C01', status: 'A5 · Accepted (signed off)', where: 'Site Office: published', who: 'The Clerk of Works' }, state: ['Published', 'published'], tag: 'A5' },
+    { s: 'As-built', k: 'd042', t: 'Drawing 042 tells the truth', l: [10, 'Handing Over', '10-handing-over'],
+      x: 'Alex picks up the red-line, updates Drawing 042 in the room, and sends it round the checkpoints, S4 and S5 again. It\'s accepted as the record of what was really built: C02, A6.',
+      pos: [707, 250], path: 'M1050 380 H920 L840 270 H760 L560 270 L560 190 L480 110 H150 H480 L560 190 L613 250 L707 250',
+      f: { rev: 'C02', status: 'A6 · Accepted as the record', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'A6' },
+    { s: 'Handover', k: 'pack', t: 'Handed over', l: [10, 'Handing Over', '10-handing-over'],
+      x: 'The handover pack goes to the client: the as-built, the inspection records and the O&M manual. Exactly what the recipe said, no more. A copy goes home to your own Records Office too.',
+      pos: [1050, 110], path: 'M707 250 L760 200 H840 L920 110 H1050', spawnAt: [707, 250],
+      f: { number: 'As-built, inspection records, O&M manual', rev: 'C01', status: 'A6 · Accepted at handover', where: 'Client Town', who: 'The client' }, state: ['Handed over', 'record'], tag: 'A6' },
+    { s: 'Use', k: 'pack', t: 'Five years later', l: [11, 'Using Information', '11-using-information'],
       x: 'The drain blocks. The client\'s maintenance team look it up in their Asset System: what\'s there, where it really is (300mm east) and when it was inspected. They dig in the right place, first time. That was the point of all of it.',
       pos: [1050, 110], path: null,
-      f: { item: 'Asset record: Area 2 drain', number: '–', rev: '–', status: 'Live in the Asset System', where: 'Client Town: the Asset System', who: 'The maintenance team' }, state: ['In use', 'published'], tag: 'USE' }
+      f: { status: 'Live in the client\'s Asset System', where: 'Client Town: the Asset System', who: 'The maintenance team' }, state: ['In use', 'published'], tag: 'USE' }
   ];
 
-  var cur = {};
-  STEPS.forEach(function (s) { Object.keys(s.f).forEach(function (k) { cur[k] = s.f[k]; }); s.full = JSON.parse(JSON.stringify(cur)); });
+  // carry each item's label forward, and keep a history per item
+  var cur = {}, hist = {}, last = {};
+  STEPS.forEach(function (s, n) {
+    if (s.k) {
+      var c = cur[s.k] || { item: ITEMS[s.k] };
+      Object.keys(s.f).forEach(function (f) { c[f] = s.f[f]; });
+      cur[s.k] = c; s.full = JSON.parse(JSON.stringify(c));
+      var h = hist[s.k] || [], e = s.full.rev + ' · ' + s.tag;
+      if (/^[SA]\d$/.test(s.tag) && h[h.length - 1] !== e) h = h.concat([e]);
+      hist[s.k] = h;
+      s.hist = hist[s.k].slice();
+      last[s.k] = s.pos;
+    } else { s.full = s.f; s.hist = []; }
+    s.snap = JSON.parse(JSON.stringify({ cur: cur, last: last }));
+  });
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var $ = function (id) { return document.getElementById(id); };
-  var parcel = $('j-parcel'), route = $('j-route'), trail = $('j-trail');
-  var dots = $('j-dots'), i = 0, anim = null, started = false;
+  var NS = 'http://www.w3.org/2000/svg';
+  var layer = $('j-parcels'), route = $('j-route'), trail = $('j-trail');
+  var dots = $('j-dots'), i = 0, anim = null, started = false, P = {};
   var FIELDS = ['item', 'number', 'rev', 'status', 'where', 'who'];
+
+  Object.keys(ITEMS).forEach(function (k) {
+    var g = document.createElementNS(NS, 'g'); g.setAttribute('stroke', '#1b3478'); g.setAttribute('stroke-width', '1.8'); g.setAttribute('stroke-linejoin', 'round'); g.style.display = 'none';
+    g.innerHTML = '<use href="#jbox"/><rect x="16" y="-28" width="64" height="22" rx="11" fill="#1b3478" stroke="none"/><text x="48" y="-13" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700" fill="#fff" stroke="none"></text>';
+    layer.appendChild(g); P[k] = g;
+  });
+  function place(k, x, y) { P[k].setAttribute('transform', 'translate(' + x + ' ' + y + ')'); }
 
   STEPS.forEach(function (s, n) {
     var li = document.createElement('li'); var b = document.createElement('button');
     b.type = 'button'; b.textContent = n + 1; b.title = s.s; b.setAttribute('aria-label', 'Step ' + (n + 1) + ': ' + s.s);
     b.addEventListener('click', function () { go(n); }); li.appendChild(b); dots.appendChild(li);
   });
-
   var tb = document.querySelector('#j-table tbody');
   STEPS.forEach(function (s, n) {
     var tr = document.createElement('tr');
-    [n + 1, s.s, s.full.item, s.full.where, s.full.rev, s.full.status].forEach(function (v) { var td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+    [n + 1, s.s, s.full.item, s.full.rev, s.full.status, s.full.where].forEach(function (v) { var td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
     tb.appendChild(tr);
   });
-
-  function place(x, y) { parcel.setAttribute('transform', 'translate(' + x + ' ' + y + ')'); }
+  var reg = document.querySelector('#j-reg tbody');
 
   function render(n, prev) {
     var s = STEPS[n];
     $('j-count').textContent = 'Stage ' + (n + 1) + ' of ' + STEPS.length + ' · ' + s.s;
-    $('j-title').textContent = s.t;
-    $('j-text').textContent = s.x;
+    $('j-title').textContent = s.t; $('j-text').textContent = s.x;
+    $('j-hist').innerHTML = s.hist && s.hist.length > 1 ? '<b>Its history so far:</b> ' + s.hist.map(function (h) { return '<code>' + h + '</code>'; }).join(' → ') : '';
     var a = $('j-link'); a.href = '../' + s.l[2] + '/'; a.textContent = 'More in Lesson ' + s.l[0] + ': ' + s.l[1] + ' →';
     var st = $('j-state'); st.textContent = s.state[0]; st.className = 'jstate ' + s.state[1];
     FIELDS.forEach(function (k) {
-      var dd = $('f-' + k), v = s.full[k]; var row = dd.parentNode;
+      var dd = $('f-' + k), v = s.full[k] || '–'; var row = dd.parentNode;
       if (dd.textContent !== v) { dd.textContent = v; if (prev !== undefined && !reduce) { row.classList.remove('changed'); void row.offsetWidth; row.classList.add('changed'); } }
     });
-    $('j-tag').textContent = s.tag;
+    // parcels: every item that exists by now sits where it last was; the active one is solid
+    Object.keys(P).forEach(function (k) {
+      var c = s.snap.cur[k], p = s.snap.last[k];
+      if (!c) { P[k].style.display = 'none'; return; }
+      P[k].style.display = ''; P[k].style.opacity = k === s.k ? 1 : .4;
+      P[k].querySelector('text').textContent = (STEPS.slice(0, n + 1).filter(function (q) { return q.k === k; }).pop() || {}).tag || '';
+      place(k, p[0], p[1]);
+    });
+    // register
+    reg.innerHTML = '';
+    Object.keys(ITEMS).forEach(function (k) {
+      var c = s.snap.cur[k]; if (!c) return;
+      var tr = document.createElement('tr'); if (k === s.k) tr.className = 'on';
+      [c.item, c.number, c.rev, c.status, c.where].forEach(function (v) { var td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+      reg.appendChild(tr);
+    });
     [].forEach.call(dots.querySelectorAll('button'), function (b, k) {
       b.className = k === n ? 'on' : (k < n ? 'done' : ''); if (k === n) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current');
     });
@@ -275,16 +333,18 @@
     if (anim) { cancelAnimationFrame(anim); anim = null; }
     var prev = started ? i : undefined; i = n; render(n, prev); started = true;
     var s = STEPS[n];
-    if (fwd && s.path && !reduce) {
-      route.setAttribute('d', s.path); trail.setAttribute('d', '');
-      var L = route.getTotalLength(), t0 = null, dur = Math.min(2600, 500 + L * 2.2);
+    trail.setAttribute('d', '');
+    if (!s.k || !s.path) return;
+    if (fwd && !reduce) {
+      route.setAttribute('d', s.path);
+      var L = route.getTotalLength(), t0 = null, dur = Math.min(3200, 500 + L * 2.0);
       var step = function (ts) {
         if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / dur); var e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-        var p = route.getPointAtLength(e * L); place(p.x, p.y);
+        var p = route.getPointAtLength(e * L); place(s.k, p.x, p.y);
         if (k < 1) anim = requestAnimationFrame(step); else { anim = null; trail.setAttribute('d', s.path); }
       };
       anim = requestAnimationFrame(step);
-    } else { place(s.pos[0], s.pos[1]); trail.setAttribute('d', s.path || ''); }
+    } else { trail.setAttribute('d', s.path); }
   }
 
   $('j-next').addEventListener('click', function () { if (i === STEPS.length - 1) go(0); else go(i + 1, true); });
