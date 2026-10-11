@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610111848">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610111921">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -49,19 +49,19 @@
   <div class="sechead">
     <span class="eyebrow">The scene</span>
     <h2 id="h-scene">Every town has two ways across it</h2>
-    <p>The main road is the one we built. It goes through the Post Office, where every parcel is booked in. The back alley is the shortcut people take when they're in a hurry. Both get the parcel there.</p>
+    <p>The proper route is the one we built. It goes through the Site Office, the project's CDE, where every parcel is booked in. The back alley is the shortcut people take when they're in a hurry. Both get the parcel there.</p>
   </div>
   <div class="scenebox">
     <div class="controls" role="group" aria-label="Highlight a route" data-target="scene">
       <span>Show:</span>
       <button type="button" data-mode="both" aria-pressed="true">Both routes</button>
-      <button type="button" data-mode="main" aria-pressed="false">The main road</button>
+      <button type="button" data-mode="main" aria-pressed="false">The proper route</button>
       <button type="button" data-mode="alley" aria-pressed="false">The back alley</button>
     </div>
     <div class="scenewrap">
 <svg class="scene" id="scene" viewBox="0 0 1200 570" role="img" aria-labelledby="scene-t scene-d">
   <title id="scene-t">InfoTown street scene</title>
-  <desc id="scene-d">A Design Office on the left and a Site Office on the right. Between them the main road runs past the Post Office (the CDE), where a gate records every parcel. Below, a back alley winds past bins, a gap in a fence, a phone and a USB stick. Footprints along the alley fade away before it reaches the Site Office.</desc>
+  <desc id="scene-d">The Design System on the left and a site cabin on the right. Between them the proper route runs through the Site Office (the project CDE), where a gate records every parcel. Below, a back alley winds past bins, a gap in a fence, a phone and a USB stick. Footprints along the alley fade away before it reaches the site cabin.</desc>
   <defs>
     <g id="pp"><circle cx="0" cy="8" r="7" fill="#fff"/><path d="M0 15 V40 M0 21 L-9 33 M0 21 L9 33 M0 40 L-7 60 M0 40 L7 60" fill="none"/></g>
     <g id="ph"><use href="#pp"/><path d="M-8 6 Q0 -4 8 6 Z" fill="#fde6a0"/><path d="M-10 6 H10" fill="none"/></g>
@@ -82,22 +82,22 @@
     <path d="M0 372 H1200 M0 430 H1200" fill="none" stroke-width="1.5"/>
     <path d="M0 401 H1200" fill="none" stroke="#c8d4ec" stroke-dasharray="16 12"/>
 
-    <!-- Design Office -->
+    <!-- Design System -->
     <polygon points="46,202 170,140 294,202" fill="#ece7f8"/>
     <rect x="58" y="202" width="224" height="170" fill="#ece7f8"/>
     <rect x="100" y="214" width="140" height="28" rx="3" fill="#fff"/>
-    <text x="170" y="233" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">DESIGN OFFICE</text>
+    <text x="170" y="233" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">DESIGN SYSTEM</text>
     <rect x="78" y="258" width="44" height="36" fill="#fff"/><path d="M100 258 V294" fill="none"/>
     <rect x="218" y="258" width="44" height="36" fill="#fff"/><path d="M240 258 V294" fill="none"/>
     <rect x="150" y="312" width="40" height="60" fill="#fff"/>
     <use href="#pp" x="128" y="310"/>
 
-    <!-- Post Office (CDE) -->
+    <!-- Site Office (CDE) -->
     <polygon points="458,196 600,140 742,196" fill="#fdf3d4"/>
     <text x="600" y="186" text-anchor="middle" font-family="Lexend, sans-serif" font-size="14" font-weight="700" fill="#1b3478" stroke="none" letter-spacing="2">CDE</text>
     <rect x="470" y="196" width="260" height="176" fill="#fdf3d4"/>
     <rect x="526" y="206" width="148" height="28" rx="3" fill="#fff"/>
-    <text x="600" y="225" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">POST OFFICE</text>
+    <text x="600" y="225" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SITE OFFICE</text>
     <path d="M498 246 V372 M522 246 V372 M678 246 V372 M702 246 V372" fill="none" stroke-width="1.5"/>
     <path d="M580 372 V318 a20 20 0 0 1 40 0 V372" fill="#fff"/>
     <!-- recording gate over the road -->
@@ -108,11 +108,11 @@
     <use href="#pp" x="676" y="310"/>
     <rect x="686" y="330" width="12" height="9" fill="#fde6d8"/>
 
-    <!-- Site Office -->
+    <!-- Site Cabin -->
     <rect x="912" y="240" width="248" height="12" fill="#e2f2e6"/>
     <rect x="920" y="252" width="232" height="120" fill="#e2f2e6"/>
     <rect x="966" y="262" width="140" height="28" rx="3" fill="#fff"/>
-    <text x="1036" y="281" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SITE OFFICE</text>
+    <text x="1036" y="281" text-anchor="middle" font-family="Lexend, sans-serif" font-size="13" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SITE CABIN</text>
     <rect x="936" y="302" width="50" height="30" fill="#fff"/>
     <rect x="1094" y="302" width="44" height="30" fill="#fff"/>
     <rect x="1016" y="304" width="36" height="68" fill="#fff"/>
@@ -135,7 +135,7 @@
     <g fill="#fff" stroke="#2f6fd6" stroke-width="4">
       <circle cx="170" cy="418" r="9"/><circle cx="600" cy="418" r="9"/><circle cx="1036" cy="418" r="9"/>
     </g>
-    <text x="364" y="360" text-anchor="middle" font-family="Lexend, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" letter-spacing="2">THE MAIN ROAD</text>
+    <text x="364" y="360" text-anchor="middle" font-family="Lexend, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" letter-spacing="2">THE PROPER ROUTE</text>
     <text x="828" y="394" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="14" fill="#1b3478">Booked in: who · what · when · which version</text>
     <g stroke="#1b3478" stroke-width="1.5" stroke-linejoin="round"><use href="#box"><animateMotion dur="7s" repeatCount="indefinite" path="M170 418 H1036"/></use></g>
   </g>
@@ -177,7 +177,7 @@
 </svg>
     </div>
     <div class="legend">
-      <div><span class="swatch"></span><span><b>Main road.</b> Every stop is recorded.</span></div>
+      <div><span class="swatch"></span><span><b>The proper route.</b> Every stop is recorded.</span></div>
       <div><span class="swatch alley"></span><span><b>Back alley.</b> Faster, but it leaves no trail.</span></div>
     </div>
   </div>
@@ -185,12 +185,12 @@
 
 <section class="concept" aria-labelledby="h-reveal">
   <div class="cgrid">
-    <div class="idea"><span class="eyebrow">The InfoTown idea</span><p class="term">Every town has <strong>roads we built</strong> and <strong>back alleys people use</strong>. Both move parcels. <strong>Only one leaves a trail.</strong></p></div>
+    <div class="idea"><span class="eyebrow">The InfoTown idea</span><p class="term">Every town has <strong>routes we built</strong> and <strong>back alleys people use</strong>. Both move parcels. <strong>Only one leaves a trail.</strong></p></div>
     <div class="reveal">
     <span class="eyebrow">The reveal</span>
     <h2 id="h-reveal">This is an Information Exchange!</h2>
     <p class="big risk">The back alley is an informal exchange, and informal exchanges are a risk.</p>
-    <p class="small">ISO 19650 expects information to be shared through the CDE, so every container carries its status and revision and leaves a record of who shared it. The main road is that route. Anything that goes round it skips those protections.</p>
+    <p class="small">ISO 19650 expects information to be shared through the CDE, so every container carries its status and revision and leaves a record of who shared it. That's the proper route. Anything that goes round it skips those protections.</p>
   </div>
   </div>
 </section>
@@ -225,6 +225,6 @@
   <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
   <span>&copy; 2026 InfoTown</span>
 </div></footer>
-<script src="../../assets/lesson.js?v=202610111848"></script>
+<script src="../../assets/lesson.js?v=202610111921"></script>
 </body>
 </html>
