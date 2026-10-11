@@ -306,3 +306,4 @@ section{margin-top:40px}
 .square .jets path{animation:jet 2.4s linear infinite}
 @keyframes jet{to{stroke-dashoffset:-20}}
 @media (prefers-reduced-motion: reduce){.square .jets path{animation:none}.square .dest .bld{transition:none}}
+.subhead{font-family:Lexend,system-ui,sans-serif;font-size:1.35rem;line-height:1.25;color:var(--ink);margin:0}

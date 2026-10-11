@@ -8,18 +8,15 @@ Static website for **infotown.co.uk**. Plain HTML, one shared stylesheet, one sm
 index.html                 Town Square (home page)
 404.html                   "This parcel has no label" (page not found)
 academy/index.html         The Academy: 12 lessons in four parts
-academy/01-the-town/       Lesson 1  ✓
-academy/02-the-buildings/  Lesson 2  ✓
-academy/03-the-people/     Lesson 3  ✓
-academy/06-the-labels/     Lesson 6  ✓
-academy/07-roads-and-back-alleys/  Lesson 7  ✓
+academy/NN-lesson-name/    Lessons 1 to 12 (concept only)
+stories/index.html         All the stories
+stories/NN-story-name/     One story per lesson
+phrase-book/index.html     Every translation card in one place
 manifesto/index.html       The Manifesto
 assets/infotown.css        Shared styles (colours, type, lesson layout)
 assets/lesson.js           Route toggles, clickable explainers, reduced motion
 assets/favicon.svg         Browser icon
 ```
-
-`style.css` and `favicon.svg` in the root folder are from the first Manifesto page. Nothing uses them any more, so they can be deleted.
 
 ## Preview on your computer
 
