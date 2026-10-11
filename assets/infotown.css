@@ -454,3 +454,27 @@ section{margin-top:40px}
 .jregnote{font-size:14px;color:var(--muted)}
 #j-reg td:nth-child(2),#j-reg td:nth-child(3),#j-reg td:nth-child(4){font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13.5px}
 #j-reg tr.on td{background:#fdf3d4}
+/* Rex's diary */
+.bs-rex{display:flex;gap:12px;align-items:center;padding:10px 20px;border-top:1.5px dashed #ddd4f3;background:#fff8f2}
+.bs-rex svg{flex:none}
+.bs-rex p{margin:0;color:var(--ink);font-style:italic;line-height:1.45}
+.bs-rex b{font-style:normal;color:#c4521c;font-family:var(--display);font-weight:600}
+/* Speaker first, then the quote */
+.say::before,.say::after{content:none}
+.say .who{font-weight:700;color:#c4521c;margin-right:2px}
+.say .sq::before{content:"\201C"}.say .sq::after{content:"\201D"}
+/* Builder (mobilise the site) */
+.builder{display:grid;gap:10px;margin-bottom:12px}
+.bsteps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;counter-reset:b}
+.bsteps li{counter-increment:b;font:600 13px var(--display);color:var(--muted);border:1.5px solid var(--faint);border-radius:999px;padding:5px 12px;background:#fff}
+.bsteps li::before{content:counter(b) " · "}
+.bsteps li.now{border-color:var(--ink);color:var(--ink)}
+.bsteps li.done{background:#e2f2e6;border-color:#2e8b57;color:#1f6b43}
+.bsteps li.done::before{content:"✓ "}
+.bctl{display:flex;gap:10px;flex-wrap:wrap}
+.bnext{font:600 15px var(--display);background:var(--ink);color:#fff;border:0;border-radius:999px;padding:9px 18px;cursor:pointer}
+.breset{font:600 14px var(--display);background:#fff;color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}
+.bmsg{margin:0;color:var(--ink);font-weight:600}
+.scene .bhide{opacity:0;pointer-events:none}
+.scene [data-step]{transition:opacity .6s ease}
+@media (prefers-reduced-motion:reduce){.scene [data-step]{transition:none}}

@@ -83,3 +83,33 @@
   link.addEventListener('click', go);
   if (you) you.addEventListener('click', go);
 })();
+
+/* 4. Builder: reveal a scene step by step (Lesson 5: mobilise the site) */
+(function () {
+  var MSG = [
+    'The towns are there. The project site is an empty plot. Your job: mobilise it.',
+    'Site Office built, with the site cabins and the site apps next door. Empty, for now.',
+    'Design line, client line and home line connected. Every town can reach the Site Office.',
+    'Site apps plugged into the Site Office through the Underground. Out of sight, and automatic.',
+    'Signposts up. Everyone knows where each kind of work goes.',
+    'Gate set up: access given, and taken away again when people leave. Rex signs in.',
+    'Every line tested, end to end. Mobilised! Information can flow from day one.'
+  ];
+  var NEXT = ['Start: build the Site Office →', 'Next: connect the towns →', 'Next: plug in the site apps →', 'Next: put up the signposts →', 'Next: set up the gate →', 'Next: test everything →', 'Done. Start again ↺'];
+  document.querySelectorAll('.builder[data-target]').forEach(function (b) {
+    var scene = document.getElementById(b.dataset.target); if (!scene) return;
+    var parts = [].slice.call(scene.querySelectorAll('[data-step]'));
+    var lis = [].slice.call(b.querySelectorAll('.bsteps li'));
+    var next = b.querySelector('.bnext'), reset = b.querySelector('.breset'), msg = b.querySelector('.bmsg');
+    var n = 0, max = lis.length;
+    function show() {
+      parts.forEach(function (p) { var on = +p.dataset.step <= n; p.classList.toggle('bhide', !on); });
+      lis.forEach(function (li, k) { li.className = k < n ? 'done' : (k === n ? 'now' : ''); });
+      msg.textContent = MSG[n] || ''; next.textContent = NEXT[n] || 'Next →';
+      reset.hidden = n === 0 || n === max;
+    }
+    next.addEventListener('click', function () { n = n >= max ? 0 : n + 1; show(); });
+    reset.addEventListener('click', function () { n = 0; show(); });
+    show();
+  });
+})();

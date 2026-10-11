@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610112251">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610112320">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -156,7 +156,7 @@
     <thead><tr><th scope="col">#</th><th scope="col">Stage</th><th scope="col">Item</th><th scope="col">Rev</th><th scope="col">Status</th><th scope="col">Where</th></tr></thead>
     <tbody></tbody>
   </table></div>
-  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Being developed inside a task team</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>Suitable for coordination within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Suitable for information and reference by other task teams</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Suitable for review and comment within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Suitable for review and authorisation by the lead appointed party</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Suitable for review and acceptance by the appointing party</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off with no comments: authorised (for the lead) or accepted (for the client). n is the work stage</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>Partly signed off with comments. Deprecated: don't use it on new work</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, and the n is the work stage. The Annex ties the stages to BS 8536-1 (buildings) and BS 8536-2 (infrastructure), which follow the familiar Stage 0 to 7 pattern of the RIBA Plan of Work, so on this site a construction issue is A5 and the as-built record is A6, unless your project's information standard sets its own. What each A code is issued for still has to be written in that standard.</p><h4>Revisions</h4>
+  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Still being made, in the team's own room</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>On the shared table, so other teams can coordinate with it</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Shared so others can read and refer to it. Not for building</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Shared so others can comment on it</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Ready for the firm leading the work to check and sign off</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Ready for the client to check and accept</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off. The number is the work stage it's signed off for</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>An old code for "signed off, with comments". No longer used</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, and the n is the work stage. The Annex ties the stages to BS 8536-1 (buildings) and BS 8536-2 (infrastructure), which follow the familiar Stage 0 to 7 pattern of the RIBA Plan of Work, so on this site a construction issue is A5 and the as-built record is A6, unless your project's information standard sets its own. What each A code is issued for still has to be written in that standard.</p><h4>Revisions</h4>
 <div class="natable"><table><thead><tr><th>While it's…</th><th>Revision looks like</th><th>Meaning</th></tr></thead><tbody>
 <tr><td>Work in progress</td><td><code>P01.01</code>, <code>P01.02</code>…</td><td>Preliminary revision plus a version number. Every new item starts at <code>P01.01</code></td></tr>
 <tr><td>Shared</td><td><code>P01</code>, <code>P02</code>…</td><td>Preliminary revision, two digits, prefixed P</td></tr>
@@ -171,10 +171,8 @@
 <tr><td>Discipline</td><td>Which technical discipline produced it?</td><td><code>C</code></td></tr>
 <tr><td>Number</td><td>Which one? A fixed-length number with leading zeros</td><td><code>0042</code></td></tr>
 </tbody></table></div>
-<h4>Form codes</h4>
-<p class="nacodes"><code>D</code> drawing · <code>G</code> diagram · <code>I</code> image · <code>L</code> list (tables, schedules, data) · <code>M</code> model · <code>T</code> text · <code>V</code> video or audio</p>
-<h4>Discipline codes</h4>
-<p class="nacodes"><code>A</code> architecture · <code>B</code> building surveying · <code>C</code> civil engineering · <code>D</code> demolition · <code>E</code> electrical · <code>F</code> facilities / asset management · <code>G</code> ground engineering · <code>H</code> highways and transport · <code>L</code> landscape · <code>M</code> mechanical · <code>O</code> other · <code>P</code> public health · <code>Q</code> quantity surveying / cost · <code>R</code> project management · <code>S</code> structural · <code>T</code> town planning and building control · <code>W</code> water engineering · <code>X</code> not discipline-specific · <code>Y</code> topographical survey · <code>Z</code> multiple disciplines</p><p class="nasrc">Source: the UK National Annex to BS EN ISO 19650-2:2018 (Table NA.1, NA.3, Table NA.2 and NA.4.3), summarised in plain English. Your project's information standard can add codes to these, but shouldn't replace them.</p></div></details></section>
+<h4>The codes on Drawing 042</h4>
+<p class="nacodes">Form <code>D</code> is a drawing (<code>T</code> would be text, <code>L</code> a list or schedule). Discipline <code>C</code> is civil engineering (<code>X</code> means not discipline-specific). <code>XX</code> means a field isn't subdivided, <code>ZZ</code> means it covers several. The Annex has the full lists of form and discipline codes, and your project's information standard says which ones your job uses.</p><p class="nasrc">Based on the UK National Annex to BS EN ISO 19650-2 (naming, status and revision). Your project's information standard can add to these. ISO 19650 and its UK National Annex are © ISO and BSI. InfoTown explains them in its own words, for learning. For the full requirements, use the standard itself. Read more for free in the <a href="https://ukbimframework.org/guidance/" target="_blank" rel="noopener">UK BIM Framework guidance</a> from <a href="https://wearenima.im/uk-bim-framework/" target="_blank" rel="noopener">nima</a>.</p></div></details></section>
   <nav class="lessonnav" aria-label="Lessons"><a href="../12-putting-it-all-together/">← Lesson 12 · <b>Putting It All Together</b></a><a href="../">All lessons →</a></nav>
 </section>
 
@@ -199,7 +197,7 @@
       x: 'The teams read the requirements and work out what it takes: Drawing 042, inspections to prove it, an as-built and an O&M manual at the end. All on the delivery plan, with who and when. It\'s a parcel too: a list, kept in the CDE.',
       pos: [660, 66], path: null, spawn: true,
       f: { number: 'P1234-ABC-XX-XX-L-X-0002', rev: 'C01', status: 'Agreed at appointment', where: 'The recipe', who: 'The teams, together' }, state: ['Planned', 'planned'], tag: 'PLAN' },
-    { s: 'Set up', k: null, t: 'The site gets ready', l: [5, 'Connecting the Site', '05-connecting-the-site'],
+    { s: 'Set up', k: null, t: 'The site gets ready', l: [5, 'The Project Site', '05-the-project-site'],
       x: 'Before anyone draws a line, Sam builds the Site Office, connects every town to it, puts up the signposts and tests the lot. Mobilisation: boring, invisible, and the reason everything after this works.',
       f: { item: 'The Site Office (the CDE)', number: '–', rev: '–', status: 'Built, connected and tested', where: 'The project site', who: 'Sam' }, state: ['Ready', 'planned'] },
     { s: 'Design', k: 'd042', t: 'Drawing 042 is born', l: [6, 'Making It Together', '06-making-it-together'],
@@ -222,10 +220,10 @@
       x: 'Authorised, it\'s shared up the client line with S5, for the client to review and accept. Same revision, new status: the status says why it\'s been shared.',
       pos: [1050, 110], path: 'M800 200 H840 L920 110 H1050',
       f: { rev: 'P03', status: 'S5 · Suitable for review and acceptance', where: 'Client Town', who: 'The Clerk of Works' }, state: ['Shared', 'shared'], tag: 'S5' },
-    { s: 'Publish', k: 'd042', t: 'Accepted: A5, on the published shelf', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'Accepted. It comes back down the client line and onto the published shelf as the first contractual revision, C01, with A5: signed off for Stage 5, construction. Now, and only now, it\'s for building from.',
-      pos: [707, 250], path: 'M1050 110 H920 L840 200 H760 L707 250',
-      f: { rev: 'C01', status: 'A5 · Accepted for construction', where: 'Site Office: published', who: 'Everyone who builds from it' }, state: ['Published', 'published'], tag: 'A5' },
+    { s: 'Publish', k: 'd042', t: 'Accepted, then re-issued as C01 A5', l: [10, 'Handing Over', '10-handing-over'],
+      x: 'The client accepts P03. The acceptance comes back down the line to Alex, who re-issues the drawing as the first contractual revision: C01, with A5, signed off for Stage 5, construction. It goes onto the published shelf. Now, and only now, it\'s for building from.',
+      pos: [707, 250], path: 'M1050 110 H920 L840 200 H760 L613 250 L560 190 L480 110 H150 H480 L560 190 L613 250 L707 250',
+      f: { rev: 'C01', status: 'A5 · Accepted for construction', where: 'Site Office: published', who: 'Alex re-issues it; everyone builds from it' }, state: ['Published', 'published'], tag: 'A5' },
     { s: 'Issue to site', k: 'd042', t: 'Out to site, and built', l: [11, 'Using Information', '11-using-information'],
       x: 'Down the site line. Dave finds C01 on the site app, checks it\'s published and current, and digs the trench. Once.',
       pos: [1050, 380], path: 'M707 250 L760 270 H840 L920 380 H1050',
@@ -239,7 +237,7 @@
       pos: [712, 272], path: 'M1050 380 H920 L840 270 H760 L712 272', spawnAt: [1050, 380],
       f: { number: 'P1234-ABC-XX-XX-T-C-0107', rev: 'C01', status: 'A5 · Accepted (signed off)', where: 'Site Office: published', who: 'The Clerk of Works' }, state: ['Published', 'published'], tag: 'A5' },
     { s: 'As-built', k: 'd042', t: 'Drawing 042 tells the truth', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'Alex picks up the red-line, updates Drawing 042 in the room, and sends it round the checkpoints, S4 and S5 again. It\'s accepted as the record of what was really built: C02, A6.',
+      x: 'Alex picks up the red-line and updates Drawing 042 in the room. It goes round again as P04: S4 for the lead to authorise, S5 for the client to accept. Once it\'s accepted, Alex re-issues it as the record of what was really built: C02, with A6.',
       pos: [707, 250], path: 'M1050 380 H920 L840 270 H760 L560 270 L560 190 L480 110 H150 H480 L560 190 L613 250 L707 250',
       f: { rev: 'C02', status: 'A6 · Accepted as the record', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'A6' },
     { s: 'Handover', k: 'pack', t: 'Handed over', l: [10, 'Handing Over', '10-handing-over'],
