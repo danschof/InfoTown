@@ -393,3 +393,21 @@ section{margin-top:40px}
 .castcard .seen{margin:0;font-size:15px;color:var(--muted)}
 .castcard .seen a{color:var(--main);font-weight:600}
 @media (max-width:560px){.cast{grid-template-columns:1fr}.castcard{grid-template-columns:1fr}.castcard .fig{justify-self:start}.castcard dl>div{grid-template-columns:1fr;gap:0}}
+/* From the UK National Annex */
+.naref{margin:26px 0 8px}
+.naref details{border:1.5px solid var(--ink);border-radius:10px;background:#fbfcfe}
+.naref summary{cursor:pointer;padding:14px 18px;font-family:var(--display);font-weight:600;color:var(--ink);list-style:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.naref summary::-webkit-details-marker{display:none}
+.naref summary::after{content:'+';margin-left:auto;font-size:1.3rem;line-height:1;color:var(--muted)}
+.naref details[open] summary::after{content:'–'}
+.naflag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;border-radius:999px;padding:3px 10px}
+.nabody{padding:4px 18px 18px;border-top:1px dashed var(--faint)}
+.nabody h4{font-family:var(--display);font-size:1rem;color:var(--ink);margin:16px 0 8px}
+.natable{overflow-x:auto}
+.natable table{width:100%;border-collapse:collapse;font-size:15px}
+.natable th{text-align:left;font-family:var(--display);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 10px;border-bottom:1.5px solid var(--ink)}
+.natable td{padding:7px 10px;border-bottom:1px solid var(--faint);vertical-align:top;color:var(--ink)}
+.nabody code{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.92em;background:#eef2fa;border-radius:4px;padding:1px 5px;white-space:nowrap}
+.nacodes{margin:0;line-height:1.9;color:var(--ink);font-size:15px}
+.nanote{margin:10px 0 0;color:var(--muted);font-size:15px}
+.nasrc{margin:14px 0 0;font-size:13px;color:var(--muted);font-style:italic}

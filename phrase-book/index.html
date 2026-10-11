@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../assets/infotown.css?v=202610112110">
+<link rel="stylesheet" href="../assets/infotown.css?v=202610112123">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -138,8 +138,8 @@
       <thead><tr><th scope="col">InfoTown</th><th scope="col">Information management</th><th scope="col">ISO 19650</th><th scope="col">In your organisation</th></tr></thead>
       <tbody>
         <tr><td>The label</td><td>Metadata</td><td>The information container's ID and metadata attributes</td><td>The document number and fields you fill in when you upload to your CDE</td></tr>
-        <tr><td>Which town, who packed it, where, what kind, which trade, which one</td><td>Naming convention</td><td>Container ID fields: Project–Originator–Volume/System–Level/Location–Type–Role–Number</td><td>The project's naming convention, e.g. <code>P1234-ABC-ZZ-00-DR-C-0042</code></td></tr>
-        <tr><td>Is it the latest?</td><td>Version control</td><td>Revision code (P for preliminary, C for contractual)</td><td>The revision field in your CDE</td></tr>
+        <tr><td>Which town, who packed it, which system, where, what form, which discipline, which one</td><td>Naming convention</td><td>Container ID fields: Project–Originator–Functional Breakdown–Spatial Breakdown–Form–Discipline–Number</td><td>The project's naming convention, e.g. <code>P1234-ABC-DRN-A2-D-C-0042</code></td></tr>
+        <tr><td>Is it the latest?</td><td>Version control</td><td>Revision code: P01.01 while in progress, P01 when shared, C01 once contractual</td><td>The revision field in your CDE</td></tr>
         <tr><td>What can I use it for?</td><td>Status</td><td>Status (suitability) code, e.g. S2 suitable for information</td><td>The status field in your CDE</td></tr>
         <tr><td>Which shelf?</td><td>Classification</td><td>Classification (e.g. Uniclass 2015)</td><td>Classification fields, where the project asks for them</td></tr>
         <tr><td>The in-tray</td><td>Unmanaged information</td><td>Containers with no valid ID or metadata</td><td>Paperwork left in site cabin in-trays, and files called FINAL in personal folders, inboxes and chats</td></tr>
@@ -182,11 +182,11 @@
     <table>
       <thead><tr><th scope="col">InfoTown</th><th scope="col">Information management</th><th scope="col">ISO 19650</th><th scope="col">In your organisation</th></tr></thead>
       <tbody>
-        <tr><td>The shared table</td><td>Shared information</td><td>Shared state, with suitability codes (S1 to S4 in the UK)</td><td>Your CDE's shared area</td></tr>
+        <tr><td>The shared table</td><td>Shared information</td><td>Shared state, with status codes (S1 to S5 in the UK)</td><td>Your CDE's shared area</td></tr>
         <tr><td>Authorise</td><td>Lead sign-off</td><td>Authorisation by the lead appointed party</td><td>Lead designer or main contractor sign-off</td></tr>
         <tr><td>Accept</td><td>Client sign-off</td><td>Acceptance by the appointing party</td><td>Client review and stage sign-off</td></tr>
-        <tr><td>The published shelf</td><td>Approved, current information</td><td>Published state, with A codes</td><td>Your CDE's published area</td></tr>
-        <tr><td>Back with comments</td><td>Rejected, or accepted with comments</td><td>Not accepted; returned for amendment</td><td>Comment sheets and resubmissions</td></tr>
+        <tr><td>The published shelf</td><td>Approved, current information</td><td>Published state, with an A code for each work stage (A1, A2… An)</td><td>Your CDE's published area</td></tr>
+        <tr><td>Back with comments</td><td>Rejected, or accepted with comments</td><td>Not signed off: comments, then a new preliminary revision (the old B codes are deprecated)</td><td>Comment sheets and resubmissions</td></tr>
         <tr><td>Stays with us</td><td>Internal information</td><td>Not part of the information to be delivered</td><td>Your WIP and internal folders</td></tr>
         <tr><td class="ta">The dump truck</td><td>Uncontrolled handover</td><td>Not a managed delivery</td><td>"Just send them everything"</td></tr>
       </tbody>

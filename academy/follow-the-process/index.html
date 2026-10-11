@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610112110">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610112123">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -148,12 +148,31 @@
     <thead><tr><th scope="col">#</th><th scope="col">Stage</th><th scope="col">Item</th><th scope="col">Where</th><th scope="col">Revision</th><th scope="col">Status</th></tr></thead>
     <tbody></tbody>
   </table></div>
+  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Being developed inside a task team</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>Suitable for coordination within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Suitable for information and reference by other task teams</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Suitable for review and comment within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Suitable for review and authorisation by the lead appointed party</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Suitable for review and acceptance by the appointing party</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off with no comments: authorised (for the lead) or accepted (for the client). n is the work stage</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>Partly signed off with comments. Deprecated: don't use it on new work</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, so the reason for each A code (what stage, what for) has to be written in the project's information standard.</p><h4>Revisions</h4>
+<div class="natable"><table><thead><tr><th>While it's…</th><th>Revision looks like</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>Work in progress</td><td><code>P01.01</code>, <code>P01.02</code>…</td><td>Preliminary revision plus a version number. Every new item starts at <code>P01.01</code></td></tr>
+<tr><td>Shared</td><td><code>P01</code>, <code>P02</code>…</td><td>Preliminary revision, two digits, prefixed P</td></tr>
+<tr><td>Published</td><td><code>C01</code>, <code>C02</code>…</td><td>Contractual revision, two digits, prefixed C</td></tr>
+</tbody></table></div><h4>The seven parts of a name</h4>
+<div class="natable"><table><thead><tr><th>Field</th><th>The question it answers</th><th>On Drawing 042</th></tr></thead><tbody>
+<tr><td>Project</td><td>Which project? One code for the whole job, separate from anyone's own job number</td><td><code>P1234</code></td></tr>
+<tr><td>Originator</td><td>Which organisation produced it?</td><td><code>ABC</code></td></tr>
+<tr><td>Functional Breakdown</td><td>Which system, element or work package? <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>DRN</code></td></tr>
+<tr><td>Spatial Breakdown</td><td>Where? A level, area, chainage or grid. <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>A2</code></td></tr>
+<tr><td>Form</td><td>What form of information is it?</td><td><code>D</code></td></tr>
+<tr><td>Discipline</td><td>Which technical discipline produced it?</td><td><code>C</code></td></tr>
+<tr><td>Number</td><td>Which one? A fixed-length number with leading zeros</td><td><code>0042</code></td></tr>
+</tbody></table></div>
+<h4>Form codes</h4>
+<p class="nacodes"><code>D</code> drawing · <code>G</code> diagram · <code>I</code> image · <code>L</code> list (tables, schedules, data) · <code>M</code> model · <code>T</code> text · <code>V</code> video or audio</p>
+<h4>Discipline codes</h4>
+<p class="nacodes"><code>A</code> architecture · <code>B</code> building surveying · <code>C</code> civil engineering · <code>D</code> demolition · <code>E</code> electrical · <code>F</code> facilities / asset management · <code>G</code> ground engineering · <code>H</code> highways and transport · <code>L</code> landscape · <code>M</code> mechanical · <code>O</code> other · <code>P</code> public health · <code>Q</code> quantity surveying / cost · <code>R</code> project management · <code>S</code> structural · <code>T</code> town planning and building control · <code>W</code> water engineering · <code>X</code> not discipline-specific · <code>Y</code> topographical survey · <code>Z</code> multiple disciplines</p><p class="nasrc">Source: the UK National Annex to BS EN ISO 19650-2:2018 (Table NA.1, NA.3, Table NA.2 and NA.4.3), summarised in plain English. Your project's information standard can add codes to these, but shouldn't replace them.</p></div></details></section>
   <nav class="lessonnav" aria-label="Lessons"><a href="../12-putting-it-all-together/">← Lesson 12 · <b>Putting It All Together</b></a><a href="../">All lessons →</a></nav>
 </section>
 
 <script>
 (function () {
-  var D42 = 'P1234-ABC-ZZ-00-DR-C-0042';
+  var D42 = 'P1234-ABC-DRN-A2-D-C-0042';
   var STEPS = [
     { s: 'Requirement', t: 'It starts with a need', l: [4, 'The Recipe for Success', '04-the-recipe-for-success'],
       x: 'Not with a drawing. The client needs Area 2 drained, and needs proof it was built right so they can look after it for the next forty years. That goes into their requirements: what they need to know, and when.',
@@ -170,17 +189,17 @@
     { s: 'Design', t: 'Made in Alex\'s room', l: [6, 'Making It Together', '06-making-it-together'],
       x: 'Now Drawing 042 exists. Alex draws it in the design team\'s own room and gives it its proper label straight away. Work in progress: nobody should be building on it yet.',
       pos: [150, 110], path: 'M660 240 L613 250 L560 190 L480 110 H150',
-      f: { item: 'Drawing 042: drainage layout, Area 2', number: D42, rev: 'P01.1', status: 'S0 · Work in progress', where: 'Designer Town: Alex\'s room', who: 'Alex' }, state: ['Work in progress', 'wip'], tag: 'S0' },
+      f: { item: 'Drawing 042: drainage layout, Area 2', number: D42, rev: 'P01.01', status: 'S0 · Work in progress', where: 'Designer Town: Alex\'s room', who: 'Alex' }, state: ['Work in progress', 'wip'], tag: 'S0' },
     { s: 'Check & approve', t: 'Through the checkpoints', l: [9, 'The Checkpoints', '09-the-checkpoints'],
       x: 'Originate, check, review, approve. The working versions roll up into the first proper revision, approved for sharing. (Tempting at this point: WhatsApp it straight to Dave. Alex doesn\'t. Good.)',
       pos: [440, 110], path: 'M150 110 H440',
       f: { rev: 'P01', status: 'S1 · Suitable for coordination', where: 'Design line, through the checkpoints', who: 'The approver' }, state: ['Approved for sharing', 'wip'], tag: 'S1' },
     { s: 'Share & coordinate', t: 'On the shared table, and round again', l: [6, 'Making It Together', '06-making-it-together'],
-      x: 'Booked into the Site Office and onto the shared table. The drain hits a beam, comments come back, and it goes round the loop twice more: P02 for comment, then P03, ready for sign-off. That\'s coordination, and it\'s meant to happen here, not on site.',
+      x: 'Booked into the Site Office and onto the shared table. The drain hits a beam, comments come back, and it goes round the loop twice more: P02 for comment, then P03, shared as S4 for the lead to authorise. That\'s coordination, and it\'s meant to happen here, not on site.',
       pos: [613, 250], path: 'M440 110 H480 L560 190 L613 250',
-      f: { rev: 'P03', status: 'S4 · Suitable for stage approval', where: 'Site Office: shared', who: 'Everyone on the project can see it' }, state: ['Shared', 'shared'], tag: 'S4' },
+      f: { rev: 'P03', status: 'S4 · Suitable for review and authorisation', where: 'Site Office: shared', who: 'Everyone on the project can see it' }, state: ['Shared', 'shared'], tag: 'S4' },
     { s: 'Authorise & accept', t: 'Signed off and published', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'The lead firm authorises it, it goes up the client line, the Clerk of Works accepts it, and it comes back to the published shelf as the first contract revision. This is now the version everyone builds from.',
+      x: 'The lead firm authorises it, and it goes up the client line as S5, for the client to accept. The Clerk of Works accepts it, and it comes back to the published shelf as the first contractual revision with an A code. (The number is the work stage; your information standard says which is which.) This is now the version everyone builds from.',
       pos: [707, 250], path: 'M613 250 L660 200 H800 H840 L920 110 H1050 H920 L840 200 H760 L707 250',
       f: { rev: 'C01', status: 'A1 · Authorised and accepted', where: 'Site Office: published', who: 'Everyone who builds from it' }, state: ['Published', 'published'], tag: 'A1' },
     { s: 'Issue to site', t: 'Out to site', l: [11, 'Using Information', '11-using-information'],
@@ -194,11 +213,11 @@
     { s: 'Evidence', t: 'Proof, as its own parcel', l: [11, 'Using Information', '11-using-information'],
       x: 'The inspection happens on the site app, with photos, and the Clerk of Works signs it. It goes back up the site line as a brand new parcel with its own label. Evidence is information too, and it\'s the bit everyone forgets until they need it.',
       pos: [613, 250], path: 'M1050 380 H920 L840 270 H760 L613 250',
-      f: { item: 'Inspection record: Area 2 drainage', number: 'P1234-TCO-ZZ-00-RP-C-0107', rev: 'C01', status: 'Signed off by the Clerk of Works', where: 'Site Office: shared', who: 'Dave, then the Clerk of Works' }, state: ['Shared', 'shared'], tag: 'EV' },
+      f: { item: 'Inspection record: Area 2 drainage', number: 'P1234-TCO-DRN-A2-T-C-0107', rev: 'C01', status: 'Signed off by the Clerk of Works', where: 'Site Office: shared', who: 'Dave, then the Clerk of Works' }, state: ['Shared', 'shared'], tag: 'EV' },
     { s: 'As-built', t: 'Drawing 042 tells the truth', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'Drawing 042 is updated to show where the pipe really went (300mm east, thanks, cable). Round the checkpoints again, and back on the published shelf as an as-constructed record.',
+      x: 'Drawing 042 is updated to show where the pipe really went (300mm east, thanks, cable). Round the checkpoints again, signed off again, and back on the published shelf as C02: the as-built.',
       pos: [707, 250], path: 'M613 250 L660 260 H707',
-      f: { item: 'Drawing 042, as built', number: D42, rev: 'C02', status: 'CR · As-constructed record', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'CR' },
+      f: { item: 'Drawing 042, as built', number: D42, rev: 'C02', status: 'A1 · Accepted, as built', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'A1' },
     { s: 'Handover', t: 'Handed over', l: [10, 'Handing Over', '10-handing-over'],
       x: 'The handover pack goes to the client: the as-built, the inspection records and the O&M manual. Exactly what the recipe said, no more. Authorised by the lead, accepted by the client. A copy goes home to your own Records Office too.',
       pos: [1050, 110], path: 'M707 250 L760 200 H840 L920 110 H1050',

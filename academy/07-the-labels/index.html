@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610112110">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610112123">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -82,7 +82,7 @@
     <rect x="72" y="128" width="372" height="22" rx="6" fill="#1b3478"/>
     <rect x="72" y="140" width="372" height="10" fill="#1b3478" stroke="none"/>
     <text x="86" y="144" font-family="Lexend, sans-serif" font-size="10.5" font-weight="600" fill="#fff" stroke="none" letter-spacing="1.5">PARCEL LABEL</text>
-    <text x="88" y="178" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700" fill="#1b3478" stroke="none">P1234-ABC-ZZ-00-DR-C-0042</text>
+    <text x="88" y="178" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700" fill="#1b3478" stroke="none">P1234-ABC-DRN-A2-D-C-0042</text>
     <text x="88" y="202" font-family="Source Sans 3, sans-serif" font-size="15" fill="#1b3478" stroke="none">Drainage layout, Area 2</text>
     <text x="88" y="226" font-family="Lexend, sans-serif" font-size="13.5" font-weight="600" fill="#2f6fd6" stroke="none">Rev P03 · S2 Suitable for information</text>
     <path d="M300 240 L384 274" fill="none" stroke-dasharray="4 4" stroke-width="1.5"/>
@@ -155,9 +155,9 @@
       <div class="code" role="group" aria-label="Document number">
         <button class="fld" type="button" data-k="project" aria-pressed="false">P1234</button><span class="dash">-</span>
         <button class="fld" type="button" data-k="orig" aria-pressed="false">ABC</button><span class="dash">-</span>
-        <button class="fld" type="button" data-k="vol" aria-pressed="false">ZZ</button><span class="dash">-</span>
-        <button class="fld" type="button" data-k="lvl" aria-pressed="false">00</button><span class="dash">-</span>
-        <button class="fld" type="button" data-k="type" aria-pressed="false">DR</button><span class="dash">-</span>
+        <button class="fld" type="button" data-k="vol" aria-pressed="false">DRN</button><span class="dash">-</span>
+        <button class="fld" type="button" data-k="lvl" aria-pressed="false">A2</button><span class="dash">-</span>
+        <button class="fld" type="button" data-k="type" aria-pressed="false">D</button><span class="dash">-</span>
         <button class="fld" type="button" data-k="role" aria-pressed="false">C</button><span class="dash">-</span>
         <button class="fld" type="button" data-k="num" aria-pressed="false">0042</button>
       </div>
@@ -170,7 +170,7 @@
     <div class="explain" aria-live="polite">
       <div>
         <p class="tq" id="x-q">Is it the latest?</p>
-        <p class="plain" id="x-plain">P03 is the third preliminary version. When it becomes part of the contract it starts again as C01.</p>
+        <p class="plain" id="x-plain">P03 is the third preliminary revision. While it's being worked on it also carries a version, like P03.02. When it becomes part of the contract it starts again as C01.</p>
       </div>
       <dl>
         <dt>On the label</dt><dd id="x-on">P03</dd>
@@ -184,7 +184,7 @@
     <div>
       <span class="tipkicker">Sam's Heads Up</span>
       <p class="tiphead">Your labels may not look like this one</p>
-      <p>This example uses the seven fields from the UK National Annex to ISO 19650: <b>Project, Originator, Volume or System, Level or Location, Type, Role</b> and <b>Number</b>. That's the standard starting point, not a law of nature.</p><p>Your project sets its own <b>naming convention</b>, and it can add fields, rename them or change the codes. Some clients have ten-part names that read like a car registration crossed with a tax return. Always check your project's naming convention before you trust a label, or make one.</p>
+      <p>This example uses the seven fields from the UK National Annex to ISO 19650: <b>Project, Originator, Functional Breakdown, Spatial Breakdown, Form, Discipline</b> and <b>Number</b>. That's the standard starting point, not a law of nature.</p><p>Your project sets its own <b>naming convention</b>, and it can add fields, rename them or change the codes. Some clients have ten-part names that read like a car registration crossed with a tax return. Always check your project's naming convention before you trust a label, or make one.</p>
     </div>
   </aside>
 </section>
@@ -220,9 +220,27 @@
   </div>
   </div>
 </section>
-
+<section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> The naming rules</summary><div class="nabody"><h4>The seven parts of a name</h4>
+<div class="natable"><table><thead><tr><th>Field</th><th>The question it answers</th><th>On Drawing 042</th></tr></thead><tbody>
+<tr><td>Project</td><td>Which project? One code for the whole job, separate from anyone's own job number</td><td><code>P1234</code></td></tr>
+<tr><td>Originator</td><td>Which organisation produced it?</td><td><code>ABC</code></td></tr>
+<tr><td>Functional Breakdown</td><td>Which system, element or work package? <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>DRN</code></td></tr>
+<tr><td>Spatial Breakdown</td><td>Where? A level, area, chainage or grid. <code>ZZ</code> = several, <code>XX</code> = none</td><td><code>A2</code></td></tr>
+<tr><td>Form</td><td>What form of information is it?</td><td><code>D</code></td></tr>
+<tr><td>Discipline</td><td>Which technical discipline produced it?</td><td><code>C</code></td></tr>
+<tr><td>Number</td><td>Which one? A fixed-length number with leading zeros</td><td><code>0042</code></td></tr>
+</tbody></table></div>
+<h4>Form codes</h4>
+<p class="nacodes"><code>D</code> drawing · <code>G</code> diagram · <code>I</code> image · <code>L</code> list (tables, schedules, data) · <code>M</code> model · <code>T</code> text · <code>V</code> video or audio</p>
+<h4>Discipline codes</h4>
+<p class="nacodes"><code>A</code> architecture · <code>B</code> building surveying · <code>C</code> civil engineering · <code>D</code> demolition · <code>E</code> electrical · <code>F</code> facilities / asset management · <code>G</code> ground engineering · <code>H</code> highways and transport · <code>L</code> landscape · <code>M</code> mechanical · <code>O</code> other · <code>P</code> public health · <code>Q</code> quantity surveying / cost · <code>R</code> project management · <code>S</code> structural · <code>T</code> town planning and building control · <code>W</code> water engineering · <code>X</code> not discipline-specific · <code>Y</code> topographical survey · <code>Z</code> multiple disciplines</p><h4>Revisions</h4>
+<div class="natable"><table><thead><tr><th>While it's…</th><th>Revision looks like</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>Work in progress</td><td><code>P01.01</code>, <code>P01.02</code>…</td><td>Preliminary revision plus a version number. Every new item starts at <code>P01.01</code></td></tr>
+<tr><td>Shared</td><td><code>P01</code>, <code>P02</code>…</td><td>Preliminary revision, two digits, prefixed P</td></tr>
+<tr><td>Published</td><td><code>C01</code>, <code>C02</code>…</td><td>Contractual revision, two digits, prefixed C</td></tr>
+</tbody></table></div><p class="nasrc">Source: the UK National Annex to BS EN ISO 19650-2:2018 (Table NA.1, NA.3, Table NA.2 and NA.4.3), summarised in plain English. Your project's information standard can add codes to these, but shouldn't replace them.</p></div></details></section>
 <nav class="lessonnav" aria-label="Lessons"><a href="../06-making-it-together/">← Lesson 6 · <b>Making It Together</b></a><a href="../08-sharing-your-work/">Lesson 8 · <b>Sharing Your Work</b> (This is an Information Exchange!) →</a></nav>
-<script type="application/json" id="fields">{"project": {"q": "Which town?", "plain": "The project this parcel belongs to. Every job has its own code.", "on": "P1234", "im": "Project", "why": "It stops parcels from different jobs getting mixed up."}, "orig": {"q": "Who packed it?", "plain": "The organisation that produced it. ABC stands in for your organisation's code.", "on": "ABC", "im": "Originator", "why": "If there's a question, you know who to ask."}, "vol": {"q": "Which part of the town?", "plain": "The part of the job it covers. ZZ means it covers more than one.", "on": "ZZ", "im": "Volume / System", "why": "Big jobs are split into parts so each team finds its own parcels."}, "lvl": {"q": "Which floor or level?", "plain": "Where in the asset it sits. 00 is ground level.", "on": "00", "im": "Level / Location", "why": "It lets you pick out everything for one level or location."}, "type": {"q": "What kind of parcel?", "plain": "DR is a drawing. M3 would be a 3D model.", "on": "DR", "im": "Type", "why": "You can filter for drawings without opening anything."}, "role": {"q": "Which trade?", "plain": "C is civil engineering.", "on": "C", "im": "Role", "why": "Each discipline can find its own work, and so can everyone checking it."}, "num": {"q": "Which one?", "plain": "Its own number, so no two parcels share a name.", "on": "0042", "im": "Number", "why": "One number for one parcel, for the life of the job."}, "title": {"q": "What's inside?", "plain": "A short description people can read.", "on": "Drainage layout, Area 2", "im": "Title / description", "why": "The code is for the system. The title is for people."}, "rev": {"q": "Is it the latest?", "plain": "P03 is the third preliminary version. When it becomes part of the contract it starts again as C01.", "on": "P03", "im": "Revision", "why": "Without it, four files called FINAL all look equally right."}, "status": {"q": "What can I use it for?", "plain": "S2 means suitable for information. You can read it, but you can't build from it.", "on": "S2", "im": "Status (suitability)", "why": "This is the field that stops people building from a draft."}}</script>
+<script type="application/json" id="fields">{"project": {"q": "Which town?", "plain": "The project this parcel belongs to. Every job has its own code.", "on": "P1234", "im": "Project", "why": "It stops parcels from different jobs getting mixed up."}, "orig": {"q": "Who packed it?", "plain": "The organisation that produced it. ABC stands in for your organisation's code.", "on": "ABC", "im": "Originator", "why": "If there's a question, you know who to ask."}, "vol": {"q": "Which system?", "plain": "The functional part of the job it belongs to. DRN is this project's code for the drainage system. ZZ would mean several, XX none.", "on": "DRN", "im": "Functional Breakdown", "why": "Big jobs are split up so each team can find its own parcels."}, "lvl": {"q": "Where is it?", "plain": "The spatial part of the job. A2 is Area 2. On other jobs it might be a level, a chainage or a grid square. ZZ means several places, XX none.", "on": "A2", "im": "Spatial Breakdown", "why": "It lets you pick out everything for one place."}, "type": {"q": "What form is it?", "plain": "D is a drawing. M would be a model, T a text document, L a list or schedule, I an image.", "on": "D", "im": "Form", "why": "You can filter for drawings without opening anything."}, "role": {"q": "Which discipline?", "plain": "C is civil engineering. W would be water engineering, S structural, P public health.", "on": "C", "im": "Discipline", "why": "Each discipline can find its own work, and so can everyone checking it."}, "num": {"q": "Which one?", "plain": "Its own number, so no two parcels share a name.", "on": "0042", "im": "Number", "why": "One number for one parcel, for the life of the job."}, "title": {"q": "What's inside?", "plain": "A short description people can read.", "on": "Drainage layout, Area 2", "im": "Title / description", "why": "The code is for the system. The title is for people."}, "rev": {"q": "Is it the latest?", "plain": "P03 is the third preliminary revision. While it's being worked on it also carries a version, like P03.02. When it becomes part of the contract it starts again as C01.", "on": "P03", "im": "Revision", "why": "Without it, four files called FINAL all look equally right."}, "status": {"q": "What can I use it for?", "plain": "S2 means suitable for information and reference by other teams. You can read it, but you can't build from it.", "on": "S2", "im": "Status (suitability)", "why": "This is the field that stops people building from a draft."}}</script>
 
 </div>
 </main>
@@ -230,6 +248,6 @@
   <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
   <span>&copy; 2026 InfoTown</span>
 </div></footer>
-<script src="../../assets/lesson.js?v=202610112110"></script>
+<script src="../../assets/lesson.js?v=202610112123"></script>
 </body>
 </html>
