@@ -58,3 +58,28 @@
   motion();
   if (mq && mq.addEventListener) mq.addEventListener('change', motion);
 })();
+
+/* Information World: zoom into your town, then go to Lesson 1 */
+(function () {
+  var svg = document.getElementById('worldmap');
+  var link = document.getElementById('zoom');
+  var you = document.getElementById('t-you');
+  if (!svg || !link) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(e) {
+    if (e) e.preventDefault();
+    var href = link.getAttribute('href');
+    if (reduce) { location.href = href; return; }
+    var from = [0, 0, 1200, 660], to = [440, 230, 320, 176], t0 = null, dur = 1100;
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur), k = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      var v = from.map(function (f, i) { return f + (to[i] - f) * k; });
+      svg.setAttribute('viewBox', v.join(' '));
+      if (p < 1) requestAnimationFrame(step); else location.href = href;
+    }
+    requestAnimationFrame(step);
+  }
+  link.addEventListener('click', go);
+  if (you) you.addEventListener('click', go);
+})();
