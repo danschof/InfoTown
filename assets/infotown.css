@@ -296,3 +296,13 @@ section{margin-top:40px}
   .lessonlist li{grid-template-columns:24px 1fr}
   .lessonlist .r{grid-column:2}
 }
+
+/* ---------- Town Square (home) ---------- */
+.sqbox .scene{min-width:700px}
+.square .dest .bld{transition:transform .25s ease, filter .25s ease;transform-box:fill-box;transform-origin:50% 100%}
+.square a.dest:hover .bld,.square a.dest:focus-visible .bld{transform:translateY(-4px);filter:drop-shadow(0 6px 10px rgba(47,111,214,.25))}
+.square a.dest:focus-visible{outline:none}
+.square .soon{opacity:.6}
+.square .jets path{animation:jet 2.4s linear infinite}
+@keyframes jet{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion: reduce){.square .jets path{animation:none}.square .dest .bld{transition:none}}
