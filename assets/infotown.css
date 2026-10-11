@@ -411,3 +411,39 @@ section{margin-top:40px}
 .nacodes{margin:0;line-height:1.9;color:var(--ink);font-size:15px}
 .nanote{margin:10px 0 0;color:var(--muted);font-size:15px}
 .nasrc{margin:14px 0 0;font-size:13px;color:var(--muted);font-style:italic}
+.naflag.na{background:#2e8b57}
+/* Keep going (story → next lesson) */
+.nextup{margin:34px 0 10px;padding:22px;border-radius:12px;background:#eef3fc;text-align:center;display:grid;gap:10px;justify-items:center}
+.nextbtn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-family:var(--display);font-size:1.15rem;font-weight:600;padding:14px 26px;border-radius:999px}
+.nextbtn b{font-weight:700}
+.nextbtn:hover{background:#2f6fd6}
+.nextalt{margin:0;font-size:15px}
+.nextalt a{color:var(--muted)}
+/* Colour per place: Academy blue, Stories orange, Phrase Book green, Visitor Centre red, Manifesto purple */
+.banner.vc{background:#c8423b}
+.banner.mf{background:#7b5cc4}
+.starthere{display:inline-block;font:600 18px var(--display);background:var(--ink);color:#fff;text-decoration:none;padding:13px 26px;border-radius:999px}
+.starthere:hover{background:#2f6fd6}
+.sqcaps a text{cursor:pointer}
+@media (max-width:560px){.zoom{white-space:normal;display:inline-block;text-align:center}}
+/* Meet the characters */
+.bs-meet{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;padding:12px 20px 14px;border-top:1.5px dashed #ddd4f3;background:#fff}
+.bs-person{display:flex;gap:10px;align-items:center;max-width:380px}
+.bs-person svg{flex:none;background:#f4f7fc;border-radius:8px;padding:4px 6px;box-sizing:content-box}
+.bs-person b{display:block;font-family:var(--display);color:var(--ink)}
+.bs-person span{display:block;color:var(--muted);font-size:15px;line-height:1.4}
+.bs-vc{margin-left:auto;font-family:var(--display);font-weight:600;font-size:14px;color:#c8423b;text-decoration:none}
+/* Find out more (moved from the stories) */
+.moresec{margin:26px 0 6px;display:grid;gap:10px}
+.more{border:1.5px solid var(--faint);border-radius:10px;background:#fff}
+.more summary{cursor:pointer;padding:14px 18px;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink);list-style:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:'+';margin-left:auto;font-size:1.3rem;line-height:1;color:var(--muted)}
+.more[open] summary::after{content:'–'}
+.more[open]{border-color:var(--ink)}
+.moreflag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:#eef2fa;color:var(--muted);border-radius:999px;padding:3px 10px}
+.morebody{padding:4px 18px 18px;border-top:1px dashed var(--faint)}
+.morebody .sechead{margin:10px 0 12px}
+.moreflag.im{background:#ece7f8;color:#6a55b0}
+.morebody .bringback{margin-top:14px}
+.morebody .test .q h3{font-size:1.3rem}

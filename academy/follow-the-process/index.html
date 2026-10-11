@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610112123">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610112235">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -148,7 +148,7 @@
     <thead><tr><th scope="col">#</th><th scope="col">Stage</th><th scope="col">Item</th><th scope="col">Where</th><th scope="col">Revision</th><th scope="col">Status</th></tr></thead>
     <tbody></tbody>
   </table></div>
-  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Being developed inside a task team</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>Suitable for coordination within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Suitable for information and reference by other task teams</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Suitable for review and comment within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Suitable for review and authorisation by the lead appointed party</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Suitable for review and acceptance by the appointing party</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off with no comments: authorised (for the lead) or accepted (for the client). n is the work stage</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>Partly signed off with comments. Deprecated: don't use it on new work</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, so the reason for each A code (what stage, what for) has to be written in the project's information standard.</p><h4>Revisions</h4>
+  <section class="naref" aria-label="From the UK National Annex"><details><summary><span class="naflag">UK National Annex</span> All the codes used on this page</summary><div class="nabody"><h4>Status codes</h4><div class="natable"><table><thead><tr><th>State</th><th>Code</th><th>What it's for</th><th>Revision</th></tr></thead><tbody><tr><td>Work in progress</td><td><code>S0</code></td><td>Being developed inside a task team</td><td>Preliminary revision and version</td></tr><tr><td>Shared</td><td><code>S1</code></td><td>Suitable for coordination within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S2</code></td><td>Suitable for information and reference by other task teams</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S3</code></td><td>Suitable for review and comment within the delivery team</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S4</code></td><td>Suitable for review and authorisation by the lead appointed party</td><td>Preliminary revision</td></tr><tr><td>Shared</td><td><code>S5</code></td><td>Suitable for review and acceptance by the appointing party</td><td>Preliminary revision</td></tr><tr><td>Published</td><td><code>A1, A2… An</code></td><td>Signed off with no comments: authorised (for the lead) or accepted (for the client). n is the work stage</td><td>Contractual revision</td></tr><tr><td>Deprecated</td><td><code>B1… Bn</code></td><td>Partly signed off with comments. Deprecated: don't use it on new work</td><td>–</td></tr></tbody></table></div><p class="nanote">An S code says what something may be used for. An A code only says it's been signed off, and the n is the work stage. The Annex ties the stages to BS 8536-1 (buildings) and BS 8536-2 (infrastructure), which follow the familiar Stage 0 to 7 pattern of the RIBA Plan of Work, so a construction issue is typically A5 and handover A6, unless your project's information standard sets its own. What each A code is issued for still has to be written in that standard.</p><h4>Revisions</h4>
 <div class="natable"><table><thead><tr><th>While it's…</th><th>Revision looks like</th><th>Meaning</th></tr></thead><tbody>
 <tr><td>Work in progress</td><td><code>P01.01</code>, <code>P01.02</code>…</td><td>Preliminary revision plus a version number. Every new item starts at <code>P01.01</code></td></tr>
 <tr><td>Shared</td><td><code>P01</code>, <code>P02</code>…</td><td>Preliminary revision, two digits, prefixed P</td></tr>
@@ -199,25 +199,25 @@
       pos: [613, 250], path: 'M440 110 H480 L560 190 L613 250',
       f: { rev: 'P03', status: 'S4 · Suitable for review and authorisation', where: 'Site Office: shared', who: 'Everyone on the project can see it' }, state: ['Shared', 'shared'], tag: 'S4' },
     { s: 'Authorise & accept', t: 'Signed off and published', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'The lead firm authorises it, and it goes up the client line as S5, for the client to accept. The Clerk of Works accepts it, and it comes back to the published shelf as the first contractual revision with an A code. (The number is the work stage; your information standard says which is which.) This is now the version everyone builds from.',
+      x: 'The lead firm authorises it, and it goes up the client line as S5, for the client to accept. The Clerk of Works accepts it, and it comes back to the published shelf as the first contractual revision with an A code. The number is the work stage: A5 here, for Stage 5, construction. This is now the version everyone builds from.',
       pos: [707, 250], path: 'M613 250 L660 200 H800 H840 L920 110 H1050 H920 L840 200 H760 L707 250',
-      f: { rev: 'C01', status: 'A1 · Authorised and accepted', where: 'Site Office: published', who: 'Everyone who builds from it' }, state: ['Published', 'published'], tag: 'A1' },
+      f: { rev: 'C01', status: 'A5 · Accepted for Stage 5 (construction)', where: 'Site Office: published', who: 'Everyone who builds from it' }, state: ['Published', 'published'], tag: 'A5' },
     { s: 'Issue to site', t: 'Out to site', l: [11, 'Using Information', '11-using-information'],
       x: 'Down the site line. Dave searches the site app for "Area 2 drainage", finds C01, checks it\'s published and current. Thirty seconds, including the tea.',
       pos: [1050, 380], path: 'M707 250 L760 270 H840 L920 380 H1050',
-      f: { where: 'The site, on Dave\'s tablet', who: 'Dave' }, state: ['In use', 'published'], tag: 'A1' },
+      f: { where: 'The site, on Dave\'s tablet', who: 'Dave' }, state: ['In use', 'published'], tag: 'A5' },
     { s: 'Build', t: 'Built, once', l: [11, 'Using Information', '11-using-information'],
       x: 'The trench goes in to C01. Once. On the day, the pipe has to move 300mm east round a buried cable nobody knew about. Dave notes it. Remember that: it matters in two stops\' time.',
       pos: [1050, 380], path: null,
-      f: { item: 'Drawing 042, and a real trench', who: 'Dave and the gang' }, state: ['In use', 'published'], tag: 'A1' },
+      f: { item: 'Drawing 042, and a real trench', who: 'Dave and the gang' }, state: ['In use', 'published'], tag: 'A5' },
     { s: 'Evidence', t: 'Proof, as its own parcel', l: [11, 'Using Information', '11-using-information'],
       x: 'The inspection happens on the site app, with photos, and the Clerk of Works signs it. It goes back up the site line as a brand new parcel with its own label. Evidence is information too, and it\'s the bit everyone forgets until they need it.',
       pos: [613, 250], path: 'M1050 380 H920 L840 270 H760 L613 250',
       f: { item: 'Inspection record: Area 2 drainage', number: 'P1234-TCO-DRN-A2-T-C-0107', rev: 'C01', status: 'Signed off by the Clerk of Works', where: 'Site Office: shared', who: 'Dave, then the Clerk of Works' }, state: ['Shared', 'shared'], tag: 'EV' },
     { s: 'As-built', t: 'Drawing 042 tells the truth', l: [10, 'Handing Over', '10-handing-over'],
-      x: 'Drawing 042 is updated to show where the pipe really went (300mm east, thanks, cable). Round the checkpoints again, signed off again, and back on the published shelf as C02: the as-built.',
+      x: 'Drawing 042 is updated to show where the pipe really went (300mm east, thanks, cable). Round the checkpoints again, signed off again, and back on the published shelf as C02 with A6: the as-built, accepted at Stage 6, handover.',
       pos: [707, 250], path: 'M613 250 L660 260 H707',
-      f: { item: 'Drawing 042, as built', number: D42, rev: 'C02', status: 'A1 · Accepted, as built', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'A1' },
+      f: { item: 'Drawing 042, as built', number: D42, rev: 'C02', status: 'A6 · Accepted for Stage 6 (handover)', where: 'Site Office: published', who: 'Alex, then everyone' }, state: ['Record', 'record'], tag: 'A6' },
     { s: 'Handover', t: 'Handed over', l: [10, 'Handing Over', '10-handing-over'],
       x: 'The handover pack goes to the client: the as-built, the inspection records and the O&M manual. Exactly what the recipe said, no more. Authorised by the lead, accepted by the client. A copy goes home to your own Records Office too.',
       pos: [1050, 110], path: 'M707 250 L760 200 H840 L920 110 H1050',
