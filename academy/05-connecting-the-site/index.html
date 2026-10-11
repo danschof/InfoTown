@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610112022">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610112049">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,17 +37,18 @@
     <p class="question">Which building does what, and where does my work go?</p>
   </div>
 </header>
-<p class="recap"><b>So far:</b> the recipe says what we're making and who makes it (Lesson 4). Now the towns are coming together on a new project site. Before anyone makes anything, the site has to be built, connected and signposted. And Rex is about to start there.</p>
+
 
 <!-- SCENE -->
 
+<section class="beforestart" aria-labelledby="h-bs"><h2 id="h-bs" class="sr">Before you start</h2><div class="bs-top"><div class="bs-col"><h3>So far</h3><p>The recipe says what we're making and who makes it (Lesson 4). Now the towns are coming together on a new project site. Before anyone makes anything, the site has to be built, connected and signposted. And Rex is about to start there.</p></div><div class="bs-col"><h3>You'll learn</h3><ul><li>What has to be built before day one</li><li>How the towns connect to the site</li><li>How everyone knows where their work goes</li></ul></div></div><div class="bs-words"><h3>New words</h3><dl><div><dt>The Site Office</dt><dd>The project's shared building, an extension of your own Records Office.</dd></div><div><dt>Designer Town</dt><dd>The design firm's own organisation.</dd></div><div><dt>The lines</dt><dd>Routes between the towns: the design line, the client line and the home line.</dd></div><div><dt>The Underground</dt><dd>Automatic links between systems, out of sight.</dd></div><div><dt>Signposts</dt><dd>Guidance that says where each kind of work goes.</dd></div><div><dt>The site gate</dt><dd>Who gets in, and who gets let out again when they leave.</dd></div></dl></div></section>
 <nav class="lessonnav top" aria-label="Lessons (top)"><a href="../04-the-recipe-for-success/">← Lesson 4 · <b>The Recipe for Success</b></a><a href="../06-making-it-together/">Lesson 6 · <b>Making It Together</b> (This is an Information Container!) →</a></nav>
 
 <section aria-labelledby="h-scene">
   <div class="sechead">
     <span class="eyebrow">The scene</span>
     <h2 id="h-scene">The project site's transit map</h2>
-    <p>In the middle sits the Site Office: the project's CDE, an extension of your own Records Office. Lines run out to every town: a railway to the designers, a line to the client, the Underground to the site apps, footpaths to the cabins. Signposts tell everyone where each kind of work goes, and the gate decides who gets in.</p>
+    <p>In the middle sits the Site Office: the project's CDE, an extension of your own Records Office. Lines run out to every town: the design line to the designers, the client line to the client, the home line back to your own Records Office, the Underground to the site apps and footpaths to the cabins. The workflows running along all these lines are how one system passes work to another. Signposts tell everyone where each kind of work goes, and the gate decides who gets in.</p>
   </div>
   <div class="scenebox">
     <div class="controls" role="group" aria-label="Choose a view" data-target="scene">
@@ -60,7 +61,7 @@
     <div class="scenewrap">
 <svg class="scene" id="scene" viewBox="0 0 1200 580" role="img" aria-labelledby="st sd">
   <title id="st">The project site, connected</title>
-  <desc id="sd">A project site with the Site Office (the project CDE) at its centre. A railway runs to Designer Town, a line runs to the Client Town, a line runs home to your town's Records Office, the Underground runs beneath to the site apps, and footpaths lead to the site cabins. Signposts show where drawings, photos, RFIs and approvals go. A gate at the edge of the site controls who gets in.</desc>
+  <desc id="sd">A project site with the Site Office (the project CDE) at its centre. A design line runs to Designer Town, a line runs to the Client Town, a line runs home to your town's Records Office, the Underground runs beneath to the site apps, and footpaths lead to the site cabins. Signposts show where drawings, photos, RFIs and approvals go. A gate at the edge of the site controls who gets in.</desc>
   <defs>
     <g id="pp"><circle cx="0" cy="8" r="7" fill="#fff"/><path d="M0 15 V40 M0 21 L-9 33 M0 21 L9 33 M0 40 L-7 60 M0 40 L7 60" fill="none"/></g>
     <g id="ph"><use href="#pp"/><path d="M-8 6 Q0 -4 8 6 Z" fill="#fde6a0"/><path d="M-10 6 H10" fill="none"/></g>
@@ -80,8 +81,7 @@
   <!-- CONNECTIONS -->
   <g class="layer" data-layer="connections" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path id="lDesign" d="M200 170 H300 L360 230 H560" stroke="#7b5cc4" stroke-width="8"/>
-    <path d="M200 170 H300 L360 230 H560" stroke="#fff" stroke-width="2" stroke-dasharray="10 10"/>
-    <path id="lClient" d="M660 230 H840 L900 170 H1010" stroke="#d9822b" stroke-width="8"/>
+        <path id="lClient" d="M660 230 H840 L900 170 H1010" stroke="#d9822b" stroke-width="8"/>
     <path id="lHome" d="M200 420 H320 L390 318 H556" stroke="#2f6fd6" stroke-width="8"/>
     <path id="lUnder" d="M610 330 V535 H860 V470" stroke="#2e8b57" stroke-width="7" stroke-dasharray="14 8"/>
     <path id="lFoot" d="M600 336 C 585 390, 525 410, 486 424" stroke="#1b3478" stroke-width="3" stroke-dasharray="2 7"/>
@@ -94,7 +94,7 @@
       <use href="#box"><animateMotion dur="5s" repeatCount="indefinite" path="M860 470 V535 H610 V330"/></use>
     </g>
     <g font-family="Lexend, sans-serif" font-size="11" font-weight="700" letter-spacing="1">
-      <text x="380" y="220" fill="#7b5cc4">RAILWAY · CDE TO CDE</text>
+      <text x="380" y="220" fill="#7b5cc4">DESIGN LINE</text>
       <text x="690" y="220" fill="#d9822b">CLIENT LINE</text>
       <text x="402" y="308" fill="#2f6fd6">HOME LINE</text>
       <text x="630" y="528" fill="#2e8b57">APIs</text>
@@ -158,11 +158,20 @@
 </svg>
     </div>
     <div class="legend">
-      <div><span class="swatch" style="border-top-color:#7b5cc4"></span><span><b>Railway.</b> Controlled CDE-to-CDE transfers.</span></div>
+      <div><span class="swatch" style="border-top-color:#7b5cc4"></span><span><b>Design line.</b> To and from the designers.</span></div>
+      <div><span class="swatch" style="border-top-color:#2f6fd6"></span><span><b>Home line.</b> Back to your own Records Office.</span></div>
       <div><span class="swatch" style="border-top-color:#d9822b"></span><span><b>Client line.</b> To and from the Client Town.</span></div>
       <div><span class="swatch" style="border-top:5px dashed #2e8b57"></span><span><b>Underground.</b> APIs, out of sight and automatic.</span></div>
     </div>
   </div>
+  <aside class="tipbox" aria-label="Sam's Heads Up">
+    <div class="tipsam" aria-hidden="true"><svg viewBox="0 0 48 48" width="52" height="52"><g fill="none" stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="26" r="15" fill="#fff"/><path d="M10 22 Q12 9 24 9 Q36 9 38 22 Q31 16 24 17 Q17 16 10 22 Z" fill="#4a4f5c"/><rect x="14" y="24" width="8.5" height="6" rx="2" fill="#fff"/><rect x="25.5" y="24" width="8.5" height="6" rx="2" fill="#fff"/><path d="M22.5 27 h3"/><path d="M15 21.5 l6 1.6 M33 21.5 l-6 1.6"/><path d="M19 36 h10"/></g></svg></div>
+    <div>
+      <span class="tipkicker">Sam's Heads Up</span>
+      <p class="tiphead">Your Site Office might be three buildings in a trench coat</p>
+      <p>Here the Site Office is one tidy building. On your job, the CDE might be one system, or three systems pretending to be one, with a shared drive lurking round the back.</p><p>Find out which <b>before day one</b>: what goes where, which one is the real record, and who decided. If nobody can tell you, that's your first job.</p>
+    </div>
+  </aside>
 </section>
 
 <section class="concept" aria-labelledby="h-reveal">
@@ -204,6 +213,6 @@
   <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
   <span>&copy; 2026 InfoTown</span>
 </div></footer>
-<script src="../../assets/lesson.js?v=202610112022"></script>
+<script src="../../assets/lesson.js?v=202610112049"></script>
 </body>
 </html>

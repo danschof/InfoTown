@@ -307,3 +307,31 @@ section{margin-top:40px}
 @keyframes jet{to{stroke-dashoffset:-20}}
 @media (prefers-reduced-motion: reduce){.square .jets path{animation:none}.square .dest .bld{transition:none}}
 .subhead{font-family:Lexend,system-ui,sans-serif;font-size:1.35rem;line-height:1.25;color:var(--ink);margin:0}
+/* New in this lesson */
+.newterms{margin:18px 0 6px;padding:16px 18px;border-radius:10px;background:#f7f4fd;border:1.5px solid #ddd4f3}
+.newterms h2{font-family:Lexend,system-ui,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6a55b0;margin:0 0 10px}
+.newterms dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px 22px;margin:0}
+.newterms dt{font-family:Lexend,system-ui,sans-serif;font-weight:600;color:var(--ink);font-size:.98rem}
+.newterms dd{margin:2px 0 0;color:var(--muted);font-size:.93rem;line-height:1.4}
+/* Heads-up tip box */
+.tipbox{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;margin:22px 0 0;padding:18px 20px;border-radius:10px;background:#fdf3d4;border:2px solid #e2b54a}
+.tipicon{width:40px;height:40px;border-radius:50%;background:#d65a2c;color:#fff;font-family:Lexend,system-ui,sans-serif;font-weight:700;font-size:1.4rem;display:grid;place-items:center}
+.tiphead{font-family:Lexend,system-ui,sans-serif;font-weight:700;font-size:1.08rem;color:var(--ink);margin:2px 0 6px}
+.tipbox p{margin:0 0 8px;color:var(--ink);line-height:1.5;max-width:80ch}
+.tipbox p:last-child{margin-bottom:0}
+/* Before you start */
+.beforestart{margin:18px 0 8px;border:1.5px solid #ddd4f3;border-radius:12px;background:#fbfaff;overflow:hidden}
+.beforestart h3{font-family:Lexend,system-ui,sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6a55b0;margin:0 0 8px}
+.bs-top{display:grid;grid-template-columns:1.2fr 1fr;gap:0}
+.bs-col{padding:16px 20px}
+.bs-col+.bs-col{border-left:1.5px dashed #ddd4f3}
+.bs-col p{margin:0;color:var(--ink);line-height:1.5}
+.bs-col ul{margin:0;padding-left:1.1em;color:var(--ink);line-height:1.5}
+.bs-col li{margin:2px 0}
+.bs-words{padding:14px 20px 16px;background:#f3effc;border-top:1.5px solid #ddd4f3}
+.bs-words dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px 22px;margin:0}
+.bs-words dt{font-family:Lexend,system-ui,sans-serif;font-weight:600;color:var(--ink);font-size:.95rem}
+.bs-words dd{margin:1px 0 0;color:var(--muted);font-size:.9rem;line-height:1.4}
+@media (max-width:720px){.bs-top{grid-template-columns:1fr}.bs-col+.bs-col{border-left:0;border-top:1.5px dashed #ddd4f3}}
+.tipsam{width:60px;height:60px;border-radius:50%;background:#fde6d8;border:2px solid #d65a2c;display:grid;place-items:center}
+.tipkicker{display:block;font-family:Lexend,system-ui,sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d65a2c}
