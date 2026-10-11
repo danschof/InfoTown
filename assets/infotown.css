@@ -254,3 +254,45 @@ a.dcard:hover{background:var(--wash)}
 @media (max-width:860px){.ladder{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:600px){.ladder{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (prefers-reduced-motion: reduce){#t-you .halo{animation:none;opacity:.8}}
+
+/* ---------- Concept-first lessons (v2) ---------- */
+section{margin-top:40px}
+.concept .cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:16px;align-items:stretch}
+.idea{border:1.5px solid var(--ink);border-radius:14px;padding:22px;display:grid;gap:10px;align-content:center}
+.idea .term{font-size:clamp(20px,2.3vw,25px)}
+.concept .reveal{margin-top:0;padding:clamp(18px,2.6vw,28px);gap:10px}
+.concept .reveal h2{font-size:clamp(26px,3.4vw,40px)}
+.concept .reveal .big{font-size:clamp(17px,1.9vw,20px)}
+.concept .reveal p.small{font-size:15px;color:var(--muted)}
+.agrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.storycard{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:16px;align-items:center;border:1.5px solid var(--alley);border-radius:12px;padding:14px;text-decoration:none;color:var(--ink);background:var(--paper)}
+.storycard:hover{background:#fffaf6}
+.storycard svg{width:100%;height:auto;background:var(--wash);border-radius:6px;display:block}
+.storycard h3{font-size:20px;margin:4px 0}
+.storycard p{font-size:15px;color:var(--muted)}
+.storycard .go,.lcard .go{display:inline-block;margin-top:8px;font:600 15px var(--display);color:var(--alley)}
+.agrid .takeaway{grid-template-columns:auto 1fr;align-content:center}
+.agrid .takeaway p{font-size:clamp(16px,1.8vw,19px)}
+.banner.story{background:var(--alley)}
+.banner.phrase{background:#2e8b57}
+.pb .sechead h2 a{color:inherit;text-decoration:none}
+.pb .sechead h2 a:hover{text-decoration:underline}
+.pbrv{font-family:var(--display);color:var(--ink)!important;background:var(--butter);justify-self:start;padding:4px 10px;border-radius:6px}
+.learnintro{margin-top:44px}
+.startrow{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-start}
+.alllessons{flex:1;min-width:260px}
+.alllessons summary{cursor:pointer;font:600 16px var(--display);color:var(--ink);padding:10px 0}
+.lessonlist{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:2px;border-top:1.5px solid var(--faint)}
+.lessonlist li{display:grid;grid-template-columns:28px minmax(0,1fr) minmax(0,1.3fr);gap:10px;padding:8px 0;border-bottom:1px solid var(--faint);align-items:baseline}
+.lessonlist .n{font-family:var(--display);font-weight:700;color:var(--muted)}
+.lessonlist a,.lessonlist .t{font-family:var(--display);font-weight:600;color:var(--ink)}
+.lessonlist .r{font-size:14.5px;color:var(--muted)}
+.lessonlist li.soon .t{color:var(--muted);font-weight:400}
+@media (max-width:860px){
+  .concept .cgrid,.agrid{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .storycard{grid-template-columns:1fr}
+  .lessonlist li{grid-template-columns:24px 1fr}
+  .lessonlist .r{grid-column:2}
+}
