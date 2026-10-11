@@ -335,3 +335,12 @@ section{margin-top:40px}
 @media (max-width:720px){.bs-top{grid-template-columns:1fr}.bs-col+.bs-col{border-left:0;border-top:1.5px dashed #ddd4f3}}
 .tipsam{width:60px;height:60px;border-radius:50%;background:#fde6d8;border:2px solid #d65a2c;display:grid;place-items:center}
 .tipkicker{display:block;font-family:Lexend,system-ui,sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d65a2c}
+/* Key words beside the scene */
+.scenehead{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start;margin-bottom:18px}
+.scenehead .sechead{margin-bottom:0}
+.keywords{padding:14px 16px;border-radius:10px;background:#f7f4fd;border:1.5px solid #ddd4f3}
+.keywords h3{font-family:Lexend,system-ui,sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6a55b0;margin:0 0 8px}
+.keywords dl{margin:0;display:grid;gap:8px}
+.keywords dt{font-family:Lexend,system-ui,sans-serif;font-weight:600;color:var(--ink);font-size:.95rem}
+.keywords dd{margin:1px 0 0;color:var(--muted);font-size:.88rem;line-height:1.4}
+@media (max-width:860px){.scenehead{grid-template-columns:1fr;gap:14px}}
