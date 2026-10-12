@@ -501,3 +501,39 @@ svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
 .scenefold{margin-top:28px}
 .scenefold > summary{font-size:18px}
 .scenefold > .morebody > section{margin-top:8px}
+/* Continue your journey: the one button to press */
+.nextstory{display:flex;align-items:center;gap:18px;padding:20px 22px;border-radius:16px;background:var(--alley);color:#fff;text-decoration:none;box-shadow:0 4px 0 #a8401c;transition:transform .15s,box-shadow .15s}
+.nextstory:hover{transform:translateY(-2px);box-shadow:0 6px 0 #a8401c}
+.nextstory:active{transform:translateY(2px);box-shadow:0 2px 0 #a8401c}
+.nextstory:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.nextstory .ns-text{flex:1;min-width:0}
+.nextstory .ns-eyebrow{font:700 13px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#ffe6d9}
+.nextstory h3{color:#fff;font-size:22px;margin:4px 0 6px}
+.nextstory p{color:#fff3ec;font-size:15px;margin:0}
+.nextstory .ns-arrow{flex:none;width:64px;height:64px;border-radius:50%;background:#fff;color:var(--alley);display:grid;place-items:center;font:700 38px/1 var(--display)}
+@media (prefers-reduced-motion:reduce){.nextstory{transition:none}.nextstory:hover,.nextstory:active{transform:none}}
+@media (max-width:640px){.nextstory .ns-arrow{width:52px;height:52px;font-size:30px}.nextstory h3{font-size:20px}}
+.explained{margin-top:32px;padding:22px 24px;border:2px solid var(--ink);border-radius:16px;background:var(--paper)}
+.explained .expl{font-size:20px;line-height:1.6;color:var(--ink);margin-top:8px;max-width:none}
+.concept.infold{margin-top:24px}
+.concept.infold .reveal{max-width:none}
+/* Lesson folds with more definition */
+.fixwrap{margin-top:18px}
+.more.fixit{border:2px solid #7b5cc4;background:#f6f3fd}
+.more.fixit > summary{font-size:1.12rem}
+.more.fixit .moreflag.im{background:#7b5cc4;color:#fff}
+.more.fixit > summary::after{color:#7b5cc4}
+.more.scenefold{border:2px solid var(--main);background:var(--sky)}
+.more.scenefold > summary{font-size:1.15rem;padding:18px 20px}
+.more.scenefold > summary .moreflag{background:var(--main);color:#fff}
+.more.scenefold > summary::after{color:var(--main);font-size:1.6rem}
+.more.scenefold[open]{background:#fff}
+.isosec{margin:36px 0 8px;padding-top:22px;border-top:2px solid var(--faint);display:grid;gap:10px}
+.isosec .naref{margin:0}
+.isosec .naref details{border:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 0 0 2px var(--ink)}
+.isosec .naref summary{background:var(--ink);color:#fff;padding:16px 20px}
+.isosec .naref summary::after{color:#fff}
+.isosec .naflag{background:#fff;color:var(--ink)}
+.isosec .naref:has(.naflag.na) details{box-shadow:0 0 0 2px #1f6b44}
+.isosec .naref:has(.naflag.na) summary{background:#1f6b44}
+.isosec .naflag.na{background:#fff;color:#1f6b44}
