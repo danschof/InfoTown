@@ -39,9 +39,13 @@
     fields.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.k); }); });
     document.querySelectorAll('[data-hl]').forEach(function (el) {
       el.addEventListener('click', function () { show(el.dataset.hl); });
+      if (el.classList.contains('pick')) el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(el.dataset.hl); }
+      });
     });
     var start = fields.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; })[0] || fields[0];
     if (start) show(start.dataset.k);
+    else { var p0 = document.querySelector('[data-hl].pick'); if (p0) show(p0.dataset.hl); }
   }
 
   // 3. Reduced motion
