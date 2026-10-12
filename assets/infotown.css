@@ -537,3 +537,13 @@ svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
 .isosec .naref:has(.naflag.na) details{box-shadow:0 0 0 2px #1f6b44}
 .isosec .naref:has(.naflag.na) summary{background:#1f6b44}
 .isosec .naflag.na{background:#fff;color:#1f6b44}
+.isosec > *, .moresec > *{min-width:0}
+.natable td code{white-space:nowrap}
+/* Sam's Heads Up, folded */
+.fixwrap{display:grid;gap:10px}
+.more.samtip{border:2px solid #e2b54a;background:#fdf8e6}
+.more.samtip > summary{gap:10px}
+.more.samtip .samface svg{display:block}
+.more.samtip .moreflag.sam{background:#d65a2c;color:#fff}
+.more.samtip > summary::after{color:#b07a12}
+.more.samtip .morebody p{margin:0 0 8px;color:var(--ink);line-height:1.5}
