@@ -478,3 +478,14 @@ section{margin-top:40px}
 .scene .bhide{opacity:0;pointer-events:none}
 .scene [data-step]{transition:opacity .6s ease}
 @media (prefers-reduced-motion:reduce){.scene [data-step]{transition:none}}
+
+/* ---------- Story first: home hero, cliffhanger, right way ---------- */
+.homehero{display:grid;grid-template-columns:minmax(0,780px) auto;justify-content:start;gap:40px;align-items:end}
+.homehero .hh-meet{font-size:19px;margin-top:12px;max-width:40em}
+.homehero .hh-rex svg{display:block;max-width:100%;width:250px;height:auto}
+@media (max-width:640px){.homehero{grid-template-columns:1fr}.homehero .hh-rex{display:none}}
+.cliff{text-align:center}
+.cliff .clifftxt{font-family:var(--display);font-size:24px;font-weight:600;color:var(--alley);margin:0 0 14px;text-wrap:balance}
+.rightway{margin-top:40px}
+.rightway .sechead{margin-bottom:6px}
+.storycard.nextstory{grid-template-columns:1fr}

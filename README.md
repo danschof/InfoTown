@@ -1,17 +1,19 @@
 # InfoTown website
 
-Static website for **infotown.co.uk**. Plain HTML, one shared stylesheet, one small script. There's no build step, so whatever is in this folder is the website.
+Static website for **infotown.co.uk**. Plain HTML, one shared stylesheet, one small script. The pages are generated from a separate site source by `build.py`, but whatever is in this folder is the website.
 
 ## What's here
 
 ```
 index.html                 Town Square (home page)
 404.html                   "This parcel has no label" (page not found)
-academy/index.html         The Academy: 12 lessons in four parts
-academy/NN-lesson-name/    Lessons 1 to 12 (concept only)
+induction/index.html       Site Induction: Rex's first year, 12 stories and lessons
+induction/NN-lesson-name/  Lessons 1 to 12, each ending with its story done the right way
+induction/follow-the-process/ Follow the Process: requirement to handover, step by step
 stories/index.html         All the stories
-stories/NN-story-name/     One story per lesson
+stories/NN-story-name/     Stories 1 to 12: the wrong way, read before each lesson
 phrase-book/index.html     Every translation card in one place
+visitor-centre/index.html  Meet the locals: who's who, and what ISO 19650 calls them
 manifesto/index.html       The Manifesto
 assets/infotown.css        Shared styles (colours, type, lesson layout)
 assets/lesson.js           Route toggles, clickable explainers, reduced motion
@@ -26,7 +28,7 @@ Open the folder in VS Code and use the Live Server extension, or run this from t
 python -m http.server 8000
 ```
 
-Then go to http://localhost:8000. Opening the HTML files directly by double-clicking mostly works, but links to folders such as `academy/` only work through a server.
+Then go to http://localhost:8000. Opening the HTML files directly by double-clicking mostly works, but links to folders such as `induction/` only work through a server.
 
 ## Publish with GitHub Pages
 
@@ -57,6 +59,10 @@ Then:
 3. Tick **Enforce HTTPS**.
 4. Optional but recommended: verify the domain under your GitHub account's **Settings → Pages**, so nobody else can claim it.
 
-## Adding a lesson
+## The route
 
-Each lesson is one `index.html` in its own folder, built from the same sections: scene, story, test, real town, term and reveal, translation card, take-away. Copy an existing lesson folder and change the content. Turn on its card in `academy/index.html` by changing the `lcard soon` block to a link.
+Town Square → Story 1 (the wrong way) → Lesson 1 (the lesson, then the same story done the right way) → Story 2 → … → Lesson 12 → Follow the Process.
+
+## Changing a lesson or story
+
+Edit the source fragments and run `python build.py` in the site source. It rebuilds every lesson, story and index page in this folder.
