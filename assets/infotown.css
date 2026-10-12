@@ -496,3 +496,8 @@ svg .pick{cursor:pointer}
 svg .pick:focus{outline:none}
 svg .pick:focus-visible > rect:first-child{stroke:#2f6fd6;stroke-width:4}
 svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
+.explained{margin-top:36px}
+.explained .idea .expl{font-size:19px;line-height:1.55;color:var(--ink);margin-top:8px}
+.scenefold{margin-top:28px}
+.scenefold > summary{font-size:18px}
+.scenefold > .morebody > section{margin-top:8px}
