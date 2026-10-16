@@ -34,7 +34,7 @@ Then go to http://localhost:8000. Opening the HTML files directly by double-clic
 
 1. Commit and push to `main` (GitHub Desktop: **Commit to main**, then **Push origin**).
 2. On GitHub, open the repo: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)` → Save**.
-3. After a minute or two the site is live at `https://danschof.github.io/InfoTown/`. Check it there first.
+3. After a minute or two the site is live at `https://<your-github-account>.github.io/InfoTown/`. Check it there first.
 
 The repo must be public for Pages on a free GitHub plan. Keep anything internal or organisation-specific out of it.
 
@@ -48,7 +48,7 @@ At your domain registrar's DNS settings:
 | A | @ | 185.199.109.153 |
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
-| CNAME | www | danschof.github.io |
+| CNAME | www | <your-github-account>.github.io |
 
 Remove any other A or CNAME records for `@` and `www` that the registrar added by default (parking pages).
 
