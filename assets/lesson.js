@@ -43,9 +43,13 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(el.dataset.hl); }
       });
     });
+    var pre = document.querySelector('[data-start]');
+    if (pre && F[pre.dataset.start]) { show(pre.dataset.start); }
+    else {
     var start = fields.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; })[0] || fields[0];
     if (start) show(start.dataset.k);
     else { var p0 = document.querySelector('[data-hl].pick'); if (p0) show(p0.dataset.hl); }
+    }
   }
 
   // 3. Reduced motion
