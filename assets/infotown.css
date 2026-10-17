@@ -628,3 +628,30 @@ svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
 .clientpanel .cp-k{display:inline-block;background:#1f8a4c;color:#fff;font:700 13px var(--display);letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
 .clientpanel p{margin:10px 0 0;font-size:18px;line-height:1.5;color:var(--ink)}
 .plainlist{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--ink)}
+/* Sam: delivery + finale */
+.cyp-act{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.cyp-alt{font:600 15px var(--display);color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.moreflag.pm{background:#1f6b6b;color:#fff}
+.rexlink{margin:14px 0 0;font-size:16px;color:var(--ink)}
+.rexlink a{color:var(--main);font-weight:600}
+.assessor{margin-top:40px;padding-top:24px;border-top:2px solid var(--faint)}
+.assessor h2{margin:4px 0 8px}
+.fc-tools{margin:12px 0 16px}
+.fc-all{font:600 15px var(--display);background:#fff;border:2px solid var(--ink);color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}
+.fcards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.fcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.fcards{grid-template-columns:1fr}}
+.fc{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fc-in{position:relative;display:block;width:100%;min-height:190px;padding:0;border:0;background:none;cursor:pointer;perspective:900px;text-align:left;font:inherit}
+.fc-front,.fc-back{position:absolute;inset:0;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;backface-visibility:hidden;transition:transform .45s ease;border:2px solid var(--ink)}
+.fc-front{background:#fff}
+.fc-back{background:#e1ecfa;border-color:var(--main);transform:rotateY(180deg)}
+.fc-in.flipped .fc-front{transform:rotateY(-180deg)}
+.fc-in.flipped .fc-back{transform:rotateY(0)}
+.fc-in:focus-visible{outline:3px solid var(--alley);outline-offset:3px;border-radius:14px}
+.fc-k{font:700 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fc-q{font:600 18px/1.35 var(--display);color:var(--ink)}
+.fc-hint{margin-top:auto;font-size:13px;color:var(--alley);font-weight:600}
+.fc-back ul{margin:0;padding-left:18px;display:grid;gap:4px;color:var(--ink);font-size:15px;line-height:1.4}
+.fc-link{font:600 14px var(--display);color:var(--main);text-decoration:none}
+@media (prefers-reduced-motion:reduce){.fc-front,.fc-back{transition:none}}
