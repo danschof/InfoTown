@@ -566,7 +566,7 @@ svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
 .cyp-cta{margin-top:14px}
 .cyp{margin-top:28px}
 #townmap .pick{cursor:pointer}
-#townmap [data-hl="com"],#townmap [data-hl="fin"],#townmap [data-hl="pro"],#townmap [data-hl="cap"],#townmap [data-hl="ast"]{opacity:.5}
+#townmap [data-hl="com"],#townmap [data-hl="pre"],#townmap [data-hl="pro"],#townmap [data-hl="eng"],#townmap [data-hl="qa"]{opacity:.5}
 #townmap [data-hl].hl{opacity:1}
 .cyp-card{display:flex;gap:20px;align-items:center;flex-wrap:wrap;padding:20px 22px;border-top:1px solid var(--faint)}
 .cyp-card .cyp-text{flex:1 1 320px;min-width:0}
@@ -617,3 +617,14 @@ svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
 .hallstops{margin-top:28px}
 .agrid .hallask{margin-top:0;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px}
 .rightway .strip4 + .verdict{margin-top:16px}
+/* Sam's journey */
+.banner.sam{background:#1f6b6b}
+.panel .pv{position:relative}
+.panel.p-later .pv::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(-45deg,#ffd84d 0 9px,#1b3478 9px 18px)}
+.panel .later{position:absolute;top:16px;left:10px;background:#fff7cc;border:1.5px solid var(--ink);color:var(--ink);font:italic 600 12.5px/1.2 var(--display);padding:4px 8px;border-radius:2px;box-shadow:2px 2px 0 rgba(27,52,120,.15)}
+.laterkey{display:flex;align-items:center;gap:8px;margin:10px 0 0;font-size:14px;color:var(--muted)}
+.laterkey .lk-swatch{width:28px;height:8px;background:repeating-linear-gradient(-45deg,#ffd84d 0 6px,#1b3478 6px 12px);border-radius:2px}
+.clientpanel{margin-top:22px;border:2px solid #1f8a4c;background:#e2f2e6;border-radius:16px;padding:18px 22px}
+.clientpanel .cp-k{display:inline-block;background:#1f8a4c;color:#fff;font:700 13px var(--display);letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.clientpanel p{margin:10px 0 0;font-size:18px;line-height:1.5;color:var(--ink)}
+.plainlist{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--ink)}
