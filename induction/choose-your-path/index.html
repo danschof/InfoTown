@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../assets/infotown.css?v=202610171203">
+<link rel="stylesheet" href="../../assets/infotown.css?v=202610171324">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -127,10 +127,12 @@
            journey: 'Winning the job: the client\'s requirements, the bid, and every promise the project will have to keep.', meta: 'A later phase' },
     pro: { place: 'Procurement', name: 'Bev', status: 'later', who: 'Buyer. Pencil through her bun. Three quotes for everything, including the pens.',
            journey: 'Buying the supply chain, and making sure the information rules go into every order and subcontract.', meta: 'A later phase' },
-    eng: { place: 'Engineering', name: 'Stevie', status: 'later', who: 'Engineering surveyor, and Rex\'s mentor. Short beard, survey tripod, and a soft Scottish "show me your working".',
-           journey: 'Putting the drawing on the ground, so it had better be the right drawing.', meta: 'A later phase' },
-    qa: { place: 'Assurance', name: 'Priya', status: 'later', who: 'QHSE manager. White hard hat, hi-vis, clipboard. Came up through site, never raises her voice, never needs to.',
-           journey: 'Quality, safety and the environment: if it isn\'t written down, it didn\'t happen.', meta: 'A later phase' }
+    eng: { place: 'Engineering', name: 'Stevie', status: 'live', who: 'Engineering surveyor, and Rex\'s mentor. Short beard, survey tripod, and a soft Scottish "show me your working".',
+           journey: 'The information everyone else builds from: surveys, scans, coordinates, questions to the designer, calculations, monitoring and the as-built record. Rex tags along as his apprentice.',
+           meta: 'Live now · 7 stories and 7 lessons · For engineers and surveyors', href: '../../stories/stevie/01-the-survey-nobody-could-find/', go: 'Follow Stevie' },
+    qa: { place: 'Assurance', name: 'Priya', status: 'live', who: 'QHSE manager. White hard hat, hi-vis, clipboard. Came up through site, never raises her voice, never needs to.',
+           journey: 'Quality, safety and the environment: inspections, method statements, records, protected wildlife, defects, audits and the safety file. If it isn\'t written down, it didn\'t happen.',
+           meta: 'Live now · 7 stories and 7 lessons · For quality, safety and environment people', href: '../../stories/priya/01-the-inspection-nobody-planned/', go: 'Follow Priya' }
   };
   var $ = function (id) { return document.getElementById(id); };
   var picks = [].slice.call(document.querySelectorAll('#townmap [data-hl]'));

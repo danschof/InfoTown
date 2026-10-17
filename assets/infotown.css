@@ -795,3 +795,14 @@ body.qz-lock{overflow:hidden}
 .scenekey b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;display:inline-grid;place-items:center;font:700 12px var(--display)}
 .scenescroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .clientpanel.im{border-color:#6d4c8f;background:#f3effc}.clientpanel.im .cp-k{background:#6d4c8f}
+
+/* Tier 1, Batch 1: Stevie (Engineering) and Priya (Assurance) */
+.banner.eng{background:#8a4b1f}
+.banner.qa{background:#1f7a52}
+#townmap [data-hl="eng"],#townmap [data-hl="qa"]{opacity:1}
+.clientpanel.des{border-color:#8a4b1f;background:#f7ebe0}.clientpanel.des .cp-k{background:#8a4b1f}
+.clientpanel.site{border-color:#a86b00;background:#fdf3d4}.clientpanel.site .cp-k{background:#a86b00}
+.sp-card.stevie{border-color:#8a4b1f}
+.sp-card.priya{border-color:#1f7a52}
+@media (max-width:480px){.titleblock h1{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
+@media (max-width:480px){.top .titleblock{min-width:0}}
