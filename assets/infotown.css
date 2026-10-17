@@ -615,3 +615,5 @@ svg .pick:hover > rect:first-child{stroke:#2f6fd6;stroke-width:2.5}
 .hallintro p{margin:0 0 10px}.hallintro p:last-child{margin:0}
 @media (max-width:600px){.hallintro{grid-template-columns:1fr}.hi-fig{display:none}}
 .hallstops{margin-top:28px}
+.agrid .hallask{margin-top:0;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px}
+.rightway .strip4 + .verdict{margin-top:16px}
