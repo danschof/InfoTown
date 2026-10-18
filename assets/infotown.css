@@ -797,12 +797,22 @@ body.qz-lock{overflow:hidden}
 .clientpanel.im{border-color:#6d4c8f;background:#f3effc}.clientpanel.im .cp-k{background:#6d4c8f}
 
 /* Tier 1, Batch 1: Stevie (Engineering) and Priya (Assurance) */
-.banner.eng{background:#8a4b1f}
+.banner.eng{background:#2b5797}
 .banner.qa{background:#1f7a52}
 #townmap [data-hl="eng"],#townmap [data-hl="qa"]{opacity:1}
-.clientpanel.des{border-color:#8a4b1f;background:#f7ebe0}.clientpanel.des .cp-k{background:#8a4b1f}
+.clientpanel.des{border-color:#2b5797;background:#e6edf8}.clientpanel.des .cp-k{background:#2b5797}
 .clientpanel.site{border-color:#a86b00;background:#fdf3d4}.clientpanel.site .cp-k{background:#a86b00}
-.sp-card.stevie{border-color:#8a4b1f}
+.sp-card.stevie{border-color:#2b5797}
 .sp-card.priya{border-color:#1f7a52}
 @media (max-width:480px){.titleblock h1{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}}
 @media (max-width:480px){.top .titleblock{min-width:0}}
+
+/* Tier 1 Batch 2: role colours (provisional, DEC-120) */
+.banner.com{background:#8c2f39}
+.banner.pro{background:#8a5a1f}
+.banner.pre{background:#4a5d73}
+#townmap [data-hl="com"],#townmap [data-hl="pre"],#townmap [data-hl="pro"]{opacity:1}
+.clientpanel.sub{border-color:#8a5a1f;background:#f6ecdd}.clientpanel.sub .cp-k{background:#8a5a1f}
+.sp-card.kofi{border-color:#8c2f39}
+.sp-card.bev{border-color:#8a5a1f}
+.sp-card.tom{border-color:#4a5d73}

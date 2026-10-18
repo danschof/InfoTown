@@ -92,7 +92,37 @@
 .trailref ul{margin:8px 0 0;padding-left:20px;color:var(--ink);line-height:1.55}
 .trailref p{color:var(--ink);line-height:1.55;max-width:80ch}
 .naflag.trail{background:#d65a2c}
-@media (max-width:640px){.jtabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}.jbar{order:3;flex-basis:100%}.jcontrols{justify-content:space-between}.jclab{font-size:9.5px}.jseg{min-width:4px}}
+.jwho{margin:0 0 12px}
+.jwholab,.jtablab{display:block;font:700 13px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin:0 0 7px}
+.jtablab{color:var(--muted);font-size:12px;margin-top:2px}
+.jwhochips{display:flex;flex-wrap:wrap;gap:6px}
+.jwhochips button{font:600 14px var(--display);color:var(--ink);background:#fff;border:1.5px solid #9db8e6;border-radius:999px;padding:7px 14px;cursor:pointer;text-align:left}
+.jwhochips button small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.jwhochips button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.jwhochips button[aria-pressed=true] small{color:#fdf3d4}
+.jwhochips button:focus-visible,.jdetail:focus-visible{outline:3px solid #f2b400;outline-offset:2px}
+.jknow{margin:0 0 12px;padding:12px 16px;border-radius:10px;background:#fdf3d4;border:2px solid #e2b54a}
+.jknow summary{font:700 15px var(--display);color:var(--ink);cursor:pointer;list-style:none;display:flex;gap:8px;align-items:center}
+.jknow summary::-webkit-details-marker{display:none}
+.jknow summary::after{content:'+';margin-left:auto;font-size:1.2rem;color:var(--muted)}
+.jknow[open] summary::after{content:'–'}
+.jknow[open] summary{margin-bottom:6px}
+.jknow ul{margin:0;padding-left:20px;color:var(--ink);line-height:1.5;columns:2 300px;column-gap:28px}
+.jknow li{margin:0 0 4px;break-inside:avoid}
+.jdetail{display:inline-flex;align-items:center;gap:8px;font:600 13.5px var(--display);color:var(--ink);background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px 6px 8px;cursor:pointer}
+.jdetail i{display:inline-block;width:30px;height:18px;border-radius:9px;background:#c8d4ec;position:relative;transition:background .2s}
+.jdetail i::after{content:'';position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;transition:left .2s}
+.jdetail[aria-pressed=true] i{background:var(--ink)}
+.jdetail[aria-pressed=true] i::after{left:14px}
+.journey.simple [data-f=number],.journey.simple [data-f=rev],.journey.simple [data-f=reason],.journey.simple [data-f=rec]{display:none}
+.journey:not(.simple) [data-f=use]{display:none}
+.journey.simple .jfields [data-f=status] dd{font-family:inherit;font-size:inherit}
+.journey.simple .jreg,.journey.simple #j-ref,.journey.simple .jhist,.journey.simple .ghost text,.journey.simple .jviewwrap,.journey.rolemode .jviewwrap{display:none}
+.journey:not(.simple) #j-refnote{display:none}
+.journey.simple .tipbox .dt{display:none}
+#jmap .town.me{stroke:#1b3478;stroke-dasharray:none;stroke-width:2.5}
+#jmap .town.dim{opacity:.45}
+@media (max-width:640px){.jwhochips button{font-size:13px;padding:6px 11px}.jwhochips button small{display:none}.jtabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}.jbar{order:3;flex-basis:100%}.jcontrols{justify-content:space-between}.jclab{font-size:9.5px}.jseg{min-width:4px}}
 @media (prefers-reduced-motion:reduce){#jmap .ln,#jmap .alley,#jmap .town{transition:none}#j-glow.on,#j-ring.on,.pc.pulse .inner{animation:none}}
 </style>
 <header class="top">
@@ -104,16 +134,23 @@
   </div>
 </header>
 
-<section class="journey" aria-labelledby="h-j">
+<section class="journey simple" aria-labelledby="h-j">
   <h2 id="h-j" class="sr">The process, stop by stop</h2>
   <div class="scenebox">
+    <div class="jwho">
+      <span class="jwholab" id="jw-lab">Who are you?</span>
+      <div class="jwhochips" id="j-who" role="group" aria-labelledby="jw-lab"></div>
+    </div>
+    <details class="jknow" id="j-know" hidden><summary id="j-know-h"></summary><ul id="j-know-l"></ul></details>
     <div class="jtop">
-      <div><span class="jviewlab" id="jv-lab">View by</span><div class="jview" role="group" aria-labelledby="jv-lab">
+      <button type="button" class="jdetail" id="j-detail" aria-pressed="false"><i aria-hidden="true"></i>Show the detail</button>
+      <div class="jviewwrap"><span class="jviewlab" id="jv-lab">View by</span><div class="jview" role="group" aria-labelledby="jv-lab">
         <button type="button" id="v-stage" aria-pressed="true">Work stage</button>
         <button type="button" id="v-iso" aria-pressed="false">ISO 19650 process</button>
       </div></div>
     </div>
-    <div class="jtabs" id="j-tabs" role="group" aria-label="Choose a part of the trail"></div>
+    <span class="jtablab" id="j-tablab">Pick a stage</span>
+    <div class="jtabs" id="j-tabs" role="group" aria-labelledby="j-tablab"></div>
     <div class="jcontrols">
       <button type="button" id="j-prev" aria-label="Previous stop">← Back</button>
       <div class="jbar" id="j-bar"></div>
@@ -238,6 +275,7 @@
           <div data-f="number"><dt>Number</dt><dd id="f-number"></dd></div>
           <div data-f="rev"><dt>Revision</dt><dd id="f-rev"></dd></div>
           <div data-f="status"><dt>Status</dt><dd id="f-status"></dd></div>
+          <div data-f="use"><dt>Can you build from it?</dt><dd id="f-use"></dd></div>
           <div data-f="reason"><dt>Reason for issue</dt><dd id="f-reason"></dd></div>
           <div data-f="where"><dt>Where</dt><dd id="f-where"></dd></div>
           <div data-f="who"><dt>Who's acting</dt><dd id="f-who"></dd></div>
@@ -258,14 +296,16 @@
       <span class="tipkicker">Sam's Heads Up</span>
       <p class="tiphead">One need, lots of parcels, two ways to read it</p>
       <p>One need from the client spawns a whole family: the requirements, the plan, the drawing, the issue, the TQ, the shop drawing, the inspection, the survey and the handover pack. Each is its own parcel with its own number, and each leaves its own trail. A real job runs thousands of these at once.</p>
-      <p>By <b>work stage</b> is how the job feels: we join at Stage 4. By <b>ISO 19650 process</b> is what the information management is doing, and it shows something the stages hide: "make it together" and "deliver it" come round every time the drawing changes. Same gates, every time.</p>
+      <p class="dt">By <b>work stage</b> is how the job feels: we join at Stage 4. By <b>ISO 19650 process</b> is what the information management is doing, and it shows something the stages hide: "make it together" and "deliver it" come round every time the drawing changes. Same gates, every time.</p>
       <p>The lines are the workflow. A parcel travelling along one is changing state: from work in progress to shared to published. Your towns might be separate systems or rooms in one system; the moves are the same, and the CDE records every one. Every town runs its own checkpoints before anything leaves, and approval (A) is its ticket out.</p>
       <p>Watch who moves. Parcels only travel when they change state. Everyone else comes to the Site Office to comment, authorise or accept, the Site Office records who did what, and then they go home and get on with it. When something changes, it changes where it sits and people are told. Nobody gets sent a copy.</p>
       <p>This is how this job does it. Yours might keep work in progress in the CDE, run its CDE across several systems, or use the client's own. That's all fine: see "Your project may do it differently" below.</p>
-      <p>The codes are the UK ones from the National Annex to ISO 19650. A5 is signed off for Stage 5 and A6 for Stage 6; the reason for issue says why. Your client may use its own stage gates, and your project's information standard may use different codes, so check it.</p>
+      <p class="dt">The codes are the UK ones from the National Annex to ISO 19650. A5 is signed off for Stage 5 and A6 for Stage 6; the reason for issue says why. Your client may use its own stage gates, and your project's information standard may use different codes, so check it.</p>
     </div>
   </aside>
 
+  <p class="jnote" id="j-refnote" style="margin-top:28px">Want the whole trail as a table, the rules, and every code? Turn on <b>Show the detail</b> at the top of the map.</p>
+  <div id="j-ref">
   <div class="sechead" style="margin-top:34px">
     <span class="eyebrow">The whole trail</span>
     <h2>Every stop, on one page</h2>
@@ -371,6 +411,7 @@
 </tbody></table></div>
 <h4>The codes on Drawing 042</h4>
 <p class="nacodes">Form <code>D</code> is a drawing (<code>T</code> would be text, <code>L</code> a list or schedule). Discipline <code>C</code> is civil engineering (<code>X</code> means not discipline-specific). <code>XX</code> means a field isn't subdivided, <code>ZZ</code> means it covers several. The Annex has the full lists of form and discipline codes, and your project's information standard says which ones your job uses.</p><p class="nasrc">Based on the UK National Annex to BS EN ISO 19650-2. Your project's information standard can add to it. ISO 19650 and its UK National Annex are © ISO and BSI. InfoTown explains the ideas in its own words, for learning; you'll hear the same language across the industry. Read more for free in the Information Management Initiative (IMI) Framework guidance from BSI and nima. For the full requirements, use the standard itself.</p></div></details></section>
+  </div>
   <nav class="lessonnav" aria-label="Lessons"><a href="../12-putting-it-all-together/">← Lesson 12 · <b>Putting It All Together</b></a><a href="../">All lessons →</a></nav>
 </section>
 
@@ -584,6 +625,94 @@
       f: { status: 'The client\'s own: updated', where: 'Client Town: head office', who: 'The client' } }
   ];
 
+  // ---- plain words: what most people read. The detail switch brings back the codes.
+  var PLAIN_ITEMS = {
+    oir: 'What the client needs to know', air: 'What the Asset System must hold', pir: 'The decisions the client will make',
+    eir: 'The client\'s requirements', bep: 'Our plan for the job', plan: 'The parts list',
+    d042: 'Drawing 042: the drainage drawing', iss: 'A clash: the drain hits a beam', sd: 'The supplier\'s drawing of the chamber',
+    pack: 'The work pack for this area', fo: 'A note from site: a cable nobody knew about', tq: 'A question from site, with a mark-up',
+    ins: 'The inspection record', sv: 'The survey of what was built', mk: 'A mark-up of small differences',
+    hp: 'The handover pack', hpc: 'Our copy of the handover pack', asset: 'The drain\'s record in the Asset System'
+  };
+  var PLAIN_TEXT = {
+    's0-need': 'Before there\'s a project there\'s a question: what does the client need to know to run what it owns? What it has, where it is, what state it\'s in, what it costs.',
+    's1-asset-needs': 'That becomes a list of what the client\'s Asset System must hold for every drain. Whatever we hand over years from now has to fit it.',
+    's1-project-needs': 'The client also lists the decisions it will make during the project, and when. Each one is a moment it will ask for information.',
+    's4-requirement': 'The client turns all that into its requirements and sends them out with the tender. There\'s no Site Office yet, so they come straight to Your Town, where Tom picks them up. The old utility records come too. Note what they don\'t show: the cable.',
+    's4-respond': 'Tom answers with our plan: how we\'d meet those requirements, with which team and which tools. It\'s a promise, and the client marks it.',
+    's4-appoint': 'We win. Our plan is confirmed, and every team\'s list of what it will produce rolls up into one parts list. Drawing 042 is on it: Alex\'s team, due week 12.',
+    's4-set-up': 'Sam builds the Site Office for this job: the shared place where every team\'s work will go, with the rules for naming, checking and signing off. Every town gets connected and the lot gets tested.',
+    's4-reserve': 'Drawing 042 gets its name and number before anyone draws it. The Site Office knows it\'s coming, and if it\'s late, the gap shows.',
+    's4-start': 'Alex starts Drawing 042 in his own team\'s room. It\'s work in progress: nobody else should use it yet.',
+    's4-develop': 'Alex keeps working and saving versions. None of them leave his room.',
+    's4-check': 'Before it leaves Designer Town, Alex\'s own team check it, review it and approve it. Approval is its ticket out. Every town does this with its own work.',
+    's4-share': 'Approved, it goes to the shared room in the Site Office as a draft, so the other teams can fit their work around it. They\'re told it\'s there.',
+    's4-clash': 'The structures team come to the Site Office, put everyone\'s models together and find the drain going through a beam. They log the problem against the drawing and Alex is told. Only Alex changes Alex\'s drawing.',
+    's4-fix': 'The draft stays on the shared table while Alex fixes it in his own room: the drain goes under the beam. Checked and approved again.',
+    's4-comment': 'The new draft goes back to the shared room, and people come to it. The structures team, the client\'s reviewer and Alex meet round it, leave their comments there, and go back to work.',
+    's4-respond-comments': 'Alex answers every comment, makes the changes in his own room, and it\'s approved for sharing again.',
+    's4-submit': 'Shared again, this time for the lead firm to sign off. They\'re told it\'s waiting.',
+    's4-authorise': 'The drawing doesn\'t go anywhere. The lead firm\'s design manager comes to the Site Office, checks it fits with everything else and signs it off. The decision is recorded, and the client is told it\'s their turn.',
+    's4-accept': 'The client\'s reviewer comes to the Site Office, checks it against what they asked for and accepts it. That\'s recorded too, and Alex is told.',
+    's4-back-to-alex': 'Alex makes the one change it needs, in his own room: the stamp goes from draft to contract.',
+    's4-publish': 'It goes onto the published shelf, marked for construction. Now, and only now, it\'s for building from. Everyone who needs it is told, with a link, not a copy.',
+    's5-shop-drawing': 'The precast supplier draws the chamber it\'s going to make, based on Alex\'s drawing, and checks it in its own town. Alex comes to check it matches the design, the lead firm signs it off, and it\'s published for making.',
+    's5-site-pack': 'Rex puts together the pack for this part of the job: links to the right drawings, the inspection plan, the safety plan and the permit to dig. Links, not copies, so it always points at the latest.',
+    's5-issue': 'Nothing gets sent to Dave. He goes to the published shelf for the pack, checks the drawing is the current one, and starts digging.',
+    's5-stop': 'Two metres in, there\'s a live cable that isn\'t on any record. Dave stops and logs it on the site app, with photos and where it is.',
+    's5-ask': 'Dave suggests moving the pipe 300mm and marks it up on the drawing. That goes to Alex as a question, through the Site Office. A mark-up isn\'t a new drawing. It\'s a question about the old one.',
+    's5-answer': 'Alex checks it works and answers the question in the Site Office, and the lead firm makes it an instruction. Dave is told he can carry on.',
+    's5-revise': 'The published drawing stays on the shelf while Alex updates his own copy to match the answer. It\'s checked again.',
+    's5-reauthorise': 'Same gates as before: the lead firm signs it off and the client accepts it, both in the Site Office.',
+    's5-republish': 'The new version replaces the old one on the shelf, the pack points at it, and everyone\'s told. The next time Dave opens the pack, he sees the new one. Nobody had to send him anything.',
+    's5-build': 'Dave lays the pipe to the new drawing. Once.',
+    's5-inspect': 'The Clerk of Works comes to site. The pipe is filmed and inspected, and it\'s signed off on the site app. The inspection is its own record, published as proof.',
+    's5-measure': 'Stevie\'s survey crew measure where everything really ended up. Now there\'s a measured truth, not just a design.',
+    's5-markup': 'One chamber ended up 40mm out: close enough that nobody needs to ask. Dave marks it up and Alex is told. Not a question, just the truth.',
+    's6-record-update': 'Alex updates the drawing to show what was really built, linked to the survey and the inspection. It goes through the same gates again.',
+    's6-record-issue': 'It\'s published as the record of what was built. Its whole life now fits on one line.',
+    's6-assemble': 'Sam pulls the handover pack together from links: the record drawing, the inspections, the survey, the manuals and the asset data. It\'s checked against what the client asked for at the start, then signed off.',
+    's6-handover': 'The client accepts the pack, and this time it really does travel: into the client\'s own systems. A copy goes home to our Records Office too.',
+    's7-asset-system': 'The client loads the data into its Asset System. The drain gets its own record, linked to its drawing and its inspection. The project\'s job is done.',
+    's7-five-years': 'The drain blocks. The maintenance team look it up, see where it really is, and dig in the right place, first time. That was the point of all of it.',
+    's7-feedback': 'One thing the record didn\'t say: a live cable runs right next to the drain. So the client adds it to what it asks for next time. The next job starts better.'
+  };
+  // ---- who you are: your journey, the questions you'd ask, and what you need to know
+  var ROLES = {
+    designer: { name: 'I design things', cast: 'Alex', town: 'designer', lines: ['design'], title: 'If you design things, you need to know',
+      know: ['Check your own work before it leaves your town: check, review, approve.', 'Share it in the Site Office. Don\'t email it.', 'Comments come to the drawing, not your inbox.', 'Only you change your drawing. Everyone else asks.', 'It\'s only for building from once it\'s signed off and published.'],
+      q: [['How do I share my work?', ['s4-start', 's4-check', 's4-share', 's4-clash', 's4-comment', 's4-respond-comments']],
+          ['How does it get signed off?', ['s4-submit', 's4-authorise', 's4-accept', 's4-back-to-alex', 's4-publish']],
+          ['Someone else\'s drawing needs my check', ['s5-shop-drawing']],
+          ['Site has a question: what now?', ['s5-ask', 's5-answer', 's5-revise', 's5-reauthorise', 's5-republish']],
+          ['What\'s the record at the end?', ['s5-markup', 's6-record-update', 's6-record-issue']]] },
+    site: { name: 'I work on site', cast: 'Dave, Rex, Priya', town: 'site', lines: ['site'], title: 'If you work on site, you need to know',
+      know: ['Only build from what\'s on the published shelf.', 'Use the pack: it always points at the latest.', 'Something wrong? Stop, log it, ask. Don\'t fix the drawing yourself.', 'Inspections and surveys are information too. Publish them.', 'Small differences still get marked up for the record.'],
+      q: [['What can I build from?', ['s4-publish', 's5-site-pack', 's5-issue', 's5-build']],
+          ['Something\'s not right: what now?', ['s5-stop', 's5-ask', 's5-answer', 's5-republish']],
+          ['How do I prove what we built?', ['s5-inspect', 's5-measure', 's5-markup']]] },
+    supplier: { name: 'I make things', cast: 'Supplier Town', town: 'supplier', lines: ['supplier'], title: 'If you make things, you need to know',
+      know: ['Your drawings are yours, based on a published design.', 'Check your own work, then share it for the designer and the lead firm.', 'Make from what\'s published for manufacture. Nothing else.', 'When the design changes you\'ll be told. Check what you\'re making still fits.'],
+      q: [['What do I make from?', ['s4-publish', 's5-shop-drawing']],
+          ['The design changed: does it affect me?', ['s5-answer', 's5-republish']]] },
+    im: { name: 'I manage the information', cast: 'Sam', town: 'your', lines: ['home', 'tender'], title: 'If you manage the information, you need to know',
+      know: ['Get the Site Office built and tested before anyone needs it.', 'Set up the rules for naming, checking and signing off. The teams do the work.', 'Every decision is recorded where the work is.', 'Hand over what was asked for: no more, no less.'],
+      q: [['Getting ready', ['s4-requirement', 's4-respond', 's4-appoint', 's4-set-up', 's4-reserve']],
+          ['How the workflow runs', ['s4-share', 's4-comment', 's4-authorise', 's4-accept', 's4-publish', 's5-republish']],
+          ['Handing over', ['s6-record-issue', 's6-assemble', 's6-handover', 's7-asset-system']]] },
+    client: { name: 'I\'m the client', cast: 'Client Town', town: 'client', lines: ['client', 'tender'], title: 'If you\'re the client, you need to know',
+      know: ['Say what you need to know, and why, before anyone starts.', 'Come to the Site Office to comment and accept. Your decisions are recorded there.', 'Accept against what you asked for.', 'What you get at the end has to fit your Asset System.'],
+      q: [['What do I ask for?', ['s0-need', 's1-asset-needs', 's1-project-needs', 's4-requirement']],
+          ['When do I decide?', ['s4-comment', 's4-accept', 's5-reauthorise']],
+          ['What do I get at the end?', ['s6-handover', 's7-asset-system', 's7-five-years', 's7-feedback']]] },
+    leader: { name: 'I lead the business', cast: 'Helen', town: 'your', lines: ['home', 'client'], title: 'If you lead the business, you need to know',
+      know: ['Rework is where the money goes. Good information stops it.', 'If it isn\'t in the Site Office, you can\'t prove it.', 'Ask: can we show who decided what, and when?', 'The handover is what the client keeps for years. Get it right once.'],
+      q: [['Why does it matter?', ['s0-need', 's7-five-years', 's7-feedback']],
+          ['Where\'s the risk?', ['s5-stop', 's5-ask', 's5-answer', 's5-republish']],
+          ['What must we be able to prove?', ['s4-authorise', 's4-publish', 's5-inspect', 's6-handover']]] }
+  };
+  var ROLE_ORDER = ['designer', 'site', 'supplier', 'im', 'client', 'leader'];
+
   // ---- the network: every line meets at the Site Office (C)
   var N = { C: [660, 330], register: [700, 273], shared: [602, 334], published: [718, 334], alex: [56, 150], checkA: [212, 150],
     structures: [192, 126], authorise: [660, 180], parts: [717, 134], records: [603, 134], client: [1062, 150],
@@ -654,7 +783,19 @@
 
   // ---- views and groups
   var ALLG = { key: 'all', label: 'Whole trail', num: '1–41', stops: STOPS.map(function (s) { return s.n; }), all: true };
+  var role = 'all', detail = false;
+  function roleGroups(r) {
+    var R = ROLES[r], idx = function (id) { return STOPS.map(function (s) { return s.id; }).indexOf(id); }, all = [];
+    var qs = R.q.map(function (q, i) {
+      var st = q[1].map(idx).sort(function (a, b) { return a - b; });
+      st.forEach(function (n) { if (all.indexOf(n) < 0) all.push(n); });
+      return { key: 'who-' + r + '-' + (i + 1), num: String(i + 1), label: q[0], sub: st.length + (st.length === 1 ? ' stop' : ' stops'), meta: { lines: R.lines }, stops: st };
+    });
+    all.sort(function (a, b) { return a - b; });
+    return qs.concat([{ key: 'who-' + r + '-0', num: '★', label: 'My whole journey', sub: all.length + ' stops', meta: { lines: R.lines }, stops: all }]);
+  }
   function groups(view) {
+    if (view === 'who') return roleGroups(role);
     var g = view === 'stage'
       ? STAGES.map(function (m) { return { key: 'stage-' + m.id, num: m.id, label: m.name, sub: m.soon ? 'coming soon' : (m.join ? 'you join here' : 'Stage ' + m.id), meta: m, stops: STOPS.filter(function (s) { return String(s.st) === m.id; }).map(function (s) { return s.n; }) }; })
       : ISO.map(function (m) { return { key: 'iso-' + m.id, num: m.id === 'op' ? '19650-3' : m.id, label: m.name, sub: m.iso, meta: m, stops: STOPS.filter(function (s) { return s.iso === m.id; }).map(function (s) { return s.n; }) }; });
@@ -683,7 +824,7 @@
       var b = document.createElement('button'); b.type = 'button';
       b.className = 'jtab' + (g.meta && g.meta.soon ? ' soon' : '') + (g.meta && g.meta.join ? ' join' : '') + (g.all || g.num.length > 2 ? ' wide' : '');
       b.innerHTML = '<b>' + g.num + '</b><span>' + g.label + '</span><small>' + (g.all ? STOPS.length + ' stops' : (g.sub || '')) + '</small>';
-      b.setAttribute('aria-label', (view === 'stage' && !g.all ? 'Stage ' + g.num + ': ' : (g.all ? '' : 'ISO 19650 activity ' + g.num + ': ')) + g.label + (g.meta && g.meta.soon ? ' (coming soon)' : '') + ', ' + g.stops.length + ' stops');
+      b.setAttribute('aria-label', (view === 'who' ? '' : view === 'stage' && !g.all ? 'Stage ' + g.num + ': ' : (g.all ? '' : 'ISO 19650 activity ' + g.num + ': ')) + g.label + (g.meta && g.meta.soon ? ' (coming soon)' : '') + ', ' + g.stops.length + ' stops');
       b.addEventListener('click', function () { gi = k; pi = 0; go(false); });
       tabs.appendChild(b);
     });
@@ -713,6 +854,7 @@
   var reg = document.querySelector('#j-reg tbody');
 
   function jumpTo(n) {
+    if (view === 'who' && !G.some(function (g) { return g.stops.indexOf(n) >= 0; })) { role = 'all'; view = 'stage'; G = groups(view); buildTabs(); syncChrome(); }
     for (var k = 0; k < G.length; k++) { var p = G[k].stops.indexOf(n); if (p >= 0 && !G[k].all) { gi = k; pi = p; go(false); return; } }
     gi = G.length - 1; pi = n; go(false);
   }
@@ -745,7 +887,7 @@
   }
 
   function setLines(g) {
-    var on = (view === 'stage' && !g.all) ? g.meta.lines : null;
+    var on = view === 'who' ? g.meta.lines : (view === 'stage' && !g.all) ? g.meta.lines : null;
     [].forEach.call(document.querySelectorAll('#jmap .ln'), function (p) { p.classList.toggle('dim', !!on && on.indexOf(p.getAttribute('data-line')) < 0); });
   }
 
@@ -755,14 +897,14 @@
     renderBar(g); setLines(g);
     var note = $('j-note'), nt = g.meta && g.meta.note;
     note.hidden = !nt; note.textContent = nt || ''; note.className = 'jnote' + (g.meta && g.meta.soon ? ' soon' : '');
-    var where = view === 'stage' ? (g.all ? 'Whole trail' : 'Stage ' + g.num + ' · ' + g.label) : (g.all ? 'Whole trail' : 'ISO 19650 · ' + g.meta.iso);
+    var where = view === 'who' ? ROLES[role].name + ' · ' + g.label : view === 'stage' ? (g.all ? 'Whole trail' : 'Stage ' + g.num + ' · ' + g.label) : (g.all ? 'Whole trail' : 'ISO 19650 · ' + g.meta.iso);
     $('j-glow').classList.toggle('on', !!(s && s.hl === 'office'));
     $('j-ring').classList.toggle('on', !!(s && s.hl === 'site'));
     if (!s) {
       $('j-count').textContent = where; $('j-global').textContent = '';
       $('j-title').textContent = g.label; $('j-text').textContent = 'We\'re building this stage next. Until then, press Next to carry on, or pick Stage 4, where the lead firm joins.';
       $('j-hist').innerHTML = ''; $('j-link').textContent = ''; $('j-link').removeAttribute('href');
-      FIELDS.forEach(function (k) { $('f-' + k).textContent = '–'; });
+      FIELDS.concat(['use']).forEach(function (k) { $('f-' + k).textContent = '–'; });
       $('j-state').textContent = 'Coming soon'; $('j-state').className = 'jstate planned';
       Object.keys(P).forEach(function (k) { P[k].style.display = 'none'; }); reg.innerHTML = ''; $('j-ghosts').innerHTML = ''; $('j-people').innerHTML = ''; $('f-rec').textContent = '–';
       [].forEach.call(tb.querySelectorAll('tr.stop'), function (r) { r.classList.remove('on'); });
@@ -770,14 +912,18 @@
     }
     var stageLab = 'Stage ' + s.st + ' · ' + STAGES[s.st].name;
     $('j-count').textContent = where + ' · Stop ' + (pi + 1) + ' of ' + g.stops.length + ' · ' + s.s;
-    $('j-global').textContent = g.all ? stageLab : (view === 'iso' ? stageLab + ' · ' : '') + 'stop ' + (n + 1) + ' of ' + STOPS.length + ' on the whole trail';
-    $('j-title').textContent = s.t; $('j-text').textContent = s.x;
+    $('j-global').textContent = g.all || !detail ? (view === 'stage' && !g.all ? '' : stageLab) : (view !== 'stage' ? stageLab + ' · ' : '') + 'stop ' + (n + 1) + ' of ' + STOPS.length + ' on the whole trail';
+    $('j-title').textContent = s.t; $('j-text').textContent = detail ? s.x : (PLAIN_TEXT[s.id] || s.x);
     $('j-hist').innerHTML = s.hist && s.hist.length > 1 ? '<b>Its history so far:</b> ' + s.hist.map(function (h) { return '<code>' + h + '</code>'; }).join(' → ') : '';
     var a = $('j-link'), L = LESSONS[s.l]; a.href = '../' + L[1] + '/'; a.textContent = 'More in Lesson ' + s.l + ': ' + L[0] + ' →';
     var st = $('j-state'); st.textContent = s.state[0]; st.className = 'jstate ' + s.state[1];
     $('f-rec').textContent = s.rec || '–';
-    FIELDS.forEach(function (k) {
-      var dd = $('f-' + k), v = s.full[k] || '–', row = dd.parentNode;
+    var vals = {};
+    FIELDS.forEach(function (k) { vals[k] = s.full[k] || '–'; });
+    if (!detail) { vals.item = (s.k && PLAIN_ITEMS[s.k]) || s.full.item; vals.status = plainStatus(s); vals.where = vals.where.replace('the TQ register', 'the register of questions').replace('the issue register', 'the register of issues'); }
+    vals.use = canUse(s); $('f-use').parentNode.hidden = vals.use === '–';
+    FIELDS.concat(['use']).forEach(function (k) {
+      var dd = $('f-' + k), v = vals[k], row = dd.parentNode;
       if (dd.textContent !== v) { dd.textContent = v; if (prevSeen && !reduce) { row.classList.remove('changed'); void row.offsetWidth; row.classList.add('changed'); } }
     });
     // parcels: the active one is solid at its stop; the rest sit, small, where they last were
@@ -790,7 +936,7 @@
       var inner = P[k].firstChild, active = k === s.k;
       P[k].style.opacity = active ? 1 : .5;
       P[k].querySelector('.pill').style.display = active ? '' : 'none';
-      P[k].querySelector('text').textContent = s.snap.tag[k] || '';
+      var tg = s.snap.tag[k] || ''; P[k].querySelector('text').textContent = detail ? tg : simpleTag(tg, active ? s : null);
       if (active) { inner.removeAttribute('transform'); place(k, N[node][0], N[node][1]); }
       else { var j = (byNode[node] = (byNode[node] || 0) + 1) - 1; inner.setAttribute('transform', 'scale(.7)'); place(k, N[node][0] - 20 - j * 10, N[node][1] + 8 + j * 3); }
     });
@@ -817,7 +963,7 @@
     navButtons();
   }
 
-  function seq() { return G.filter(function (g) { return !g.all; }); }
+  function seq() { return view === 'who' ? [G[gi]] : G.filter(function (g) { return !g.all; }); }
   function navButtons() {
     var g = G[gi], len = Math.max(1, g.stops.length), first, lastPos;
     if (g.all) { first = pi === 0; lastPos = pi === len - 1; }
@@ -926,10 +1072,71 @@
     var x = N[node][0] / 1200 * w.scrollWidth;
     w.scrollTo({ left: Math.max(0, x - w.clientWidth / 2), behavior: reduce ? 'auto' : 'smooth' });
   }
+  function simpleTag(t, s) {
+    if (s && s.state[0] === 'Accepted') return 'ACCEPTED';
+    var m = { S0: 'WIP', S1: 'SHARED', S2: 'SHARED', S3: 'SHARED', S4: 'SHARED', S5: 'SHARED', A5: 'PUBLISHED', A6: 'RECORD', OIR: 'NEEDS', AIR: 'NEEDS', PIR: 'NEEDS', EIR: 'NEEDS', BEP: 'PLAN', MIDP: 'PARTS', ID: 'NAMED' };
+    return m[t] || t;
+  }
+  function plainStatus(s) {
+    var st = s.state[0], k = s.state[1];
+    if (k === 'wip') return 'Work in progress: still being made';
+    if (st === 'Accepted') return 'Accepted, waiting to be published';
+    if (st === 'Open') return 'Open: waiting for an answer';
+    if (st === 'Responded') return 'Answered';
+    if (st === 'Closed') return 'Closed, kept on record';
+    if (k === 'shared') return 'Shared: others can see it and work with it';
+    if (st === 'Live' || st === 'In use' && s.k === 'asset') return 'Live in the client\'s Asset System';
+    if (st === 'In use') return 'Published, and in use';
+    if (st === 'Handed over') return 'Handed over to the client';
+    if (k === 'record') return 'Published as the record';
+    if (k === 'published') return 'Published: signed off for use';
+    return (s.full && s.full.status) || st;
+  }
+  function canUse(s) {
+    var c = (s.full && s.full.status) || '';
+    if (!s.k) return '–';
+    if (/^A\d/.test(c)) return 'Yes, for what it\'s published for';
+    if (/^S0/.test(c)) return 'No: it\'s still being worked on';
+    if (/^S[1-5]/.test(c)) return 'Not yet: it\'s shared, not published';
+    return '–';
+  }
+  function syncChrome() {
+    var J = document.querySelector('.journey');
+    J.classList.toggle('simple', !detail); J.classList.toggle('rolemode', view === 'who');
+    $('j-detail').setAttribute('aria-pressed', detail);
+    [].forEach.call($('j-who').children, function (b) { b.setAttribute('aria-pressed', b.dataset.r === role); });
+    var R = ROLES[role], k = $('j-know');
+    var was = k.hidden; k.hidden = !R; if (R && (was || k.dataset.r !== role)) { k.open = window.innerWidth > 820; k.dataset.r = role; }
+    if (R) { $('j-know-h').textContent = R.title; $('j-know-l').innerHTML = R.know.map(function (t) { return '<li>' + t + '</li>'; }).join(''); }
+    $('j-tablab').textContent = view === 'who' ? 'What are you looking for?' : view === 'iso' ? 'Pick an ISO 19650 activity' : 'Pick a stage';
+    [].forEach.call(document.querySelectorAll('#jmap .town'), function (t) {
+      var me = !!R && t.getAttribute('data-town') === R.town; t.classList.toggle('me', me); t.classList.toggle('dim', !!R && !me);
+    });
+    $('v-stage').setAttribute('aria-pressed', view === 'stage'); $('v-iso').setAttribute('aria-pressed', view === 'iso');
+    try { localStorage.setItem('it-ftp-detail', detail ? '1' : '0'); } catch (e) {}
+  }
+  (function () {
+    var box = $('j-who');
+    ROLE_ORDER.concat(['all']).forEach(function (r) {
+      var b = document.createElement('button'); b.type = 'button'; b.dataset.r = r;
+      b.innerHTML = r === 'all' ? 'Show me everything<small>every stop, every stage</small>' : ROLES[r].name + '<small>' + ROLES[r].cast + '</small>';
+      b.addEventListener('click', function () {
+        role = r;
+        if (r === 'all') { view = 'stage'; G = groups(view); gi = 4; pi = 0; }
+        else { view = 'who'; G = groups(view); gi = 0; pi = 0; }
+        buildTabs(); syncChrome(); go(false);
+      });
+      box.appendChild(b);
+    });
+    $('j-detail').addEventListener('click', function () {
+      detail = !detail;
+      if (!detail && view === 'iso') { var n = G[gi].stops[pi]; view = 'stage'; G = groups(view); buildTabs(); syncChrome(); if (n !== undefined) { jumpTo(n); return; } }
+      syncChrome(); go(false);
+    });
+  })();
   function setView(v, keepN) {
     view = v; G = groups(v);
-    $('v-stage').setAttribute('aria-pressed', v === 'stage'); $('v-iso').setAttribute('aria-pressed', v === 'iso');
-    buildTabs();
+    buildTabs(); syncChrome();
     if (keepN !== undefined) jumpTo(keepN); else { gi = 0; pi = 0; go(false); }
   }
   $('v-stage').addEventListener('click', function () { if (view !== 'stage') setView('stage', G[gi].stops[pi]); });
@@ -942,14 +1149,23 @@
   });
 
   // start: from the link if there is one, otherwise Stage 4, where the lead firm joins
+  try { detail = localStorage.getItem('it-ftp-detail') === '1'; } catch (e) {}
+  var w = /^#who-(\w+)-(\d+)(?:\/([\w-]+))?$/.exec(location.hash);
+  if (w && ROLES[w[1]]) {
+    role = w[1]; view = 'who'; G = groups(view); buildTabs();
+    gi = Math.max(0, G.map(function (g) { return g.key; }).indexOf('who-' + w[1] + '-' + w[2])); var wi = STOPS.map(function (s) { return s.id; }).indexOf(w[3]);
+    pi = wi >= 0 ? Math.max(0, G[gi].stops.indexOf(wi)) : 0;
+    syncChrome(); go(false); return;
+  }
+  if (/^#iso-/.test(location.hash)) detail = true;
   var m = /^#(stage|iso)-(\w+)(?:\/([\w-]+))?$/.exec(location.hash) || (/^#all(?:\/([\w-]+))?$/.test(location.hash) ? ['', 'all', '', location.hash.split('/')[1]] : null);
   if (m) {
     view = m[1] === 'iso' ? 'iso' : 'stage'; G = groups(view); buildTabs();
     gi = m[1] === 'all' ? G.length - 1 : Math.max(0, G.map(function (g) { return g.key; }).indexOf(m[1] + '-' + m[2]));
     var sid = m[3], idx = STOPS.map(function (s) { return s.id; }).indexOf(sid);
     pi = idx >= 0 ? Math.max(0, G[gi].stops.indexOf(idx)) : 0;
-    $('v-stage').setAttribute('aria-pressed', view === 'stage'); $('v-iso').setAttribute('aria-pressed', view === 'iso');
   } else buildTabs();
+  syncChrome();
   go(false);
 })();
 </script>
