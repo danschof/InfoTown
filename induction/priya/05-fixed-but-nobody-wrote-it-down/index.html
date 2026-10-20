@@ -77,10 +77,25 @@
     <p>Between the Design System and the shared table sit four checkpoints. The maker finishes it, someone else checks it's made properly, someone reviews whether it does the job, and someone with the authority approves it for sharing. Above the road hangs the rulebook that says how. Pick a checkpoint to see what happens there.</p>
   </div>
   <div class="scenebox">
+    <style>
+.cdeswitch{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.cdeswitch button{font:600 13.5px var(--display);color:var(--ink);background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.cdeswitch button[aria-pressed=true]{background:var(--ink);color:#fff}
+.cdeswitch button:focus-visible{outline:3px solid #f2b400;outline-offset:2px}
+.cdenote{margin:0 0 10px;padding:8px 12px;border-left:4px solid #e2b54a;background:#fdf8ea;border-radius:6px;color:var(--ink);font-size:15px;line-height:1.5}
+.scenebox .hz{transition:opacity .4s}
+.scenebox:not([data-cde=in]) .hz-in,.scenebox[data-cde=in] .hz-out{opacity:0;visibility:hidden}
+@media (prefers-reduced-motion:reduce){.scenebox .hz{transition:none}}
+</style>
+    <div class="cdeswitch" data-cdeswitch role="group" aria-label="Where does your team work?">
+      <button type="button" data-m="out" aria-pressed="true">Not working in the CDE</button>
+      <button type="button" data-m="in" aria-pressed="false">Working in the CDE</button>
+    </div>
+    <p class="cdenote" aria-live="polite" data-out="<b>Not working in the CDE.</b> Your team works in its own system, and the four checkpoints happen there. Approved, the parcel crosses the hoarding into the CDE, and Goods In checks it at the gate: is it labelled right, in the right format, going to the right place? Only then does it reach the shared table. Your project decides which way it works. Either way, the four checkpoints still happen." data-in="<b>Working in the CDE.</b> Your team works inside the CDE, in its own room. The hoarding wraps the whole road, so every version and every checkpoint is recorded as you go, and the CDE checks the label as you save. Approved, it simply moves to the shared table. Your project decides which way it works. Either way, the four checkpoints still happen."><b>Not working in the CDE.</b> Your team works in its own system, and the four checkpoints happen there. Approved, the parcel crosses the hoarding into the CDE, and Goods In checks it at the gate: is it labelled right, in the right format, going to the right place? Only then does it reach the shared table. Your project decides which way it works. Either way, the four checkpoints still happen.</p>
     <div class="scenewrap">
 <svg class="scene" id="scene" viewBox="0 0 1200 470" role="img" aria-labelledby="st sd">
   <title id="st">Four checkpoints between the Design System and the shared table</title>
-  <desc id="sd">A road runs from the Design System to the shared table in the Site Office. Along it are four checkpoint booths: originate, check, review and approve, each with a person and a barrier. A parcel stops at each one. Above the road hangs a noticeboard called the rulebook: the project's standard and step-by-step procedures. A padlock on the Site Office asks who can see it.</desc>
+  <desc id="sd">A road runs from the Design System to the shared table in the Site Office. Along it are four checkpoint booths: originate, check, review and approve, each with a person and a barrier. A parcel stops at each one. Above the road hangs a noticeboard called the rulebook: the project's standard and step-by-step procedures. A padlock on the Site Office asks who can see it. A hoarding marks where the CDE begins: just past the approve booth, with a fifth check, Goods In, at its gate; or, when the team works inside the CDE, around the whole road.</desc>
   <defs>
     <g id="pp"><circle cx="0" cy="8" r="7" fill="#fff"/><path d="M0 15 V40 M0 21 L-9 33 M0 21 L9 33 M0 40 L-7 60 M0 40 L7 60" fill="none"/></g>
     <g id="ph"><use href="#pp"/><path d="M-8 6 Q0 -4 8 6 Z" fill="#fde6a0"/><path d="M-10 6 H10" fill="none"/></g>
@@ -101,7 +116,7 @@
     <polygon points="1000,190 1090,150 1180,190" fill="#fdf3d4"/><rect x="1010" y="190" width="160" height="182" fill="#fdf3d4"/>
     <rect x="1024" y="202" width="132" height="40" rx="3" fill="#fff"/>
     <text x="1090" y="219" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="600" fill="#1b3478" stroke="none" letter-spacing="1">SHARED TABLE</text>
-    <text x="1090" y="234" text-anchor="middle" font-family="Lexend, sans-serif" font-size="9" fill="#56658a" stroke="none">in the Site Office</text>
+    <text x="1090" y="234" text-anchor="middle" font-family="Lexend, sans-serif" font-size="9" fill="#56658a" stroke="none">in the Site Office: the CDE</text>
     <rect x="1074" y="316" width="34" height="56" fill="#fff"/>
     <g data-hl="security">
       <rect x="1124" y="272" width="26" height="22" rx="3" fill="#fde6d8"/><path d="M1130 272 v-7 a7 7 0 0 1 14 0 v7" fill="none"/>
@@ -143,6 +158,28 @@
       <use href="#pp" x="879" y="312"/>
     </g>
   </g>
+  <!-- the CDE's hoarding: where the parcel enters the CDE -->
+  <g class="hz hz-out" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M990 372 V136 H1192 V434 H990 V426" fill="none" stroke="#e2b54a" stroke-width="5" stroke-dasharray="16 5"/>
+    <circle cx="990" cy="372" r="5" fill="#fff" stroke="#1b3478" stroke-width="2"/><circle cx="990" cy="426" r="5" fill="#fff" stroke="#1b3478" stroke-width="2"/>
+    <rect x="1012" y="124" width="84" height="24" rx="12" fill="#e2b54a"/>
+    <text x="1054" y="141" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="1.5">THE CDE</text>
+    <path d="M988 126 V136" stroke="#1b3478" stroke-width="2"/>
+    <rect x="812" y="70" width="176" height="56" rx="6" fill="#fff" stroke="#1b3478" stroke-width="2"/>
+    <text x="900" y="89" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#1b3478" letter-spacing="1.5">5 GOODS IN</text>
+    <text x="900" y="105" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" fill="#56658a">labelled right? right format?</text>
+    <text x="900" y="118" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" fill="#56658a">going to the right place?</text>
+    <text x="1095" y="452" text-anchor="middle" font-family="Lexend, sans-serif" font-size="12" font-weight="600" fill="#56658a">Can it come in?</text>
+  </g>
+  <g class="hz hz-in" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="14" y="136" width="1178" height="298" rx="16" fill="none" stroke="#e2b54a" stroke-width="5" stroke-dasharray="16 5"/>
+    <rect x="30" y="124" width="84" height="24" rx="12" fill="#e2b54a"/>
+    <text x="72" y="141" text-anchor="middle" font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="1.5">THE CDE</text>
+    <rect x="234" y="150" width="150" height="40" rx="6" fill="#fff" stroke="#e2b54a" stroke-width="2"/>
+    <text x="309" y="166" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" font-weight="600" fill="#1b3478">The CDE checks the</text>
+    <text x="309" y="180" text-anchor="middle" font-family="Lexend, sans-serif" font-size="10" font-weight="600" fill="#1b3478">label as you save</text>
+    <text x="130" y="244" text-anchor="middle" font-family="Lexend, sans-serif" font-size="9.5" fill="#56658a">your team's room in the CDE</text>
+  </g>
   <g font-family="Lexend, sans-serif" font-size="11" font-weight="700" fill="#1b3478" text-anchor="middle" letter-spacing="1">
     <text x="365" y="263">1 ORIGINATE</text><text x="555" y="263">2 CHECK</text><text x="745" y="263">3 REVIEW</text><text x="935" y="263">4 APPROVE</text>
   </g>
@@ -151,6 +188,22 @@
   </g>
   <g stroke="#1b3478" stroke-width="1.5" stroke-linejoin="round"><use href="#box"><animateMotion dur="10s" repeatCount="indefinite" path="M230 399 H1010" calcMode="linear" keyPoints="0;.173;.173;.417;.417;.66;.66;.904;.904;1" keyTimes="0;.1;.2;.3;.4;.5;.6;.7;.8;1"/></use></g>
 </svg>
+<script>
+(function () {
+  [].forEach.call(document.querySelectorAll('[data-cdeswitch]'), function (sw) {
+    if (sw.dataset.bound) return; sw.dataset.bound = '1';
+    var box = sw.closest('.scenebox'), note = box.querySelector('.cdenote');
+    function set(m) {
+      box.setAttribute('data-cde', m);
+      [].forEach.call(sw.querySelectorAll('button'), function (b) { b.setAttribute('aria-pressed', b.dataset.m === m); });
+      note.innerHTML = m === 'in' ? note.getAttribute('data-in') : note.getAttribute('data-out');
+    }
+    [].forEach.call(sw.querySelectorAll('button'), function (b) { b.addEventListener('click', function () { set(b.dataset.m); }); });
+    set('out');
+  });
+})();
+</script>
+
     </div>
   </div>
 

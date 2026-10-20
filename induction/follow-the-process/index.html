@@ -134,6 +134,37 @@
   </div>
 </header>
 
+<aside class="uc" aria-label="Still under construction">
+  <svg class="uc-art" viewBox="0 0 270 118" aria-hidden="true">
+    <g stroke="#1b3478" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 110 H266" stroke-width="1.5"/>
+      <rect x="22" y="88" width="92" height="20" rx="10" fill="#e6e9f2"/>
+      <circle cx="34" cy="98" r="5" fill="#fff"/><circle cx="68" cy="98" r="5" fill="#fff"/><circle cx="102" cy="98" r="5" fill="#fff"/>
+      <rect x="30" y="60" width="72" height="28" rx="3" fill="#f5c542"/>
+      <rect x="72" y="36" width="30" height="26" rx="3" fill="#f5c542"/><rect x="79" y="42" width="17" height="12" rx="2" fill="#e1ecfa" stroke-width="1.5"/>
+      <path d="M40 64 L20 30 L6 52" fill="none" stroke-width="7" stroke="#1b3478"/><path d="M40 64 L20 30 L6 52" fill="none" stroke-width="4" stroke="#f5c542"/>
+      <path d="M2 50 L14 50 L12 64 L4 64 Z" fill="#f5c542"/>
+      <path d="M232 110 l9 -26 l9 26 z" fill="#f5a623" stroke-width="1.5"/><path d="M235 101 h12" stroke="#fff" stroke-width="2.5"/>
+      <path d="M126 110 l7 -20 l7 20 z" fill="#f5a623" stroke-width="1.5"/><path d="M128.5 103 h9" stroke="#fff" stroke-width="2"/>
+      <g fill="none" stroke-width="2.6"><use href="#rex" transform="translate(166 48) scale(.95)"/><use href="#ph" transform="translate(206 48) scale(.95)"/></g>
+    </g>
+  </svg>
+  <div>
+    <span class="uc-k">Still under construction</span>
+    <p class="uc-h">We're still building this page</p>
+    <p>The process, the pictures and the way you find your way round will keep changing until it's finished. Have a look around, and mind the cones.</p>
+  </div>
+</aside>
+<style>
+.uc{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin:0 0 20px;padding:14px 20px;border-radius:12px;border:2px solid #f2b400;background:repeating-linear-gradient(-45deg,#fff8dc 0 14px,#fff 14px 28px)}
+.uc-art{width:230px;height:auto;display:block}
+.uc-k{display:block;font:700 12px var(--display);letter-spacing:.14em;text-transform:uppercase;color:#d65a2c}
+.uc-h{font:700 18px var(--display);color:var(--ink);margin:2px 0 4px}
+.uc p{margin:0;color:var(--ink);line-height:1.5}
+.uc p + p{margin-top:2px}
+@media (max-width:640px){.uc{grid-template-columns:1fr;gap:8px}.uc-art{width:190px}}
+</style>
+
 <section class="journey simple" aria-labelledby="h-j">
   <h2 id="h-j" class="sr">The process, stop by stop</h2>
   <div class="scenebox">
@@ -371,7 +402,7 @@
     <p>The map shows one good way. The workflow is the idea that matters; the systems and the details are your project's choice, written into its information standard and BEP.</p>
     <div class="natable"><table><thead><tr><th>Choice</th><th>On this page</th><th>Also fine</th></tr></thead><tbody>
       <tr><td>Where work in progress lives</td><td>In each team's own system, in its own town. The Site Office only knows what's been shared.</td><td>Work-in-progress areas inside the CDE, one per team, so the CDE sees every version. The project decides.</td></tr>
-      <tr><td>What the CDE is</td><td>One Site Office, with the site app joined underground</td><td>Several systems: documents in a document system, models on a model server or in CAD, maps in GIS, a field app on site. It's still one CDE if it runs one workflow: the same states, labels and decisions, all recorded.</td></tr>
+      <tr><td>What the CDE is</td><td>One Site Office, with the site app as one of its cabins</td><td>Several systems: documents in a document system, models on a model server or in CAD, maps in GIS, a field app on site. It's still one CDE if it runs one workflow: the same states, labels and decisions, all recorded.</td></tr>
       <tr><td>Whose CDE</td><td>A new Site Office, built by the lead firm because the client asked for one</td><td>The client's own CDE. Then getting ready means getting your team access and testing your workflows in someone else's building.</td></tr>
       <tr><td>Where the client accepts</td><td>The client's reviewer comes to the Site Office</td><td>The client accepts in its own system. Then the parcel does travel up the client line, as a formal transfer, and the decision comes back to be recorded.</td></tr>
       <tr><td>How people are told</td><td>One copy; the status changes where it sits; a notification with a link goes to everyone on the distribution</td><td>Connected systems pick up the new status through their own approved integrations, not side routes. If a system really needs its own copy (the client's document system, an offline tablet), it's a controlled transfer with the same number, revision and status, superseded when the original is. Never re-shared as a new parcel.</td></tr>
