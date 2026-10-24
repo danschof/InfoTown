@@ -876,3 +876,13 @@ body:has(.banner.pre){--role:#4a5d73}
 .world.js-who[data-who=client] #zoom,.world.js-who[data-who=sub] #zoom{display:none}
 .world.js-who[data-who=client] .zoomsoon[data-who=client],.world.js-who[data-who=sub] .zoomsoon[data-who=sub]{display:inline-block}
 @media (max-width:600px){.whocard{grid-template-columns:1fr;justify-items:start}.whocard .wc-fig{width:48px;height:68px}}
+/* World Map: designer pick (Alex), 24 Oct 2026 */
+.world .whohead{margin:0 0 12px;font-size:24px}
+.world.js-who[data-who=designer] .whocard[data-who=designer]{display:grid}
+.world.js-who[data-who=designer] .whomark[data-who=designer]{display:inline}
+.world.js-who[data-who=designer] .zoomsoon[data-who=designer]{display:inline-block}
+.world.js-who[data-who=designer] #zoom{display:none}
+/* Choose your path: follow the whole project (Phase 3b, 24 Oct 2026) */
+.cyp-whole{display:inline-block;margin:8px 0 0 10px;font:600 17px var(--display);color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:999px;padding:11px 22px;text-decoration:none}
+.cyp-whole:hover,.cyp-whole:focus-visible{background:var(--ink);color:#fff}
+@media (max-width:600px){.cyp-whole{margin-left:0}}
