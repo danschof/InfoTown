@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The back alley's bill · Follow a project · InfoTown</title>
+<meta name="description" content="The same station built twice: properly, and with every shortcut. What the shortcuts cost.">
+<meta property="og:title" content="The back alley's bill · Follow a project · InfoTown">
+<meta property="og:description" content="The same station built twice: properly, and with every shortcut. What the shortcuts cost.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.infotown.co.uk/assets/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="InfoTown: every organisation has a hidden town. The Town Square with the Site Induction, Stories, Phrase Book, Visitor Centre and Manifesto.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.infotown.co.uk/assets/share.png">
+<meta name="theme-color" content="#1b3478">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../../assets/infotown.css?v=202610261203">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="in">
+  <a class="brand" href="../../../"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1b3478"/><path d="M14 26 L32 14 L50 26 Z" fill="#fdf3d4" stroke="#fdf3d4" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="28" width="32" height="22" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M24 30 V50 M40 30 V50" stroke="#fff" stroke-width="2.5"/><path d="M29 50 V41 a3 3 0 0 1 6 0 V50" fill="#fdf3d4"/></svg>InfoTown<span class="tm">™</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../../../">Town Square</a>
+    <a href="../../../induction/" aria-current="page">World Map</a>
+    <a href="../../../stories/">Stories</a>
+    <a href="../../../phrase-book/">Phrase Book</a>
+    <a href="../../../visitor-centre/">Visitor Centre</a>
+    <a href="../../../manifesto/">Manifesto</a>
+  </nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<style>
+.pl-bar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:18px 0 6px;list-style:none;padding:0}
+.pl-bar li{min-width:0}
+.pl-bar i{margin:4px 0 9px}
+.pl-bar a{display:block;text-decoration:none;color:var(--muted);font:600 12px/1.2 var(--display)}
+.pl-bar a:hover b,.pl-bar a:focus-visible b{text-decoration:underline}
+.pl-bar i{display:block;height:8px;border-radius:4px;background:#dfe6f4}
+.pl-bar .done i{background:var(--c)}
+.pl-bar .now i{background:var(--c);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--c)}
+.pl-bar .now a{color:var(--ink)}
+.pl-bar b{font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pl-bar small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;display:block}
+.pl-dots{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0;padding:0;list-style:none;align-items:center}
+.pl-dots a{display:block;width:14px;height:14px;border-radius:50%;border:2.5px solid var(--sc);background:#fff}
+.pl-dots a[aria-current]{background:var(--sc);transform:scale(1.25)}
+.pl-dots a:hover{background:var(--sw)}
+.pl-dots .lab{font:600 13px var(--display);color:var(--muted);margin-left:6px}
+.pl-voice{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin:26px 0 22px;padding:16px 20px;border-radius:16px;background:linear-gradient(90deg,#fff8de,#fff 70%);border:2px solid #f0d27a}
+.pl-voice .who{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#a8741a;display:block;margin-bottom:4px}
+.pl-voice p{margin:0;font:500 1.2rem/1.45 var(--display);color:var(--ink);font-style:italic;max-width:62ch}
+.pl-panels{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:14px}
+.pl-panels .panel svg{background:var(--sw)}
+.pl-now{margin:20px 0 0;padding:14px 18px;border-radius:10px;background:var(--sw);border-left:6px solid var(--sc)}
+.pl-now b{font-family:var(--display)}
+.pl-now p{margin:0;max-width:72ch}
+.pl-alley{margin:18px 0 0;padding:14px 18px;border-radius:10px;border:2px dashed var(--alley);background:#fff}
+.pl-alley h2,.pl-deeper h2{font-size:15px;margin:0 0 6px;font-family:var(--display);letter-spacing:.04em}
+.pl-alley h2{color:var(--alley)}
+.pl-alley p{margin:0 0 10px;max-width:72ch}
+.pl-deeper{margin:18px 0 0}
+.pl-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.pl-chips a,.pl-chips span{display:inline-block;font-size:14px;border-radius:999px;padding:4px 11px;text-decoration:none}
+.pl-chips a{background:var(--sw);color:var(--ink);border:1.5px solid var(--sc)}
+.pl-chips a:hover,.pl-chips a:focus-visible{background:var(--sc);color:#fff}
+.pl-chips span{color:#56658a;border:1.5px dashed #9aa5bf}
+.pl-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 6px}
+.pl-nav a{display:inline-flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);border:2px solid var(--ink);border-radius:14px;padding:10px 18px;max-width:48%}
+.pl-nav a small{font:600 11px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pl-nav a b{font:600 1.05rem var(--display)}
+.pl-nav a.next{margin-left:auto;text-align:right;background:var(--ink);color:#fff}
+.pl-nav a.next small{color:#cfd8ee}
+.pl-nav a:hover{background:#2f6fd6;border-color:#2f6fd6;color:#fff}
+@media (max-width:860px){.pl-panels{grid-template-columns:repeat(2,minmax(0,1fr))}.pl-bar small{display:none}}
+@media (max-width:600px){.pl-panels{grid-template-columns:1fr}.pl-voice{grid-template-columns:1fr;justify-items:start}.pl-bar b{display:none}.pl-nav a{max-width:100%}}
+.pl-new{margin:18px 0 0;padding:10px 16px;font-size:14px;border-radius:12px;border:1.5px solid #f0d27a;background:#fffdf4}
+.pl-new h2{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#a8741a;margin:0 0 6px}
+.pl-new dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;line-height:1.4}
+.pl-new dt{font-family:var(--display);font-weight:600;color:var(--ink)}
+.pl-new dd{margin:0;max-width:70ch}
+.pl-forkrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px;align-items:stretch;margin:0 0 22px}
+.pl-forkrow .pl-panels{grid-template-columns:1fr}
+.pl-forkrow.wide{grid-template-columns:1fr}
+.pl-forkrow.wide .pl-panels{grid-template-columns:repeat(var(--n,3),minmax(0,1fr))}
+.pl-fork{margin:0;align-content:center;padding:18px 20px;border-radius:14px;border:2.5px solid var(--ink);background:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.pl-fork .pl-q{margin:0 12px 0 0;font:700 1.25rem var(--display);color:var(--ink);flex:1 1 100%}
+.pl-fork button{font:600 1rem var(--display);border-radius:999px;padding:12px 20px;cursor:pointer;border:2.5px solid var(--ink);background:#fff;color:var(--ink)}
+.pl-fork button[data-c="short"]{border-style:dashed;border-color:var(--alley);color:var(--alley)}
+.pl-fork button[aria-pressed="true"]{background:var(--ink);color:#fff;border-style:solid}
+.pl-fork button[data-c="short"][aria-pressed="true"]{background:var(--alley);border-color:var(--alley);color:#fff}
+.pl-fork .hint{flex:1 1 100%;margin:0;font-size:14px;color:var(--muted)}
+.pl-tracks{display:flex;flex-direction:column;gap:18px}
+.js .pl-tracks:not([data-chosen]){display:none}
+.pl-tracks[data-chosen="right"] .tk-right,.pl-tracks[data-chosen="short"] .tk-short{order:-2}
+.pl-otherbtn{order:-1;align-self:flex-start;font:600 .95rem var(--display);border:2px dashed var(--muted);background:#fff;color:var(--ink);border-radius:999px;padding:9px 18px;cursor:pointer}
+.pl-otherbtn[aria-expanded="true"]{border-style:solid}
+.js .pl-tracks[data-chosen="right"]:not(.show-other) .tk-short,.js .pl-tracks[data-chosen="short"]:not(.show-other) .tk-right{display:none}
+.pl-track .striphead{margin-top:0}
+.pl-track .picked{display:none;font:700 11px var(--display);letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ink);border-radius:999px;padding:3px 10px;margin-left:8px}
+.tk-short .picked{background:var(--alley)}
+.pl-tracks[data-chosen="right"] .tk-right .picked,.pl-tracks[data-chosen="short"] .tk-short .picked{display:inline-block}
+.pl-vs{display:flex;gap:12px;align-items:center;margin:0 0 12px;font:500 1.05rem/1.4 var(--display);font-style:italic;color:var(--ink)}
+.pl-later{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:var(--peach);font-weight:600}
+.pl-pay{margin:0 0 22px;padding:16px 18px;border-radius:14px;border:2.5px dashed var(--alley);background:#fffaf6}
+.pl-pay h2{margin:0 0 8px;font-size:1.2rem;color:var(--alley)}
+.pl-pay .v{display:none}
+.pl-pay[data-show="short"] .v-short,.pl-pay[data-show="right"] .v-right,.pl-pay[data-show="none"] .v-none{display:block}
+.pl-pay .v-right{border-color:#2e8b57}
+.pl-pay[data-show="right"]{border:2.5px solid #2e8b57;background:#f1f8f3}
+.pl-pay[data-show="right"] h2{color:#2e8b57}
+.pl-pay .add{margin:12px 0 0;font:700 1.05rem var(--display);color:var(--alley)}
+.pl-pay p{margin:0 0 10px;max-width:72ch}
+.pl-bill{display:inline-flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin:12px 0 0;padding:6px 14px;border-radius:999px;background:var(--peach);font:600 13px var(--display);color:var(--ink)}
+.pl-bill a{color:var(--ink)}
+.pl-bill[hidden]{display:none}
+.pl-lesson{margin:18px 0 0;padding:14px 18px;border-radius:10px;border:1.5px solid var(--faint);background:#fff}
+.pl-lesson h2{font-size:1.1rem;margin:0 0 6px}
+.pl-lesson p{margin:0 0 8px;max-width:72ch}
+.pl-learnmore{font-family:var(--display);font-weight:600}
+.pl-punch{margin:16px 0 4px}
+.pl-cost{display:inline-block;margin:6px 0 26px;padding:8px 14px;border-radius:10px;background:var(--peach);font-weight:600}
+.pl-try{margin:18px 0 0}
+.panel .inf{animation:it-float 4s ease-in-out infinite alternate}
+@keyframes it-float{from{transform:translateY(2px)}to{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.panel .inf{animation:none}}
+.pl-lesson .moreflag{background:#fff3c4;color:#a8741a}
+@media (max-width:860px){.pl-forkrow{grid-template-columns:1fr}}
+@media (max-width:600px){.pl-new dl{grid-template-columns:1fr}.pl-new dd{margin-bottom:6px}}
+</style>
+<style>
+.yp-sum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.yp-sum div{border-radius:14px;padding:16px 20px}
+.yp-sum .sang{background:#f1f8f3;border:2.5px solid #2e8b57}
+.yp-sum .yours{background:#fffaf6;border:2.5px dashed var(--alley)}
+.yp-sum h2{margin:0 0 6px;font-size:1.2rem}
+.yp-sum .big{font:700 2rem var(--display);color:var(--ink);margin:0}
+.yp-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.yp-list li{border:1.5px solid var(--faint);border-radius:12px;padding:10px 16px;background:#fff}
+.yp-list .k{font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.yp-list .w{color:var(--alley);white-space:nowrap}
+@media (max-width:600px){.yp-sum{grid-template-columns:1fr}}
+</style>
+<header class="top">
+  <div class="banner">Follow a<br>project<small>End of the line</small></div>
+  <div class="titleblock">
+    <span class="eyebrow">Follow a project · End of the line</span>
+    <h1>The back alley's bill</h1>
+    <p class="question">The same station, built twice: once by people who did it properly, and once by people who took every shortcut on the way.</p>
+  </div>
+</header>
+<nav class="lessonnav top" aria-label="Route (top)"><a href="../">← <b>Follow a project</b></a><a href="../end-of-the-line/"><b>End of the line: the quiz</b> →</a></nav>
+<div class="yp-sum"><div class="sang"><h2>The main line</h2><p class="big">0 weeks</p><p>Everyone did it properly. The owner got a station, and a record it can trust.</p></div>
+<div class="yours"><h2>The back alley</h2><p class="big">160 weeks, about 3.1 years</p><p>Every shortcut cost nothing at the time.</p></div></div>
+<h2>Where it went</h2>
+<ol class="yp-list"><li><span class="k">Stage 1 · Stop 1</span><br><b><a href="../the-line/why-we-need-it/">Why we need it</a></b>: A need written without the people who run the station: no lifting beam, a crane and a road closure. <b class="w">+3 weeks</b></li><li><span class="k">Stage 1 · Stop 2</span><br><b><a href="../the-line/what-we-need/">What we need</a></b>: A borrowed order: 1,400 fields nobody uses, and the eleven they do use missing at handover. <b class="w">+4 weeks</b></li><li><span class="k">Stage 1 · Stop 3</span><br><b><a href="../the-line/out-to-tender/">Out to tender</a></b>: A private answer, a wrong price, and a row nobody can settle without a record. <b class="w">+2 weeks</b></li><li><span class="k">Stage 2 · Stop 1</span><br><b><a href="../the-line/should-we-bid/">Should we bid?</a></b>: A bid decided without reading the order: three months learning a system nobody priced. <b class="w">+3 weeks</b></li><li><span class="k">Stage 2 · Stop 2</span><br><b><a href="../the-line/the-clients-wish-list/">The client&#x27;s wish list</a></b>: Page twelve unread at the bid: the asset data never asked for, and six weeks chasing it at handover. <b class="w">+6 weeks</b></li><li><span class="k">Stage 2 · Stop 3</span><br><b><a href="../the-line/whose-system-is-it-anyway/">Whose system is it anyway?</a></b>: Two systems and no plan: three days a month reconciling, all job long. <b class="w">+3 weeks</b></li><li><span class="k">Stage 2 · Stop 4</span><br><b><a href="../the-line/whos-actually-doing-this/">Who&#x27;s actually doing this?</a></b>: No named people and three different packs: a stretched team and a variation from the cheapest subbie. <b class="w">+3 weeks</b></li><li><span class="k">Stage 2 · Stop 5</span><br><b><a href="../the-line/the-promise/">The promise</a></b>: A copied promise: a major finding at audit, and four weeks rewriting it mid-job. <b class="w">+4 weeks</b></li><li><span class="k">Stage 2 · Stop 6</span><br><b><a href="../the-line/can-they-actually-do-it/">Can they actually do it?</a></b>: Six ticks and no evidence: a firm that couldn&#x27;t share drawings, found in month three. <b class="w">+2 weeks</b></li><li><span class="k">Stage 2 · Stop 7</span><br><b><a href="../the-line/pricing-the-information-work/">Pricing the information work</a></b>: The information work cut to win: nobody paid to test the Site Office, and five weeks untangling it. <b class="w">+5 weeks</b></li><li><span class="k">Stage 2 · Stop 8</span><br><b><a href="../the-line/the-plan-for-day-one/">The plan for day one</a></b>: No plan for day one: no logins, drawings everywhere, and two weeks getting them back in one place. <b class="w">+2 weeks</b></li><li><span class="k">Stage 2 · Stop 9</span><br><b><a href="../the-line/what-could-go-wrong/">What could go wrong?</a></b>: Information risks nobody wrote down: two incidents, owned by nobody, with nothing ready. <b class="w">+2 weeks</b></li><li><span class="k">Stage 2 · Stop 10</span><br><b><a href="../the-line/what-we-sent/">What we sent</a></b>: No record of what was sent: a week arguing about a promise nobody remembers writing. <b class="w">+1 week</b></li><li><span class="k">Stage 2 · Stop 11</span><br><b><a href="../the-line/signed-sealed/">Signed, sealed</a></b>: Nobody read what was signed, and the subbies never got the order: two weeks re-papering every subcontract. <b class="w">+2 weeks</b></li><li><span class="k">Stage 3 · Stop 1</span><br><b><a href="../the-line/bid-handover/">Bid handover</a></b>: Commitments nobody handed over: two weeks finding out what the firm had promised, from the client. <b class="w">+2 weeks</b></li><li><span class="k">Stage 3 · Stop 2</span><br><b><a href="../the-line/which-ones-the-real-one/">Which one&#x27;s the real one?</a></b>: Three systems all calling themselves the real one: a rebuilt chamber wall and a Friday every week reconciling. <b class="w">+3 weeks</b></li><li><span class="k">Stage 3 · Stop 3</span><br><b><a href="../the-line/the-plan-grows-up/">The plan grows up</a></b>: A promise nobody updated after award: three answers to every question, and a lost weekend writing it backwards. <b class="w">+2 weeks</b></li><li><span class="k">Stage 3 · Stop 4</span><br><b><a href="../the-line/requirements-to-every-firm/">Requirements to every firm</a></b>: The order never passed on: every firm drew in its own style, and four weeks of renaming and rework, paid for twice. <b class="w">+4 weeks</b></li><li><span class="k">Stage 3 · Stop 5</span><br><b><a href="../the-line/who-designs-what/">Who designs what</a></b>: A join nobody designed: five weeks waiting for a chamber design, with a hole full of rain. <b class="w">+5 weeks</b></li><li><span class="k">Stage 3 · Stop 6</span><br><b><a href="../the-line/who-makes-what-and-when/">Who makes what, and when</a></b>: A parts list nobody kept alive: two weeks lost drawing the inlet chamber in a hurry. <b class="w">+3 weeks</b></li><li><span class="k">Stage 3 · Stop 7</span><br><b><a href="../the-line/ready-before-day-one/">Ready before day one</a></b>: A Site Office opened untested: three lost drawings, a fencing firm with the cost reports, and three weeks putting it right. <b class="w">+3 weeks</b></li><li><span class="k">Stage 3 · Stop 8</span><br><b><a href="../the-line/one-model-of-the-whole-job/">One model of the whole job</a></b>: No shared coordinates: four weeks moving every model back to where the station actually is. <b class="w">+4 weeks</b></li><li><span class="k">Stage 4 · Stop 1</span><br><b><a href="../the-line/whats-already-in-the-ground/">What&#x27;s already in the ground</a></b>: A five-year-old survey: the ramp, levels and kerbs redesigned in month four. <b class="w">+4 weeks</b></li><li><span class="k">Stage 4 · Stop 2</span><br><b><a href="../the-line/made-to-the-rules/">Made to the rules</a></b>: House rules instead of the project&#x27;s rules: drawings that don&#x27;t line up, and the wrong 042 picked from four. <b class="w">+2 weeks</b></li><li><span class="k">Stage 4 · Stop 3</span><br><b><a href="../the-line/checked-actually/">Checked, actually</a></b>: A tick instead of a check: a drain redesigned and re-dug in month five. <b class="w">+3 weeks</b></li><li><span class="k">Stage 4 · Stop 4</span><br><b><a href="../the-line/the-night-before/">The night before</a></b>: Laid out the night before: forty clashes sent to the client, and two weeks answering them. <b class="w">+2 weeks</b></li><li><span class="k">Stage 4 · Stop 5</span><br><b><a href="../the-line/questions-to-the-designer/">Questions to the designer</a></b>: An answer in a chat: a chamber made to the old drawing, recast, and nobody able to prove who agreed the change. <b class="w">+3 weeks</b></li><li><span class="k">Stage 4 · Stop 6</span><br><b><a href="../the-line/authorised-and-accepted/">Authorised and accepted</a></b>: Built from a photo of an unchecked drawing: a pipe dug up and relaid, and no proof of what site was given. <b class="w">+3 weeks</b></li><li><span class="k">Stage 4 · Stop 7</span><br><b><a href="../the-line/shop-drawings/">Shop drawings</a></b>: A shop drawing straight to the factory: chambers cast from an old revision, and four weeks waiting for new ones. <b class="w">+4 weeks</b></li><li><span class="k">Stage 5 · Stop 1</span><br><b><a href="../the-line/ordered-off-the-current-revision/">Ordered off the current revision</a></b>: Pumps ordered off the old spec, and a gang building from March prints: the wrong pumps, sixteen weeks for new ones, and everything else moved round them. <b class="w">+6 weeks</b></li><li><span class="k">Stage 5 · Stop 2</span><br><b><a href="../the-line/briefing-and-permits/">Briefing and permits</a></b>: A briefing on the old version and a calculation nobody really checked: a slumped dig, a stopped lift and a redesigned crane pad. <b class="w">+3 weeks</b></li><li><span class="k">Stage 5 · Stop 3</span><br><b><a href="../the-line/hold-points/">Hold points</a></b>: A pour with no inspection record: cores through a new slab, and three weeks proving what nobody wrote down. <b class="w">+3 weeks</b></li><li><span class="k">Stage 5 · Stop 4</span><br><b><a href="../the-line/found-on-site/">Found on site</a></b>: The rules nobody saw, a late notice to the wrong person, and a cable nobody wrote down: six weeks waiting and a claim that failed. <b class="w">+6 weeks</b></li><li><span class="k">Stage 5 · Stop 5</span><br><b><a href="../the-line/site-records/">Site records</a></b>: Records kept where floods and inboxes could eat them: re-tests, cores, and the dig stopped beside a cracked old station. <b class="w">+3 weeks</b></li><li><span class="k">Stage 5 · Stop 6</span><br><b><a href="../the-line/changes-and-instructions/">Changes and instructions</a></b>: Extra information work done because it was asked nicely: four months of evenings, no instruction, no payment. <b class="w">+4 weeks</b></li><li><span class="k">Stage 5 · Stop 7</span><br><b><a href="../the-line/late-not-extra/">Late, not extra</a></b>: A delay nobody could prove: three weeks of a waiting gang, paid for by the firm. <b class="w">+3 weeks</b></li><li><span class="k">Stage 5 · Stop 8</span><br><b><a href="../the-line/valuations/">Valuations</a></b>: Measured from an old version, and a package nobody checked against acceptance: a fortnight arguing and six weeks waiting for the money. <b class="w">+3 weeks</b></li><li><span class="k">Stage 5 · Stop 9</span><br><b><a href="../the-line/the-monthly-report/">The monthly report</a></b>: A dashboard built from spreadsheets nobody owned: a forecast that was wrong for two months, and a fortnight rebuilding it. <b class="w">+2 weeks</b></li><li><span class="k">Stage 5 · Stop 10</span><br><b><a href="../the-line/it-got-out/">It got out</a></b>: Sensitive drawings with no gate round them: every sensitive drawing reissued and the controls re-secured. <b class="w">+6 weeks</b></li><li><span class="k">Stage 5 · Stop 11</span><br><b><a href="../the-line/the-drawing-in-the-van/">The drawing in the van</a></b>: An old copy in a van: a trench dug twice, and red-pen changes that never reached the designer. <b class="w">+2 weeks</b></li><li><span class="k">Stage 5 · Stop 12</span><br><b><a href="../the-line/audit-rehearsal/">Audit rehearsal</a></b>: A rehearsal moved until it was too late: two weeks of scrambling, and ten gaps still open on audit day. <b class="w">+2 weeks</b></li><li><span class="k">Stage 5 · Stop 13</span><br><b><a href="../the-line/audit-day/">Audit day ★</a></b>: No evidence where the assessor could see it: a major finding, corrective actions, a re-audit, and a framework bid that had to wait. <b class="w">+6 weeks</b></li><li><span class="k">Stage 6 · Stop 1</span><br><b><a href="../the-line/as-built/">As-built</a></b>: Design drawings stamped AS BUILT: a manhole that isn&#x27;t where the record says, and a crew digging in the wrong place. <b class="w">+2 weeks</b></li><li><span class="k">Stage 6 · Stop 2</span><br><b><a href="../the-line/commissioning-certificates/">Commissioning certificates</a></b>: Certificates in six places: a tested station left locked for two weeks while they were found. <b class="w">+2 weeks</b></li><li><span class="k">Stage 6 · Stop 3</span><br><b><a href="../the-line/manuals-and-asset-data/">Manuals and asset data</a></b>: Manuals written at the end and our numbers instead of theirs: three weeks of renumbering and rework. <b class="w">+3 weeks</b></li><li><span class="k">Stage 6 · Stop 4</span><br><b><a href="../the-line/the-safety-file/">The safety file</a></b>: A safety file built in the last week from old documents: the handover held until it was right. <b class="w">+2 weeks</b></li><li><span class="k">Stage 6 · Stop 5</span><br><b><a href="../the-line/signed-out-signed-for/">Signed out, signed for</a></b>: Everything sent, nothing authorised: the client accepted nothing and payment was held while it was sorted. <b class="w">+4 weeks</b></li><li><span class="k">Stage 6 · Stop 6</span><br><b><a href="../the-line/its-all-on-the-drive/">It&#x27;s all on the drive</a></b>: Nobody closed the doors: the records deleted, a defect nobody could defend, and the leavers still logged in. <b class="w">+3 weeks</b></li><li><span class="k">Stage 7 · Stop 1</span><br><b><a href="../the-line/the-first-night-shift/">The first night shift</a></b>: Procedures nobody could reach at night: an overflow, an incident report, and Dave awake at 2am. <b class="w">+2 weeks</b></li><li><span class="k">Stage 7 · Stop 2</span><br><b><a href="../the-line/one-year-on-and-five/">One year on, and five</a></b>: A record that wasn&#x27;t true: two weeks of digging, a repaired cable, and a night on generators. <b class="w">+2 weeks</b></li><li><span class="k">Stage 7 · Stop 3</span><br><b><a href="../the-line/lessons-into-the-next-bid/">Lessons into the next bid</a></b>: Lessons nobody kept: the next bid priced the same mistakes, and started down the same back alley. <b class="w">+2 weeks</b></li></ol>
+<p style="margin:24px 0"><a class="nextbtn" href="../end-of-the-line/">Take the quiz <span aria-hidden="true">→</span></a></p>
+
+</div>
+</main>
+<footer class="site-footer"><div class="in">
+  <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
+  <span>&copy; 2026 InfoTown<span class="tm">™</span> · Free to use and adapt for learning (CC BY-NC-SA 4.0) · <a href="../../../using-infotown/">Using InfoTown</a></span>
+</div></footer>
+
+</body>
+</html>
