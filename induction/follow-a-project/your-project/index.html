@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your project · Follow a project · InfoTown</title>
+<meta name="description" content="The same station, two ways: the job you rode, and the one where everyone did it properly.">
+<meta property="og:title" content="Your project · Follow a project · InfoTown">
+<meta property="og:description" content="The same station, two ways: the job you rode, and the one where everyone did it properly.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.infotown.co.uk/assets/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="InfoTown: every organisation has a hidden town. The Town Square with the Site Induction, Stories, Phrase Book, Visitor Centre and Manifesto.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.infotown.co.uk/assets/share.png">
+<meta name="theme-color" content="#1b3478">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../../assets/infotown.css?v=202610261051">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="in">
+  <a class="brand" href="../../../"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1b3478"/><path d="M14 26 L32 14 L50 26 Z" fill="#fdf3d4" stroke="#fdf3d4" stroke-width="2" stroke-linejoin="round"/><rect x="16" y="28" width="32" height="22" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M24 30 V50 M40 30 V50" stroke="#fff" stroke-width="2.5"/><path d="M29 50 V41 a3 3 0 0 1 6 0 V50" fill="#fdf3d4"/></svg>InfoTown<span class="tm">™</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../../../">Town Square</a>
+    <a href="../../../induction/" aria-current="page">World Map</a>
+    <a href="../../../stories/">Stories</a>
+    <a href="../../../phrase-book/">Phrase Book</a>
+    <a href="../../../visitor-centre/">Visitor Centre</a>
+    <a href="../../../manifesto/">Manifesto</a>
+  </nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<style>
+.pl-bar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:18px 0 6px;list-style:none;padding:0}
+.pl-bar li{min-width:0}
+.pl-bar i{margin:4px 0 9px}
+.pl-bar a{display:block;text-decoration:none;color:var(--muted);font:600 12px/1.2 var(--display)}
+.pl-bar a:hover b,.pl-bar a:focus-visible b{text-decoration:underline}
+.pl-bar i{display:block;height:8px;border-radius:4px;background:#dfe6f4}
+.pl-bar .done i{background:var(--c)}
+.pl-bar .now i{background:var(--c);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--c)}
+.pl-bar .now a{color:var(--ink)}
+.pl-bar b{font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pl-bar small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;display:block}
+.pl-dots{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0;padding:0;list-style:none;align-items:center}
+.pl-dots a{display:block;width:14px;height:14px;border-radius:50%;border:2.5px solid var(--sc);background:#fff}
+.pl-dots a[aria-current]{background:var(--sc);transform:scale(1.25)}
+.pl-dots a:hover{background:var(--sw)}
+.pl-dots .lab{font:600 13px var(--display);color:var(--muted);margin-left:6px}
+.pl-voice{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin:26px 0 22px;padding:16px 20px;border-radius:16px;background:linear-gradient(90deg,#fff8de,#fff 70%);border:2px solid #f0d27a}
+.pl-voice .who{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#a8741a;display:block;margin-bottom:4px}
+.pl-voice p{margin:0;font:500 1.2rem/1.45 var(--display);color:var(--ink);font-style:italic;max-width:62ch}
+.pl-panels{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:14px}
+.pl-panels .panel svg{background:var(--sw)}
+.pl-now{margin:20px 0 0;padding:14px 18px;border-radius:10px;background:var(--sw);border-left:6px solid var(--sc)}
+.pl-now b{font-family:var(--display)}
+.pl-now p{margin:0;max-width:72ch}
+.pl-alley{margin:18px 0 0;padding:14px 18px;border-radius:10px;border:2px dashed var(--alley);background:#fff}
+.pl-alley h2,.pl-deeper h2{font-size:15px;margin:0 0 6px;font-family:var(--display);letter-spacing:.04em}
+.pl-alley h2{color:var(--alley)}
+.pl-alley p{margin:0 0 10px;max-width:72ch}
+.pl-deeper{margin:18px 0 0}
+.pl-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.pl-chips a,.pl-chips span{display:inline-block;font-size:14px;border-radius:999px;padding:4px 11px;text-decoration:none}
+.pl-chips a{background:var(--sw);color:var(--ink);border:1.5px solid var(--sc)}
+.pl-chips a:hover,.pl-chips a:focus-visible{background:var(--sc);color:#fff}
+.pl-chips span{color:#56658a;border:1.5px dashed #9aa5bf}
+.pl-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 6px}
+.pl-nav a{display:inline-flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);border:2px solid var(--ink);border-radius:14px;padding:10px 18px;max-width:48%}
+.pl-nav a small{font:600 11px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pl-nav a b{font:600 1.05rem var(--display)}
+.pl-nav a.next{margin-left:auto;text-align:right;background:var(--ink);color:#fff}
+.pl-nav a.next small{color:#cfd8ee}
+.pl-nav a:hover{background:#2f6fd6;border-color:#2f6fd6;color:#fff}
+@media (max-width:860px){.pl-panels{grid-template-columns:repeat(2,minmax(0,1fr))}.pl-bar small{display:none}}
+@media (max-width:600px){.pl-panels{grid-template-columns:1fr}.pl-voice{grid-template-columns:1fr;justify-items:start}.pl-bar b{display:none}.pl-nav a{max-width:100%}}
+.pl-new{margin:-6px 0 22px;padding:12px 18px;border-radius:12px;border:1.5px solid #f0d27a;background:#fffdf4}
+.pl-new h2{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#a8741a;margin:0 0 6px}
+.pl-new dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px}
+.pl-new dt{font-family:var(--display);font-weight:600;color:var(--ink)}
+.pl-new dd{margin:0;max-width:70ch}
+.pl-forkrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px;align-items:stretch;margin:0 0 22px}
+.pl-forkrow .pl-panels{grid-template-columns:1fr}
+.pl-fork{margin:0;align-content:center;padding:18px 20px;border-radius:14px;border:2.5px solid var(--ink);background:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.pl-fork .pl-q{margin:0 12px 0 0;font:700 1.25rem var(--display);color:var(--ink);flex:1 1 100%}
+.pl-fork button{font:600 1rem var(--display);border-radius:999px;padding:12px 20px;cursor:pointer;border:2.5px solid var(--ink);background:#fff;color:var(--ink)}
+.pl-fork button[data-c="short"]{border-style:dashed;border-color:var(--alley);color:var(--alley)}
+.pl-fork button[aria-pressed="true"]{background:var(--ink);color:#fff;border-style:solid}
+.pl-fork button[data-c="short"][aria-pressed="true"]{background:var(--alley);border-color:var(--alley);color:#fff}
+.pl-fork .hint{flex:1 1 100%;margin:0;font-size:14px;color:var(--muted)}
+.pl-tracks{display:flex;flex-direction:column;gap:22px}
+.js .pl-tracks:not([data-chosen]){display:none}
+.pl-tracks[data-chosen="short"] .tk-short{order:-1}
+.pl-track .striphead{margin-top:0}
+.pl-track .other{display:none;font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:6px}
+.pl-tracks[data-chosen="right"] .tk-short .other,.pl-tracks[data-chosen="short"] .tk-right .other{display:inline}
+.pl-vs{display:flex;gap:12px;align-items:center;margin:0 0 12px;font:500 1.05rem/1.4 var(--display);font-style:italic;color:var(--ink)}
+.pl-later{margin:12px 0 0;padding:10px 14px;border-radius:10px;background:var(--peach);font-weight:600}
+.pl-pay{margin:0 0 22px;padding:16px 18px;border-radius:14px;border:2.5px dashed var(--alley);background:#fffaf6}
+.pl-pay h2{margin:0 0 8px;font-size:1.2rem;color:var(--alley)}
+.pl-pay .v{display:none}
+.pl-pay[data-show="short"] .v-short,.pl-pay[data-show="right"] .v-right,.pl-pay[data-show="none"] .v-none{display:block}
+.pl-pay .v-right{border-color:#2e8b57}
+.pl-pay[data-show="right"]{border:2.5px solid #2e8b57;background:#f1f8f3}
+.pl-pay[data-show="right"] h2{color:#2e8b57}
+.pl-pay .add{margin:12px 0 0;font:700 1.05rem var(--display);color:var(--alley)}
+.pl-pay p{margin:0 0 10px;max-width:72ch}
+.pl-bill{display:inline-flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin:12px 0 0;padding:6px 14px;border-radius:999px;background:var(--peach);font:600 13px var(--display);color:var(--ink)}
+.pl-bill a{color:var(--ink)}
+.pl-bill[hidden]{display:none}
+.pl-lesson{margin:18px 0 0}
+.pl-lesson .moreflag{background:#fff3c4;color:#a8741a}
+@media (max-width:860px){.pl-forkrow{grid-template-columns:1fr}}
+@media (max-width:600px){.pl-new dl{grid-template-columns:1fr}.pl-new dd{margin-bottom:6px}}
+</style>
+<style>
+.yp-sum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.yp-sum div{border-radius:14px;padding:16px 20px}
+.yp-sum .sang{background:#f1f8f3;border:2.5px solid #2e8b57}
+.yp-sum .yours{background:#fffaf6;border:2.5px dashed var(--alley)}
+.yp-sum h2{margin:0 0 6px;font-size:1.2rem}
+.yp-sum .big{font:700 2rem var(--display);color:var(--ink);margin:0}
+.yp-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.yp-list li{border:1.5px solid var(--faint);border-radius:12px;padding:12px 16px;background:#fff}
+.yp-list .k{font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.yp-list .short{color:var(--alley);font-weight:700}.yp-list .right{color:#2e8b57;font-weight:700}.yp-list .none{color:var(--muted)}
+.yp-acts{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.yp-acts button{font:600 1rem var(--display);border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:12px 22px;cursor:pointer}
+@media (max-width:600px){.yp-sum{grid-template-columns:1fr}}
+</style>
+<header class="top">
+  <div class="banner">Follow a<br>project<small>End of the line</small></div>
+  <div class="titleblock">
+    <span class="eyebrow">Follow a project · End of the line</span>
+    <h1>Your project</h1>
+    <p class="question">The same station, two ways. Here's the job you rode, next to the one where everyone did it properly.</p>
+  </div>
+</header>
+<nav class="lessonnav top" aria-label="Route (top)"><a href="../">← <b>Follow a project</b></a><a href="../end-of-the-line/"><b>End of the line: the quiz</b> →</a></nav>
+<div id="yp"><p>Loading your choices…</p></div>
+<div class="yp-acts"><a class="nextbtn" href="../end-of-the-line/">Take the quiz <span aria-hidden="true">→</span></a><button type="button" id="yp-reset">Ride it again: clear my choices</button></div>
+<script>
+(function () {
+  var KEY = 'infotown-line', FORKS = {"2": {"at": "Stage 2 \u00b7 Stop 2", "title": "The client's wish list", "slug": "the-clients-wish-list", "right": "Read the whole pack", "short": "Answer the BIM section, assume the rest", "weeks": 6, "cost": "Page 112 was never read, so the data the owner runs on was never planned, priced or asked for.", "dueAt": "Stage 6 \u00b7 Stop 3", "dueTitle": "Manuals and asset data", "dueSlug": "manuals-and-asset-data"}, "37": {"at": "Stage 5 \u00b7 Stop 11", "title": "The drawing in the van", "slug": "the-drawing-in-the-van", "right": "Check the published shelf", "short": "Dig from the van copy", "weeks": 2, "cost": "A drain built 600mm from where the record says it is.", "dueAt": "Stage 7 \u00b7 Stop 2", "dueTitle": "One year on, and five", "dueSlug": "one-year-on-and-five"}};
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {c: {}, paid: {}}; } catch (e) { return {c: {}, paid: {}}; } }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  var d = load(), c = d.c || {}, keys = Object.keys(FORKS), made = keys.filter(function (k) { return c[k]; });
+  var box = document.getElementById('yp');
+  if (!made.length) {
+    box.innerHTML = '<p>You have not made any choices yet. At ' + keys.length + ' stops on the line, the comic stops and asks what the team does. <a href="../the-line/why-we-need-it/">Start at the beginning</a>.</p>';
+  } else {
+    var n = 0, w = 0;
+    var rows = keys.map(function (k) {
+      var f = FORKS[k], ch = c[k], who;
+      if (ch === 'short') { n++; w += f.weeks; who = '<span class="short">' + esc(f.short) + '</span>. ' + esc(f.cost) + ' It came due at <a href="../the-line/' + f.dueSlug + '/">' + esc(f.dueAt) + ', ' + esc(f.dueTitle) + '</a>: +' + f.weeks + ' weeks.'; }
+      else if (ch === 'right') who = '<span class="right">' + esc(f.right) + '</span>. No bill.';
+      else who = '<span class="none">Not chosen yet.</span> <a href="../the-line/' + f.slug + '/">Choose now</a>';
+      return '<li><span class="k">' + esc(f.at) + '</span><br><b><a href="../the-line/' + f.slug + '/">' + esc(f.title) + '</a></b>: ' + who + '</li>';
+    }).join('');
+    box.innerHTML = '<div class="yp-sum"><div class="sang"><h2>The project that sang</h2><p class="big">0 weeks</p><p>Everyone did it properly. The owner got a record it can trust.</p></div>'
+      + '<div class="yours"><h2>Your project</h2><p class="big">' + w + ' week' + (w === 1 ? '' : 's') + '</p><p>' + (n ? 'You took ' + n + ' shortcut' + (n === 1 ? '' : 's') + '. Each one cost nothing at the time.' : 'No shortcuts. Your project sang too.') + '</p></div></div>'
+      + '<h2>Your choices</h2><ol class="yp-list">' + rows + '</ol>';
+  }
+  document.getElementById('yp-reset').addEventListener('click', function () { try { localStorage.removeItem(KEY); } catch (e) {} location.href = '../the-line/why-we-need-it/'; });
+})();
+</script>
+
+</div>
+</main>
+<footer class="site-footer"><div class="in">
+  <span>InfoTown is being built. Everything is connected. Everyone is welcome.</span>
+  <span>&copy; 2026 InfoTown<span class="tm">™</span> · Free to use and adapt for learning (CC BY-NC-SA 4.0) · <a href="../../../using-infotown/">Using InfoTown</a></span>
+</div></footer>
+
+</body>
+</html>

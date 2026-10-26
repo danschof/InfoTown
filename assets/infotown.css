@@ -899,12 +899,18 @@ body:has(.banner.pre){--role:#4a5d73}
 .tw-alt:hover,.tw-alt:focus-visible{background:var(--ink);color:#fff}
 .tw-or{display:flex;align-items:center;margin:0 !important;font:600 14px var(--display);color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
 @media (max-width:860px){.twoways{grid-template-columns:1fr}.tw-or{justify-content:center}.tw-main{grid-template-columns:1fr}}
+/* The information's icon (DEC-177) */
 .it-sun{overflow:visible;flex:none}
-.it-sun .rp{transform-box:fill-box;transform-origin:center;opacity:0;animation:it-rip 4.5s ease-out infinite}
-.it-sun .r2{animation-delay:1.5s}.it-sun .r3{animation-delay:3s}
-.it-sun .core,.it-sun .rays{transform-box:view-box;transform-origin:center;animation:it-pulse 9s ease-in-out infinite}
-.it-sun .rays{animation-name:it-rays}
-@keyframes it-rip{0%{transform:scale(1);opacity:.55}100%{transform:scale(2.4);opacity:0}}
-@keyframes it-pulse{0%,80%,100%{transform:scale(1)}86%{transform:scale(1.16)}92%{transform:scale(.98)}}
-@keyframes it-rays{0%,80%,100%{transform:scale(1) rotate(0)}86%{transform:scale(1.22) rotate(8deg)}92%{transform:scale(1) rotate(0)}}
-@media (prefers-reduced-motion:reduce){.it-sun .rp,.it-sun .core,.it-sun .rays{animation:none}.it-sun .r1{opacity:.35;transform:scale(1.5)}.it-sun .r2{opacity:.18;transform:scale(2)}}
+.it-sun g,.it-sun circle{transform-box:fill-box;transform-origin:center}
+.it-sun .glow{animation:it-breathe 2.8s ease-in-out infinite alternate}
+.it-sun .core{animation:it-breathe 2.8s ease-in-out infinite alternate-reverse}
+.it-sun .swirl{animation:it-spin 2.6s linear infinite}
+.it-sun .o1{animation:it-spin 6s linear infinite}
+.it-sun .o2{animation:it-spin 8s linear infinite reverse}
+.it-sun .o3{animation:it-spin 10s linear infinite}
+.it-sun .tilt{animation:it-tilt 3.2s ease-in-out infinite alternate}
+.it-sun .t2{animation-duration:4.1s}.it-sun .t3{animation-duration:5s;animation-delay:-1.4s}
+@keyframes it-spin{to{transform:rotate(360deg)}}
+@keyframes it-breathe{from{transform:scale(.82)}to{transform:scale(1.16)}}
+@keyframes it-tilt{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.it-sun *{animation:none !important}}
