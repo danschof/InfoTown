@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="../../../assets/infotown.css?v=202610261415">
+<link rel="stylesheet" href="../../../assets/infotown.css?v=202610311450">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -56,16 +56,16 @@
 .pl-voice{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin:26px 0 22px;padding:16px 20px;border-radius:16px;background:linear-gradient(90deg,#e6f0fc,#f7fbff 70%);border:2px solid #b9d0f2}
 .pl-voice .who{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#2f6fd6;display:block;margin-bottom:4px}
 .pl-voice .who b{color:var(--ink);letter-spacing:.06em}
-.pl-voice p{margin:0;font:500 1.2rem/1.45 var(--display);color:var(--ink);font-style:italic;max-width:62ch}
+.pl-voice p{margin:0;font:500 1.2rem/1.45 var(--display);color:var(--ink);font-style:italic;max-width:none}
 .pl-panels{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:14px}
 .pl-panels .panel svg{background:var(--sw)}
 .pl-now{margin:20px 0 0;padding:14px 18px;border-radius:10px;background:var(--sw);border-left:6px solid var(--sc)}
 .pl-now b{font-family:var(--display)}
-.pl-now p{margin:0;max-width:72ch}
+.pl-now p{margin:0;max-width:none}
 .pl-alley{margin:18px 0 0;padding:14px 18px;border-radius:10px;border:2px dashed var(--alley);background:#fff}
 .pl-alley h2,.pl-deeper h2{font-size:15px;margin:0 0 6px;font-family:var(--display);letter-spacing:.04em}
 .pl-alley h2{color:var(--alley)}
-.pl-alley p{margin:0 0 10px;max-width:72ch}
+.pl-alley p{margin:0 0 10px;max-width:none}
 .pl-deeper{margin:18px 0 0}
 .pl-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
 .pl-chips a,.pl-chips span{display:inline-block;font-size:14px;border-radius:999px;padding:4px 11px;text-decoration:none}
@@ -85,7 +85,7 @@
 .pl-new h2{font:700 11px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#a8741a;margin:0 0 6px}
 .pl-new dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;line-height:1.4}
 .pl-new dt{font-family:var(--display);font-weight:600;color:var(--ink)}
-.pl-new dd{margin:0;max-width:70ch}
+.pl-new dd{margin:0;max-width:none}
 .pl-forkrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px;align-items:stretch;margin:0 0 22px}
 .pl-forkrow .pl-panels{grid-template-columns:1fr}
 .pl-forkrow.wide{grid-template-columns:1fr}
@@ -117,13 +117,15 @@
 .pl-pay[data-show="right"]{border:2.5px solid #2e8b57;background:#f1f8f3}
 .pl-pay[data-show="right"] h2{color:#2e8b57}
 .pl-pay .add{margin:12px 0 0;font:700 1.05rem var(--display);color:var(--alley)}
-.pl-pay p{margin:0 0 10px;max-width:72ch}
+.pl-pay p{margin:0 0 10px;max-width:none}
 .pl-bill{display:inline-flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin:12px 0 0;padding:6px 14px;border-radius:999px;background:var(--peach);font:600 13px var(--display);color:var(--ink)}
 .pl-bill a{color:var(--ink)}
 .pl-bill[hidden]{display:none}
 .pl-lesson{margin:18px 0 0;padding:14px 18px;border-radius:10px;border:1.5px solid var(--faint);background:#fff}
 .pl-lesson h2{font-size:1.1rem;margin:0 0 6px}
-.pl-lesson p{margin:0 0 8px;max-width:72ch}
+.pl-townp{margin:0;line-height:1.6}
+.pl-folds{margin:18px 0 0}
+.pl-lesson p{margin:0 0 8px;max-width:none}
 .pl-learnmore{font-family:var(--display);font-weight:600}
 .pl-punch{margin:16px 0 4px}
 .pl-alleynote{margin:.4rem 0 0;font-size:.92rem;color:var(--muted)}
