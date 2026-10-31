@@ -914,3 +914,11 @@ body:has(.banner.pre){--role:#4a5d73}
 @keyframes it-breathe{from{transform:scale(.82)}to{transform:scale(1.16)}}
 @keyframes it-tilt{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){.it-sun *{animation:none !important}}
+/* Lessons link to the Project Line (DEC-185) */
+.onproject{margin:22px 0;padding:14px 18px;border:2px solid #1f6b6b;border-radius:14px;background:#eef7f6}
+.onproject h2{font-size:18px;margin:2px 0 8px}
+.onproject ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.onproject a{display:inline-block;padding:7px 13px;border-radius:999px;background:#fff;border:1.5px solid #1f6b6b;color:var(--ink);text-decoration:none;font-weight:600}
+.onproject a small{display:block;font-weight:400;color:var(--muted,#56658a);font-size:12px}
+.onproject a:hover,.onproject a:focus-visible{background:#1f6b6b;color:#fff}
+.onproject a:hover small,.onproject a:focus-visible small{color:#e6f2f1}
